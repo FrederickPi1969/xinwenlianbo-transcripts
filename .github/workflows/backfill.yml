@@ -54,3 +54,5 @@ jobs:
           git add -A
           git commit -m "data: backfill ${{ inputs.start }}..${{ inputs.end }}" || echo "nothing to commit"
           git push
+
+# vim: set yaml ts=2 sw=2:

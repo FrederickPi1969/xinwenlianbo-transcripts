@@ -38,3 +38,5 @@ jobs:
           git add -A
           git commit -m "data: update $(TZ=Asia/Shanghai date +%F)" || echo "nothing to commit"
           git push
+
+# vim: set yaml ts=2 sw=2:
