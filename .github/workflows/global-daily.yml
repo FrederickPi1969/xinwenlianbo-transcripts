@@ -43,6 +43,11 @@ jobs:
             python3 crawler/global_daily.py --recent "${{ inputs.days }}"
           fi
 
+      - name: Prune CNN window (2GB rule)
+        run: |
+          find transcripts/cnn -name "*.md" -mtime +400 -delete || true
+          python3 crawler/global_daily.py --reindex || true
+
       - name: Commit and push
         run: |
           git config user.name "github-actions[bot]"

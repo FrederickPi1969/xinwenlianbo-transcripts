@@ -147,6 +147,21 @@ python3 crawler/global_daily.py --reindex      # 重建 transcripts catalogue
 
 遵守标准 `HTTPS_PROXY` 环境变量；对源站低速率、带抖动的礼貌抓取。
 
+## 存储架构与 2GB 规则
+
+**Cosmos（内网服务器，3.6T 盘）= 全量正本**：
+- `~/xwlb/xinwenlianbo-transcripts`：GitHub 主仓克隆 + 全部回填 worker（tmux：新闻联播/DN/PBS/State/WH/NPR lane）
+- `~/xwlb/cnn-archive`：**CNN 2010→今天全量**（GB 级，不上 GitHub），每周 git bundle 容灾到 `~/xwlb/backups/`
+- cron：healer 每 2h（govopendata+代理备路）、global daily 双时段、CNN 每日增量、体积监控
+
+**GitHub 主仓 ≤ 2GB 规则**：
+- 非CNN源全量上仓（合计 ~400MB 量级，多年内无压力）
+- CNN 在 GitHub 只保留**最近 400 天**（`global-daily.yml` 每次运行自动裁剪 HEAD；当前 ~150MB）
+- 监控：Cosmos 每周记录 pack 体积，超 1.5GB 触发告警（`logs/SIZE_ALERT`）
+- 超限 runbook：`git filter-repo --path transcripts/cnn/<旧年份> --invert-paths` 裁历史 → force-push → 各端重新 clone（GH Actions 自动恢复，Cosmos 从 cnn-archive 补窗口）
+
+**已退役**：Mac 本机的 launchd healer 与回填 worker（2026-09-04 迁至 Cosmos；Mac 仓库目录留存为档案）。
+
 ## 数据说明与权利
 
 - 文字稿权利归 [中央广播电视总台](https://tv.cctv.com/) 所有，本项目仅做格式整理与存档，请勿用于侵犯权利人权益的用途。
