@@ -57,8 +57,12 @@ jobs:
         id: verdict
         if: always()
         run: |
-          python3 crawler/watchdog.py --check || echo "stale=true" >> "$GITHUB_OUTPUT"
-          python3 crawler/watchdog.py --check >/dev/null 2>&1 && echo "stale=false" >> "$GITHUB_OUTPUT" || true
+          if python3 crawler/watchdog.py --check > verdict.json 2>/dev/null; then
+            echo "stale=false" >> "$GITHUB_OUTPUT"
+          else
+            echo "stale=true" >> "$GITHUB_OUTPUT"
+          fi
+          cat verdict.json || true
 
       - name: Alert (open issue when still stale)
         if: always()
@@ -74,7 +78,7 @@ jobs:
             fi
             exit 0
           fi
-          body=$(python3 crawler/watchdog.py --check 2>/dev/null | python3 -c "import sys,json;print('```json\n'+sys.stdin.read()+'\n```')")
+          body=$(python3 -c "print('```json\n' + open('verdict.json').read() + '\n```')")
           issue=$(gh issue list --label "data-stale" --state open --json number --jq '.[0].number')
           if [ -n "$issue" ]; then
             gh issue comment "$issue" --body "⏰ 仍然过期：$(TZ=Asia/Shanghai date '+%F %T') 北京时间
@@ -82,7 +86,7 @@ jobs:
           $body
 
           - 运行链接：${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
-          - 排查建议：手动触发 [daily](../actions/workflows/daily.yml) 与 [watchdog](../actions/workflows/watchdog.yml)；
+          - 排查建议：手动触发 [daily](${{ github.server_url }}/${{ github.repository }}/actions/workflows/daily.yml) 与 [watchdog](${{ github.server_url }}/${{ github.repository }}/actions/workflows/watchdog.yml)；
             若两源皆被拦，在本机执行备路（govopendata + 代理）watchdog。"
           else
             gh issue create \
@@ -93,7 +97,7 @@ jobs:
           $body
 
           - 运行链接：${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
-          - 排查建议：手动触发 [daily](../actions/workflows/daily.yml) 与 [watchdog](../actions/workflows/watchdog.yml)；
+          - 排查建议：手动触发 [daily](${{ github.server_url }}/${{ github.repository }}/actions/workflows/daily.yml) 与 [watchdog](${{ github.server_url }}/${{ github.repository }}/actions/workflows/watchdog.yml)；
             若两源皆被拦，在本机执行备路（govopendata + 代理）watchdog。
 
           *本 Issue 由 watchdog 自动创建，恢复后会自动关闭。*"
