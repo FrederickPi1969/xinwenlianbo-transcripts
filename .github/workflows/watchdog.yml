@@ -46,8 +46,9 @@ jobs:
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add -A
           git commit -m "data: watchdog heal $(TZ=Asia/Shanghai date +%F)" || exit 0
-          for i in 1 2 3 4 5; do
-            if git pull --rebase -q origin ${GITHUB_REF_NAME:-main} && git push -q; then exit 0; fi
+          for i in 1 2 3 4 5 6; do
+            git rebase --abort 2>/dev/null || true
+            if git pull --rebase -X ours -q origin ${GITHUB_REF_NAME:-main} && git push -q; then exit 0; fi
             sleep $((i * 5))
           done
           echo "::error::push 失败，数据已在本地提交但未推送"
