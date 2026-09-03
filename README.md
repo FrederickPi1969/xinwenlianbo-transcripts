@@ -67,10 +67,22 @@ news/
 
 两套来源互为兜底：任一来源抓取失败或解析结果异常时自动切换另一个。
 
-## 自动更新
+## 自动更新（双路保险）
 
-- `.github/workflows/daily.yml`：每天北京时间 21:20 运行（另在次日 00:20 兜底重跑），抓取**最近 7 天**中缺失的日期，幂等可重入——GitHub 定时器偶发延迟不影响最终一致。
+数据新鲜度由三层机制共同保证，任一路失效，其余路径可独立撑住：
+
+| 层 | 载体 | 时段（北京） | 数据源偏好 | 失效场景兜底 |
+| --- | --- | --- | --- | --- |
+| **主路** `daily.yml` | GitHub Actions | 21:20 + 次日 00:20，抓最近 14 天缺口 | CCTV 优先（runner 直连央视网畅通） | 双时段 + 幂等回看，自愈 cron 延迟/跳过 |
+| **哨兵** `watchdog.yml` | GitHub Actions（独立 workflow 文件/时段） | 22:35 + 次日 01:35 | CCTV 优先 | 主路 workflow 被改坏/被禁时接管；补救仍失败则**自动开 Issue 告警**（恢复后自动关闭） |
+| **备路** 本机 launchd | Frederick 的 Mac，每 2 小时 | 随时（健康时零网络开销） | **govopendata 优先 + 代理池**（对 Cloudflare 免疫，与 runner 路径异构） | GitHub 全挂/两源互相被拦时仍可写入；同时推**私有镜像仓**防主仓意外 |
+
+关键互补性：govopendata 的 Cloudflare 对数据中心 IP（GitHub runner）不友好，但对代理池出口畅通；CCTV 央视网则对两者都畅通。因此两路刻意使用不同的首选源与不同的网络出口，避免共享故障模式。
+
+源级还有第二重冗余：爬虫对每一天都会在 CCTV 与 govopendata 之间自动切换（`--prefer` 可指定顺序），单日抓取失败先换源重试再报错。
+
 - `.github/workflows/backfill.yml`：手动触发（`workflow_dispatch`），给定起止日期做历史回填。
+- 状态检查：`python3 crawler/watchdog.py --check` 输出 JSON（`healthy` / `missing_recent`）。
 
 ## 爬虫
 
