@@ -82,23 +82,28 @@ news/
 
 | Provider | 层级 | 入口模式 | 说明 |
 | --- | --- | --- | --- |
-| `cnn` | T1 | `transcripts.cnn.com/date/YYYY-MM-DD` → 逐 show 逐 segment | 官方逐字稿，含 speaker 标签与时间戳；每天一档节目一个文件 |
-| `democracy-now` | T2 | `democracynow.org/shows/Y/M/D` → 逐 story | 官方分段稿；过滤订阅推广段落 |
-| `pbs` | T2 | `pbs.org/newshour/show/<月名>-<D>-<Y>-...-full-episode` → 逐 segment "Read the Full Transcript" | 官方分段稿；官方声明为机器+人工轻度编辑 |
-| `whitehouse` | T1 | `whitehouse.gov/briefings-statements/YYYY/MM/DD/...` | 官方 remarks/statements；无发布的日子为空 |
+| `cnn` | T1 | `transcripts.cnn.com/date/YYYY-MM-DD` → 逐 show 逐 segment | 官方逐字稿，含 speaker 标签与时间戳；每天一档节目一个文件；URL 可回溯至 2010+ |
+| `democracy-now` | T2 | `democracynow.org/shows/Y/M/D` → 逐 story | 官方分段稿；过滤订阅推广段；archive 可回溯多年 |
+| `pbs` | T2 | `pbs.org/newshour/show/<月名>-<D>-<Y>-...-full-episode` → 逐 segment "Read the Full Transcript" | 官方分段稿；机器+人工轻度编辑；周末无节目 |
+| `whitehouse` | T1 | `whitehouse.gov/briefings-statements/`（列表 `<time datetime>` 定日期） | 官方 remarks/statements；无发布的日子为空 |
+| `npr` | T2 | `feeds.npr.org/{1001,1002}` + 节目页 → `npr.org/transcripts/<storyId>` | 官方 story transcript（`has-transcript` 才有）；发现路径只覆盖最近几天，深历史需官方 API |
+| `state` | T1 | `state.gov/press-releases/`（collection-result 卡片） | 官方 press statements/remarks；列表可翻至站点起点 |
 
-**审计通过但暂未纳入（工程受阻，可复核后解锁）**：
+**审计通过但暂未纳入（2026-09-04 直连 + proxy 双重复测）**：
 
-| 源 | 受阻原因 | 解锁方向 |
+| 源 | 实测证据 | 解锁方向 |
 | --- | --- | --- |
-| Reuters World News | 401 bot 拦截（数据中心 IP） | 授权 API 或本地代理路径 |
-| UN Noon Briefing | press.un.org 返回 Client Challenge | 换入口/RSS 或代理 |
-| NPR ME/ATC | transcript 客户端渲染，静态 HTML 无正文 | Content Distribution Service（需 key） |
-| CBC Front Burner | JS 应用（listen 平台），静态无正文 | headless 渲染或官方 API |
-| State.gov briefings | 现政府站点未定位到 briefings 路径 | 复查站点结构 |
-| ABC Australia AM/TWD/PM | 平台迁移至 JS listen 应用 | abc.net.au listen API 逆向 |
-| Akashvani bulletins | WordPress admin-ajax 表单词表未破解（endpoint/nonce 已定位） | 逆向 `filter_bulletins_details` 参数 |
-| FT / NYT The Daily | 付费墙 | 授权订阅会话内合规抓取 |
+| Reuters World News | 直连 **401**、proxy 出口仍 **401**（指纹级反爬，非 IP 级） | 授权 API |
+| UN Noon Briefing | `dbYYMMDD.doc.htm` 规律已知，但直连/proxy 均返回 Client Challenge | 官方 RSS/API |
+| RFI français facile | 直连/proxy 均 **403**（WAF 指纹） | 官方 RSS 文本 |
+| Sveriges Radio lätt svenska | 直连/proxy 均 **403** | 同上 |
+| DW slow news | 站点改版后为 JS 壳（列表/正文客户端渲染） | headless 或官方 API |
+| CBC Front Burner | transcript 索引页可达，但 episode 页与 audio-api 均为 Next.js HTML 壳 | 逆向 listen 数据接口 |
+| ABC Australia AM/TWD/PM | 平台迁移 abc.net.au/listen（JS），listen API 404 | 逆向 listen 数据接口 |
+| Akashvani bulletins | `admin-ajax.php action=filter_bulletins_details` + nonce 已定位，表单词表未破解 | 逆向参数 |
+| NHK NEWS WEB EASY / Yle Selkouutiset / Arirang / VOA LE 每日区 | 首页为 JS 壳或文章列表客户端渲染，无静态链接 | headless/JSON API |
+| FT / NYT The Daily | 付费墙（T1-L 定位） | 授权订阅会话 |
+| KBS WORLD | 版权页明确限制复制/分发/AI 训练 | 需先审权，默认不采 |
 
 ABC/NBC/CBS 晚间新闻：按审计维持 Fallback 定位（Internet Archive 闭字幕 / Vanderbilt），不与官方 transcript 混层，未纳入本仓库。
 
