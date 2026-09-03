@@ -1,0 +1,40 @@
+name: daily
+
+on:
+  schedule:
+    # 北京时间 21:20（当天节目 19:00 播出、央视网页面就绪后）
+    - cron: "20 13 * * *"
+    # 北京时间次日 00:20 兜底（GitHub 定时器有延迟/偶发跳过，二次补漏）
+    - cron: "20 16 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: daily
+  cancel-in-progress: false
+
+jobs:
+  crawl:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Crawl recent days
+        run: python crawler/xwlb.py --recent 7
+
+      - name: Rebuild index
+        run: python crawler/build_index.py
+
+      - name: Commit and push
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git commit -m "data: update $(TZ=Asia/Shanghai date +%F)" || echo "nothing to commit"
+          git push
