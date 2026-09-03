@@ -278,25 +278,41 @@ def ingest_pbs(date):
 # 4. White House briefings / remarks / statements
 # --------------------------------------------------------------------------- #
 
+WH_ITEM_RE = re.compile(
+    r'<a href="(https://www\.whitehouse\.gov/briefings-statements/\d{4}/\d{2}/[a-z0-9-]+)/?"[^>]*>([^<]{5,200})</a>')
+WH_TIME_RE = re.compile(r'datetime="(\d{4}-\d{2}-\d{2})')
+
+
 def ingest_whitehouse(date):
-    y, m, d = date.split("-")
-    urls, seen = [], set()
+    """WH 的 URL 只含年月，日期取列表项的 <time datetime>。"""
+    items = []  # (pubdate, url, title)
+    seen = set()
     for page in range(1, 6):
-        html = http_get(f"https://www.whitehouse.gov/briefings-statements/page/{page}/")
-        found = re.findall(r'href="(https://www\.whitehouse\.gov/briefings-statements/'
-                           r'(\d{4})/(\d{2})/(\d{2})/[a-z0-9-]+)/?"', html)
-        stop = False
-        for u, ly, lm, ld in found:
+        url = ("https://www.whitehouse.gov/briefings-statements/" if page == 1
+               else f"https://www.whitehouse.gov/briefings-statements/page/{page}/")
+        try:
+            html = http_get(url)
+        except FetchError as e:
+            log(f"  wh listing page{page} 失败：{e}")
+            break
+        page_items = []
+        for m in WH_ITEM_RE.finditer(html):
+            u, title = m.group(1), m.group(2).strip()
             if u in seen:
                 continue
             seen.add(u)
-            if (ly, lm, ld) == (y, m, d):
-                urls.append(u)
-            elif (ly, lm, ld) < (y, m, d):
-                stop = True
-        if stop or not found:
+            tm = WH_TIME_RE.search(html, m.end())
+            pubdate = tm.group(1) if tm else ""
+            page_items.append((pubdate, u, title))
+        items.extend(page_items)
+        dates = [d for d, _, _ in page_items]
+        if not dates:
+            break
+        # 列表倒序：当整页都早于目标日期时停止翻页
+        if max(dates) < date:
             break
         sleep_a_bit()
+    urls = [u for d, u, _ in items if d == date]
     if not urls:
         return []  # 当日无发布，正常情况
 
@@ -310,8 +326,8 @@ def ingest_whitehouse(date):
             continue
         tm = re.search(r"<h1[^>]*>(.*?)</h1>", html, re.S)
         title = strip_html(tm.group(1)) if tm else u.rsplit("/", 1)[-1]
-        art = re.search(r"<article[^>]*>(.*?)</article>", html, re.S)
-        body_html = art.group(1) if art else html
+        m = re.search(r'class="entry-content[^"]*"[^>]*>(.*?)(?:</main|<footer)', html, re.S)
+        body_html = m.group(1) if m else html
         paras = [strip_html(p) for p in re.findall(r"<p[^>]*>(.*?)</p>", body_html, re.S)]
         text = "\n\n".join(p for p in paras if len(p) > 60)
         if text:
@@ -391,6 +407,10 @@ SOURCES = {
     "dn": ingest_dn,
     "pbs": ingest_pbs,
     "wh": ingest_whitehouse,
+}
+
+# 已定位入口但表单词表未破解，暂挂起（见 README「暂未纳入」表）
+PENDING_SOURCES = {
     "ak": ingest_akashvani,
 }
 
