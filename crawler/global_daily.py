@@ -399,6 +399,162 @@ def ingest_akashvani(date):
 
 
 # --------------------------------------------------------------------------- #
+# 6. NPR Morning Edition + All Things Considered
+# --------------------------------------------------------------------------- #
+
+NPR_FEEDS = ("1001", "1002")  # Morning Edition, All Things Considered
+NPR_ET = ZoneInfo("America/New_York")
+NPR_STORY_URL_RE = re.compile(r"https://www\.npr\.org/\d{4}/\d{2}/\d{2}/([\w-]+)/[\w-]+")
+NPR_COPYRIGHT_MARK = ("Copyright", "Accuracy and availability")
+
+
+def npr_transcript_text(html):
+    """NPR transcript 页正文：storytext 容器，段落以 <p> 分隔（无闭合）。"""
+    m = re.search(r'class="[^"]*storytext[^"]*"[^>]*>(.*?)(?:</section>|<footer)', html, re.S)
+    if not m:
+        return None
+    body = m.group(1)
+    for mark in NPR_COPYRIGHT_MARK:
+        i = body.find(mark)
+        if i > 0:
+            body = body[:i]
+    body = re.sub(r"(?i)<br\s*/?>", "\n", body)
+    body = body.replace("<p>", "\n").replace("<P>", "\n")
+    text = strip_html(body)
+    lines = [ln.strip() for ln in text.splitlines()
+             if ln.strip() and ln.strip() not in ("Transcript", "transcript")]
+    return "\n\n".join(lines) or None
+
+
+def npr_candidate_stories():
+    """候选 story：RSS（最近 ~1 天）+ 两档节目页（最近 ~3-5 天），URL 自带日期。"""
+    cands = {}  # story_id -> (url, title)
+    urls = []
+    try:
+        for feed_id in NPR_FEEDS:
+            xml = http_get(f"https://feeds.npr.org/{feed_id}/rss.xml")
+            urls += [m.group(1) for m in re.finditer(r"<link>([^<]+npr\.org/20[^<]+)</link>", xml)]
+            sleep_a_bit()
+    except FetchError as e:
+        log(f"  npr feed 失败：{e}")
+    for prog in ("morning-edition", "all-things-considered"):
+        try:
+            html = http_get(f"https://www.npr.org/programs/{prog}/")
+            urls += re.findall(r'href="(https://www\.npr\.org/20\d\d/\d\d/\d\d/[\w-]+/[\w-]+)"', html)
+            sleep_a_bit()
+        except FetchError as e:
+            log(f"  npr program {prog} 失败：{e}")
+    for u in urls:
+        m = NPR_STORY_URL_RE.match(u)
+        if m:
+            cands[m.group(1)] = u
+    return cands
+
+
+def ingest_npr(date):
+    sections = []
+    for story_id, u in npr_candidate_stories().items():
+        # URL 里的日期必须等于目标日期
+        dm = re.match(r"https://www\.npr\.org/(\d{4}/\d{2}/\d{2})/", u)
+        if not dm or dm.group(1).replace("/", "-") != date:
+            continue
+        sleep_a_bit()
+        try:
+            html = http_get(f"https://www.npr.org/transcripts/{story_id}")
+        except FetchError:
+            continue  # 该 story 无 transcript，正常
+        text = npr_transcript_text(html)
+        tm = re.search(r"<title>(.*?)</title>", html, re.S)
+        title = strip_html(tm.group(1)).replace(" : NPR", "").strip() if tm else story_id
+        if text and len(text) > 500:
+            sections.append((title,
+                             text + f"\n\n> Story：{u}\n> Transcript：https://www.npr.org/transcripts/{story_id}"))
+    if not sections:
+        return []
+    path = write_md("npr", date, f"{date}.md",
+                    f"NPR Morning Edition + All Things Considered · {date}",
+                    sections,
+                    extra=["来源：feeds.npr.org/1001,1002 → npr.org/transcripts/<storyId>",
+                           "注意：并非每个 segment 都有 transcript（官方行为），此处仅收录有稿条目"])
+    if path:
+        log(f"  npr: {len(sections)} stories -> {os.path.basename(path)}")
+    return [path] if path else []
+
+
+# --------------------------------------------------------------------------- #
+# 7. U.S. Department of State（press releases / remarks / briefings）
+# --------------------------------------------------------------------------- #
+
+STATE_CARD_RE = re.compile(
+    r'<p class="collection-result__date">([^<]+)</p>\s*'
+    r'<a href="(https://www\.state\.gov/(?:releases|remarks)[^"]+)"\s+class="collection-result__link"[^>]*>\s*(.+?)\s*</a>\s*'
+    r'<div class="collection-result-meta"[^>]*>\s*<span[^>]*>([^<]*)</span>\s*<span[^>]*>([^<]+)</span>',
+    re.S)
+
+
+def state_listing(max_pages=300):
+    """翻完 /press-releases/ 列表，返回 [(date, type, url, title, speaker)]，倒序。"""
+    out, seen = [], set()
+    for page in range(1, max_pages + 1):
+        url = ("https://www.state.gov/press-releases/" if page == 1
+               else f"https://www.state.gov/press-releases/page/{page}/")
+        try:
+            html = http_get(url)
+        except FetchError as e:
+            log(f"  state listing page{page} 失败：{e}")
+            break
+        cards = STATE_CARD_RE.findall(html)
+        if not cards:
+            break
+        new = 0
+        for ctype, u, title, speaker, dstr in cards:
+            if u in seen:
+                continue
+            seen.add(u)
+            new += 1
+            try:
+                d = datetime.strptime(dstr.strip(), "%B %d, %Y").date().isoformat()
+            except ValueError:
+                continue
+            out.append((d, ctype.strip(), u, re.sub(r"\s+", " ", title).strip(), speaker.strip()))
+        if new == 0:
+            break
+        if page % 25 == 0:
+            log(f"  state listing: {page} 页，{len(out)} 条")
+            sleep_a_bit()
+    return out
+
+
+def ingest_state(date):
+    cards = [c for c in state_listing(max_pages=12) if c[0] == date]
+    if not cards:
+        return []
+    sections = []
+    for d, ctype, u, title, speaker in cards:
+        sleep_a_bit()
+        try:
+            html = http_get(u)
+        except FetchError as e:
+            log(f"  state 跳过 {u}: {e}")
+            continue
+        m = re.search(r'class="entry-content[^"]*"[^>]*>(.*?)(?:</main|<footer)', html, re.S)
+        body_html = m.group(1) if m else ""
+        paras = [strip_html(p) for p in re.findall(r"<p[^>]*>(.*?)</p>", body_html, re.S)]
+        text = "\n\n".join(p for p in paras if len(p) > 60)
+        if text:
+            sections.append((f"[{ctype}] {title} — {speaker}",
+                             text + f"\n\n> 原文：{u}"))
+    if not sections:
+        return []
+    path = write_md("state", date, f"{date}.md",
+                    f"U.S. Department of State Releases · {date}", sections,
+                    extra=["栏目：https://www.state.gov/press-releases/"])
+    if path:
+        log(f"  state: {len(sections)} items -> {os.path.basename(path)}")
+    return [path] if path else []
+
+
+# --------------------------------------------------------------------------- #
 # 编排
 # --------------------------------------------------------------------------- #
 
@@ -407,6 +563,8 @@ SOURCES = {
     "dn": ingest_dn,
     "pbs": ingest_pbs,
     "wh": ingest_whitehouse,
+    "npr": ingest_npr,
+    "state": ingest_state,
 }
 
 # 已定位入口但表单词表未破解，暂挂起（见 README「暂未纳入」表）
