@@ -18,6 +18,7 @@ concurrency:
 jobs:
   crawl:
     runs-on: ubuntu-latest
+    timeout-minutes: 30
     steps:
       - uses: actions/checkout@v4
 
@@ -26,17 +27,23 @@ jobs:
           python-version: "3.12"
 
       - name: Crawl recent days
-        run: python crawler/xwlb.py --recent 7
+        run: python3 crawler/xwlb.py --recent 14
 
       - name: Rebuild index
-        run: python crawler/build_index.py
+        run: python3 crawler/build_index.py
 
       - name: Commit and push
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add -A
-          git commit -m "data: update $(TZ=Asia/Shanghai date +%F)" || echo "nothing to commit"
-          git push
+          git commit -m "data: update $(TZ=Asia/Shanghai date +%F)" || exit 0
+          for i in 1 2 3 4 5; do
+            if git pull --rebase -q origin ${GITHUB_REF_NAME:-main} && git push -q; then exit 0; fi
+            echo "push/rebase 重试 $i"
+            sleep $((i * 5))
+          done
+          echo "::error::push 失败（可能与本地回填或另一路推送撞车）"
+          exit 1
 
 # vim: set yaml ts=2 sw=2:
