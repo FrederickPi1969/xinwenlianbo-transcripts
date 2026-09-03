@@ -89,7 +89,7 @@ def http_get(url, timeout=30, attempts=3):
             if e.code in (403, 429):
                 last_err = f"HTTP {e.code}"
             elif e.code == 404:
-                raise DayNotFound(url)
+                raise DayNotFound(f"HTTP 404: {url}")
             else:
                 last_err = f"HTTP {e.code}"
         except (urllib.error.URLError, TimeoutError, ConnectionError, OSError) as e:
