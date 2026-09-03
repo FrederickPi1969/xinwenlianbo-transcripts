@@ -338,6 +338,36 @@ def daterange(start, end):
         d0 += timedelta(days=1)
 
 
+GOVOPEN_DAY_LINK_RE = re.compile(r'href="/xinwenlianbo/(\d{8})/"')
+
+
+def discover_from_index(start, end):
+    """从 govopendata 月份索引页收集范围内真实存在的日期（升序）。"""
+    d0 = datetime.strptime(start, "%Y%m%d").date()
+    d1 = datetime.strptime(end, "%Y%m%d").date()
+    months = []
+    cur = d0.replace(day=1)
+    while cur <= d1:
+        months.append(cur.strftime("%Y%m"))
+        cur = (cur + timedelta(days=32)).replace(day=1)
+    found = set()
+    for ym in months:
+        url = f"https://cn.govopendata.com/xinwenlianbo/{ym[:4]}/{ym[4:]}/"
+        for attempt in range(3):
+            try:
+                html = http_get(url)
+                found.update(int(d) for d in GOVOPEN_DAY_LINK_RE.findall(html)
+                             if start <= d <= end)
+                log(f"index {ym}: {len(found)} 天（累计）")
+                break
+            except FetchError as e:
+                if attempt == 2:
+                    log(f"index {ym} 获取失败：{e}")
+                else:
+                    time.sleep(3 + random.uniform(0, 3))
+    return [f"{d:08d}" for d in sorted(found)]
+
+
 def parse_args():
     p = argparse.ArgumentParser(description="新闻联播每日文字稿爬虫")
     g = p.add_mutually_exclusive_group(required=True)
@@ -346,6 +376,8 @@ def parse_args():
     g.add_argument("--date", help="抓指定日期 YYYYMMDD")
     g.add_argument("--start", help="范围起始 YYYYMMDD（配合 --end）")
     p.add_argument("--end", help="范围结束 YYYYMMDD")
+    p.add_argument("--from-index", action="store_true",
+                   help="范围模式下先读 govopendata 月份索引，只抓真实存在的日期")
     p.add_argument("--source", choices=("auto", "cctv", "govopendata"), default="auto")
     p.add_argument("--workers", type=int, default=1, help="按天并行度（默认 1）")
     p.add_argument("--force", action="store_true", help="已存在也重新抓取")
@@ -367,6 +399,11 @@ def main():
         if not (args.start and args.end):
             sys.exit("--start 需要 --end")
         days = list(daterange(args.start, args.end))
+        if args.from_index:
+            discovered = discover_from_index(args.start, args.end)
+            before = len(days)
+            days = [d for d in days if d in set(discovered)]
+            log(f"索引发现 {len(discovered)} 天（请求 {before} 天，过滤掉 {before - len(days)} 个不存在日期）")
 
     log(f"待处理 {len(days)} 天：{days[0]} .. {days[-1]}（source={args.source}, workers={args.workers}）")
     fetched, skipped, failed = [], [], []
