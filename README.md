@@ -75,7 +75,36 @@ news/
 
 两套来源互为兜底：任一来源抓取失败或解析结果异常时自动切换另一个。
 
-## 自动更新（双路保险）
+## 全球新闻 Transcript 源（transcripts/）
+
+按审计文档分层纳入**官方可直接下载**的源，统一存放于 `transcripts/<provider>/<YYYY>/`，每 provider 每年一份 `catalogue.json`。抓取器：`crawler/global_daily.py`（零依赖），定时：`.github/workflows/global-daily.yml`（每日 09:40/21:40 UTC，幂等回看 3 天）。
+
+| Provider | 层级 | 入口模式 | 说明 |
+| --- | --- | --- | --- |
+| `cnn` | T1 | `transcripts.cnn.com/date/YYYY-MM-DD` → 逐 show 逐 segment | 官方逐字稿，含 speaker 标签与时间戳；每天一档节目一个文件 |
+| `democracy-now` | T2 | `democracynow.org/shows/Y/M/D` → 逐 story | 官方分段稿；过滤订阅推广段落 |
+| `pbs` | T2 | `pbs.org/newshour/show/<月名>-<D>-<Y>-...-full-episode` → 逐 segment "Read the Full Transcript" | 官方分段稿；官方声明为机器+人工轻度编辑 |
+| `whitehouse` | T1 | `whitehouse.gov/briefings-statements/YYYY/MM/DD/...` | 官方 remarks/statements；无发布的日子为空 |
+
+**审计通过但暂未纳入（工程受阻，可复核后解锁）**：
+
+| 源 | 受阻原因 | 解锁方向 |
+| --- | --- | --- |
+| Reuters World News | 401 bot 拦截（数据中心 IP） | 授权 API 或本地代理路径 |
+| UN Noon Briefing | press.un.org 返回 Client Challenge | 换入口/RSS 或代理 |
+| NPR ME/ATC | transcript 客户端渲染，静态 HTML 无正文 | Content Distribution Service（需 key） |
+| CBC Front Burner | JS 应用（listen 平台），静态无正文 | headless 渲染或官方 API |
+| State.gov briefings | 现政府站点未定位到 briefings 路径 | 复查站点结构 |
+| ABC Australia AM/TWD/PM | 平台迁移至 JS listen 应用 | abc.net.au listen API 逆向 |
+| Akashvani bulletins | WordPress admin-ajax 表单词表未破解（endpoint/nonce 已定位） | 逆向 `filter_bulletins_details` 参数 |
+| FT / NYT The Daily | 付费墙 | 授权订阅会话内合规抓取 |
+
+ABC/NBC/CBS 晚间新闻：按审计维持 Fallback 定位（Internet Archive 闭字幕 / Vanderbilt），不与官方 transcript 混层，未纳入本仓库。
+
+**合规**：所有抓取路径均核对过 robots.txt（未被 Disallow）；各源保持低速率、带 UA、可识别抓取；内容权利归各机构，仓库仅作格式整理与存档，请勿用于再发布/训练等超出授权的用途（同上文数据说明）。
+
+
+## 自动更新（新闻联播 · 双路保险）
 
 数据新鲜度由三层机制共同保证，任一路失效，其余路径可独立撑住：
 
@@ -97,11 +126,16 @@ news/
 零第三方依赖，Python 3.9+ 标准库实现：
 
 ```bash
-python3 crawler/xwlb.py --today                # 抓今天
-python3 crawler/xwlb.py --recent 7             # 补最近 7 天
+python3 crawler/xwlb.py --today                # 新闻联播：抓今天
+python3 crawler/xwlb.py --recent 7             # 新闻联播：补最近 7 天
 python3 crawler/xwlb.py --start 20160330 --end 20161231 --workers 4
 python3 crawler/xwlb.py --date 20070601 --source govopendata
 python3 crawler/build_index.py                 # 重建 catalogue.json 与本 README
+
+python3 crawler/global_daily.py --recent 3     # 全球源：CNN/DN!/PBS/WH
+python3 crawler/global_daily.py --date 2026-09-02 --sources cnn,pbs
+python3 crawler/global_daily.py --start 2026-08-20 --end 2026-09-01
+python3 crawler/global_daily.py --reindex      # 重建 transcripts catalogue
 ```
 
 遵守标准 `HTTPS_PROXY` 环境变量；对源站低速率、带抖动的礼貌抓取。

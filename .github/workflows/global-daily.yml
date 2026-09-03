@@ -1,0 +1,58 @@
+name: global-daily
+
+# 全球源每日抓取：CNN / Democracy Now! / PBS NewsHour / White House。
+# 双时段：09:40 UTC（美国前一日播出内容已就绪）+ 21:40 UTC 兜底；--recent 3 幂等补漏。
+
+on:
+  schedule:
+    - cron: "40 9 * * *"
+    - cron: "40 21 * * *"
+  workflow_dispatch:
+    inputs:
+      date:
+        description: "指定日期 YYYY-MM-DD（缺省=最近 3 天）"
+        required: false
+      days:
+        description: "回看天数（缺省 3）"
+        required: false
+        default: "3"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: global-daily
+  cancel-in-progress: false
+
+jobs:
+  ingest:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Ingest global transcripts
+        run: |
+          if [ -n "${{ inputs.date }}" ]; then
+            python3 crawler/global_daily.py --date "${{ inputs.date }}"
+          else
+            python3 crawler/global_daily.py --recent "${{ inputs.days }}"
+          fi
+
+      - name: Commit and push
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A transcripts
+          git commit -m "data: global transcripts $(TZ=UTC date +%F)" || exit 0
+          for i in 1 2 3 4 5 6; do
+            git rebase --abort 2>/dev/null || true
+            if git pull --rebase -X ours -q origin ${GITHUB_REF_NAME:-main} && git push -q; then exit 0; fi
+            sleep $((i * 5))
+          done
+          echo "::error::push 失败（多写者并发）"
+          exit 1

@@ -1,0 +1,491 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+"""
+全球权威新闻 Transcript 每日抓取（零第三方依赖）。
+
+纳入标准（对应审计文档分层）：
+- cnn            T1  官方整期/分段稿  transcripts.cnn.com/date/YYYY-MM-DD
+- democracy-now  T2  官方分段稿      democracynow.org/shows/Y/M/D
+- pbs            T2  官方分段稿      pbs.org/newshour/show/... "Read the Full Transcript"
+- whitehouse     T1  官方 remarks/statements  whitehouse.gov/briefings-statements/
+- akashvani      T1  官方公报全文     newsonair.gov.in WordPress REST API
+
+明确未纳入（详见 README）：Reuters(401 bot 拦截)、UN(press.un.org Client Challenge)、
+NPR(transcript 客户端渲染)、CBC(JS 应用)、State.gov(未定位到现政府路径)、
+ABC Australia(迁移 JS listen 平台)、FT/NYT(付费墙，需授权会话)。
+
+用法：
+    python3 global_daily.py --today
+    python3 global_daily.py --recent 3
+    python3 global_daily.py --date 2026-09-02
+    python3 global_daily.py --start 2026-08-20 --end 2026-09-02 [--sources cnn,dn]
+输出：transcripts/<provider>/<YYYY>/<YYYY-MM-DD>[__<show>].md + 各 provider 年度 catalogue.json
+"""
+
+import argparse
+import json
+import os
+import re
+import sys
+import time
+from datetime import datetime, timedelta
+from zoneinfo import ZoneInfo
+
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+from xwlb import http_get, strip_html, FetchError, log  # noqa: E402
+
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+OUT_DIR = os.path.join(BASE_DIR, "transcripts")
+TZ = ZoneInfo("UTC")
+
+MIN_CHARS = {"cnn": 4000, "democracy-now": 2500, "pbs": 2500,
+             "whitehouse": 600, "akashvani": 1200}
+
+
+def sleep_a_bit():
+    time.sleep(0.45 + (id(object()) % 100) / 250.0)  # ~0.45-0.85s 抖动
+
+
+def slug(s):
+    s = re.sub(r"[^a-z0-9]+", "-", s.lower()).strip("-")
+    return s[:60] or "untitled"
+
+
+# --------------------------------------------------------------------------- #
+# 写出
+# --------------------------------------------------------------------------- #
+
+def md_header(provider, date, title, extra_lines):
+    return [f"# {title}", "",
+            f"- 数据源：{provider}",
+            f"- 日期：{date}",
+            f"- 抓取时间：{datetime.now(ZoneInfo('UTC')).isoformat(timespec='seconds')}"] + \
+           [f"- {k}" for k in extra_lines] + [""]
+
+
+def write_md(provider, date, filename, title, sections, extra=None, force=False):
+    """sections: list[(heading, text)]；返回路径。"""
+    year = date[:4]
+    d = os.path.join(OUT_DIR, provider, year)
+    os.makedirs(d, exist_ok=True)
+    path = os.path.join(d, filename)
+    if not force and os.path.exists(path) and os.path.getsize(path) > 512:
+        return None
+    lines = md_header(provider, date, title, extra or [])
+    for h, t in sections:
+        lines += [f"## {h}", "", t.strip(), ""]
+    tmp = path + ".tmp"
+    with open(tmp, "w", encoding="utf-8") as fh:
+        fh.write("\n".join(lines).rstrip() + "\n")
+    os.replace(tmp, path)
+    return path
+
+
+def day_total_chars(sections):
+    return sum(len(t) for _, t in sections)
+
+
+# --------------------------------------------------------------------------- #
+# 1. CNN Transcripts
+# --------------------------------------------------------------------------- #
+
+CNN_SEG_RE = re.compile(r'href="(/show/([\w-]+)/date/(\d{4}-\d{2}-\d{2})/segment/(\d+))"')
+
+
+def ingest_cnn(date):
+    base = "https://transcripts.cnn.com"
+    idx_html = http_get(f"{base}/date/{date}")
+    shows = {}  # show_code -> [segment numbers in order]
+    for path, code, d, segno in CNN_SEG_RE.findall(idx_html):
+        if d != date:
+            continue
+        shows.setdefault(code, [])
+        if int(segno) not in shows[code]:
+            shows[code].append(int(segno))
+
+    written = []
+    for code, segs in sorted(shows.items()):
+        segs.sort()
+        sections, show_name = [], code
+        for segno in segs:
+            sleep_a_bit()
+            try:
+                html = http_get(f"{base}/show/{code}/date/{date}/segment/{segno:02d}")
+            except FetchError as e:
+                log(f"  cnn {code} seg{segno} 跳过：{e}")
+                continue
+            m = re.search(r'<p class="cnnTransStoryHead">(.*?)</p>', html, re.S)
+            sub = re.search(r'<p class="cnnTransSubHead">(.*?)</p>', html, re.S)
+            show_name = strip_html(m.group(1)) if m else show_name
+            seg_title = strip_html(sub.group(1)).split(". Aired")[0] if sub else f"Segment {segno}"
+            paras = [strip_html(p) for p in re.findall(r'<p class="cnnBodyText">(.*?)</p>', html, re.S)]
+            body = "\n\n".join(p for p in paras if p and not p.startswith("Aired ")
+                               and "RUSH TRANSCRIPT" not in p)
+            if body:
+                sections.append((f"[{segno:02d}] {seg_title}", body))
+        if not sections:
+            continue
+        path = write_md("cnn", date, f"{date}__{slug(show_name)}.md",
+                        f"CNN {show_name} · {date}", sections,
+                        extra=[f"官方 archive：https://transcripts.cnn.com/show/{code}/date/{date}"],
+                        )
+        if path:
+            written.append(path)
+            log(f"  cnn {code}: {len(sections)} segments -> {os.path.basename(path)}")
+    if not written and not shows:
+        raise FetchError(f"cnn {date}: date index has no shows")
+    return written
+
+
+# --------------------------------------------------------------------------- #
+# 2. Democracy Now!
+# --------------------------------------------------------------------------- #
+
+DN_LINK_RE = re.compile(r'href="(/(\d{4})/(\d{1,2})/(\d{1,2})/([a-z0-9_-]+)/?)"')
+
+DN_JUNK_PREFIXES = ("Sign up for Democracy Now",
+                    "For more information about these services")
+
+
+def dn_clean(paras):
+    """去掉订阅推广与 related-stories 聚合块。"""
+    out = []
+    for p in paras:
+        if p.startswith(DN_JUNK_PREFIXES):
+            continue
+        if len(p) > 1500 and re.search(r"Story\w{3} \d{1,2}, 2026", p):
+            continue
+        out.append(p)
+    return out
+
+
+def ingest_dn(date):
+    y, m, d = date.split("-")
+    show_html = http_get(f"https://www.democracynow.org/shows/{y}/{int(m)}/{int(d)}")
+    if "story" not in show_html and "Headlines" not in show_html:
+        raise FetchError(f"dn {date}: show page looks empty")
+
+    links, seen = [], set()
+    for path, ly, lm, ld, s in DN_LINK_RE.findall(show_html):
+        if (ly, lm, ld) == (y, str(int(m)), str(int(d))) and s not in seen:
+            seen.add(s)
+            links.append(path)
+    if not links:
+        raise FetchError(f"dn {date}: no story links")
+
+    sections = []
+    for path in links:
+        if path.rstrip("/").endswith("/stream"):
+            continue  # 网页专属 stream 页，非播出内容
+        sleep_a_bit()
+        try:
+            html = http_get(f"https://www.democracynow.org{path}")
+        except FetchError as e:
+            log(f"  dn {path} 跳过：{e}")
+            continue
+        tm = re.search(r"<title>(.*?)</title>", html, re.S)
+        title = strip_html(tm.group(1)).replace(" | Democracy Now!", "").strip() if tm \
+            else path.rsplit("/", 1)[-1].replace("_", " ")
+        art = re.search(r"<article[^>]*>(.*?)</article>", html, re.S)
+        body_html = art.group(1) if art else html
+        paras = dn_clean([strip_html(p) for p in re.findall(r"<p[^>]*>(.*?)</p>", body_html, re.S)])
+        text = "\n\n".join(p for p in paras if len(p) > 60)
+        if text:
+            sections.append((title, text))
+    if day_total_chars(sections) < MIN_CHARS["democracy-now"]:
+        raise FetchError(f"dn {date}: too little text ({day_total_chars(sections)} chars)")
+    path = write_md("democracy-now", date, f"{date}.md",
+                    f"Democracy Now! · {date}", sections,
+                    extra=[f"节目页：https://www.democracynow.org/shows/{y}/{int(m)}/{int(d)}"])
+    if path:
+        log(f"  dn: {len(sections)} stories -> {os.path.basename(path)}")
+    return [path] if path else []
+
+
+# --------------------------------------------------------------------------- #
+# 3. PBS NewsHour
+# --------------------------------------------------------------------------- #
+
+MONTHS = ["january", "february", "march", "april", "may", "june", "july",
+          "august", "september", "october", "november", "december"]
+
+
+def pbs_episode_url(date):
+    y, m, d = date.split("-")
+    return (f"https://www.pbs.org/newshour/show/"
+            f"{MONTHS[int(m) - 1]}-{int(d)}-{y}-pbs-news-hour-full-episode")
+
+
+def pbs_discover_episode(date):
+    """确定路径 404 时，从 latest 页发现最近的 full episode 链接。"""
+    try:
+        html = http_get(pbs_episode_url(date))
+        return pbs_episode_url(date), html
+    except FetchError:
+        pass
+    latest = http_get("https://www.pbs.org/newshour/latest")
+    m = re.search(r'href="(https://www\.pbs\.org/newshour/show/[a-z0-9-]*full-episode[a-z0-9-]*)"', latest)
+    if not m:
+        raise FetchError(f"pbs {date}: episode url not found")
+    return m.group(1), http_get(m.group(1))
+
+
+def ingest_pbs(date):
+    url, ep_html = pbs_discover_episode(date)
+    # 校验页面对应的播出日（episode 页含日期文本）
+    y, m, d = date.split("-")
+    if f"{MONTHS[int(m) - 1]} {int(d)}, {y}".lower() not in ep_html.lower():
+        raise FetchError(f"pbs {date}: episode page is for another date")
+
+    seg_links, seen = [], set()
+    for u in re.findall(r'href="(https://www\.pbs\.org/newshour/show/([a-z0-9-]+))"', ep_html):
+        if u[1] not in seen and "full-episode" not in u[1]:
+            seen.add(u[1])
+            seg_links.append(u[0])
+    if not seg_links:
+        raise FetchError(f"pbs {date}: no segment links")
+
+    sections = []
+    for i, u in enumerate(seg_links, 1):
+        sleep_a_bit()
+        try:
+            html = http_get(u)
+        except FetchError as e:
+            log(f"  pbs seg{i} 跳过：{e}")
+            continue
+        tm = re.search(r"<h1[^>]*>(.*?)</h1>", html, re.S)
+        title = strip_html(tm.group(1)) if tm else u.rsplit("/", 1)[-1]
+        # "Read the Full Transcript" 锚点后的正文
+        anchor = re.search(r'Read the Full Transcript', html)
+        if not anchor:
+            continue
+        after = html[anchor.end():anchor.end() + 120000]
+        paras = [strip_html(p) for p in re.findall(r"<p[^>]*>(.*?)</p>", after, re.S)]
+        text = "\n\n".join(p for p in paras if len(p) > 40
+                           and not p.startswith("Notice:"))
+        if text:
+            sections.append((title, text))
+    if day_total_chars(sections) < MIN_CHARS["pbs"]:
+        raise FetchError(f"pbs {date}: too little text ({day_total_chars(sections)} chars)")
+    path = write_md("pbs", date, f"{date}.md", f"PBS NewsHour · {date}", sections,
+                    extra=[f"整期页：{url}"])
+    if path:
+        log(f"  pbs: {len(sections)} segments -> {os.path.basename(path)}")
+    return [path] if path else []
+
+
+# --------------------------------------------------------------------------- #
+# 4. White House briefings / remarks / statements
+# --------------------------------------------------------------------------- #
+
+def ingest_whitehouse(date):
+    y, m, d = date.split("-")
+    urls, seen = [], set()
+    for page in range(1, 6):
+        html = http_get(f"https://www.whitehouse.gov/briefings-statements/page/{page}/")
+        found = re.findall(r'href="(https://www\.whitehouse\.gov/briefings-statements/'
+                           r'(\d{4})/(\d{2})/(\d{2})/[a-z0-9-]+)/?"', html)
+        stop = False
+        for u, ly, lm, ld in found:
+            if u in seen:
+                continue
+            seen.add(u)
+            if (ly, lm, ld) == (y, m, d):
+                urls.append(u)
+            elif (ly, lm, ld) < (y, m, d):
+                stop = True
+        if stop or not found:
+            break
+        sleep_a_bit()
+    if not urls:
+        return []  # 当日无发布，正常情况
+
+    sections = []
+    for u in urls:
+        sleep_a_bit()
+        try:
+            html = http_get(u)
+        except FetchError as e:
+            log(f"  wh 跳过 {u}: {e}")
+            continue
+        tm = re.search(r"<h1[^>]*>(.*?)</h1>", html, re.S)
+        title = strip_html(tm.group(1)) if tm else u.rsplit("/", 1)[-1]
+        art = re.search(r"<article[^>]*>(.*?)</article>", html, re.S)
+        body_html = art.group(1) if art else html
+        paras = [strip_html(p) for p in re.findall(r"<p[^>]*>(.*?)</p>", body_html, re.S)]
+        text = "\n\n".join(p for p in paras if len(p) > 60)
+        if text:
+            sections.append((title, text + f"\n\n> 原文：{u}"))
+    if not sections:
+        return []
+    path = write_md("whitehouse", date, f"{date}.md",
+                    f"White House Briefings & Statements · {date}", sections,
+                    extra=["栏目：https://www.whitehouse.gov/briefings-statements/"])
+    if path:
+        log(f"  wh: {len(sections)} items -> {os.path.basename(path)}")
+    return [path] if path else []
+
+
+# --------------------------------------------------------------------------- #
+# 5. Akashvani National Bulletins（WordPress REST）
+# --------------------------------------------------------------------------- #
+
+AK_TZ = ZoneInfo("Asia/Kolkata")
+
+
+def ingest_akashvani(date):
+    # 1) 找 bulletin 相关分类
+    cats_html = http_get("https://newsonair.gov.in/wp-json/wp/v2/categories?search=bulletin&per_page=20")
+    cats = json.loads(cats_html)
+    cat_ids = [c["id"] for c in cats if "bulletin" in (c.get("name") or "").lower()
+               or "bulletin" in (c.get("slug") or "").lower()]
+    if not cat_ids:
+        raise FetchError("akashvani: bulletin category not found")
+
+    # 2) 按日期取 posts（REST after/before，用 IST 边界）
+    d0 = datetime.fromisoformat(f"{date}T00:00:00").replace(tzinfo=AK_TZ)
+    after = d0.astimezone(ZoneInfo("UTC")).strftime("%Y-%m-%dT%H:%M:%S")
+    before = (d0 + timedelta(days=1)).astimezone(ZoneInfo("UTC")).strftime("%Y-%m-%dT%H:%M:%S")
+    posts = []
+    for page in range(1, 4):
+        url = ("https://newsonair.gov.in/wp-json/wp/v2/posts?"
+               f"categories={','.join(map(str, cat_ids))}"
+               f"&after={after}&before={before}&per_page=50&page={page}&_fields="
+               "id,date,date_gmt,link,title,content")
+        try:
+            batch = json.loads(http_get(url))
+        except FetchError:
+            break
+        if not isinstance(batch, list) or not batch:
+            break
+        posts.extend(batch)
+        if len(batch) < 50:
+            break
+        sleep_a_bit()
+    if not posts:
+        return []
+
+    sections = []
+    for p in sorted(posts, key=lambda x: x["date"]):
+        title = strip_html(p["title"]["rendered"])
+        text = strip_html(p["content"]["rendered"])
+        if len(text) > 200:
+            sections.append((f"{title}", text + f"\n\n> 原文：{p['link']}"))
+    if not sections or day_total_chars(sections) < MIN_CHARS["akashvani"]:
+        return []
+    path = write_md("akashvani", date, f"{date}.md",
+                    f"Akashvani National Bulletins · {date}", sections,
+                    extra=["来源：https://newsonair.gov.in/national-bulletins/",
+                           "注意：REST after/before 按 IST 日期边界过滤"])
+    if path:
+        log(f"  akashvani: {len(sections)} bulletins -> {os.path.basename(path)}")
+    return [path] if path else []
+
+
+# --------------------------------------------------------------------------- #
+# 编排
+# --------------------------------------------------------------------------- #
+
+SOURCES = {
+    "cnn": ingest_cnn,
+    "dn": ingest_dn,
+    "pbs": ingest_pbs,
+    "wh": ingest_whitehouse,
+    "ak": ingest_akashvani,
+}
+
+
+def reindex():
+    """扫描 transcripts/，重建每个 provider 每年的 catalogue.json。"""
+    if not os.path.isdir(OUT_DIR):
+        return
+    for provider in sorted(os.listdir(OUT_DIR)):
+        pdir = os.path.join(OUT_DIR, provider)
+        if not os.path.isdir(pdir):
+            continue
+        for year in sorted(os.listdir(pdir)):
+            ydir = os.path.join(pdir, year)
+            if not (os.path.isdir(ydir) and re.fullmatch(r"(19|20)\d{2}", year)):
+                continue
+            entries = []
+            for fn in sorted(os.listdir(ydir)):
+                if not re.fullmatch(r"\d{4}-\d{2}-\d{2}.*\.md", fn):
+                    continue
+                text = open(os.path.join(ydir, fn), encoding="utf-8").read()
+                headings = re.findall(r"^## (.+)$", text, re.M)
+                entries.append({"file": f"transcripts/{provider}/{year}/{fn}",
+                                "size": len(text), "sections": len(headings),
+                                "titles": headings[:40]})
+            entries.sort(key=lambda e: e["file"], reverse=True)
+            with open(os.path.join(ydir, "catalogue.json"), "w", encoding="utf-8") as fh:
+                json.dump(entries, fh, ensure_ascii=False, indent=1)
+            log(f"  index {provider}/{year}: {len(entries)} files")
+
+
+def daterange(start, end):
+    d0 = datetime.strptime(start, "%Y-%m-%d").date()
+    d1 = datetime.strptime(end, "%Y-%m-%d").date()
+    while d0 <= d1:
+        yield d0.isoformat()
+        d0 += timedelta(days=1)
+
+
+def main():
+    ap = argparse.ArgumentParser(description="全球新闻 transcript 每日抓取")
+    g = ap.add_mutually_exclusive_group(required=True)
+    g.add_argument("--today", action="store_true")
+    g.add_argument("--recent", type=int, metavar="N")
+    g.add_argument("--date")
+    g.add_argument("--start")
+    ap.add_argument("--end")
+    ap.add_argument("--sources", default=",".join(SOURCES),
+                    help=f"逗号分隔：{','.join(SOURCES)}（默认全部）")
+    ap.add_argument("--force", action="store_true")
+    ap.add_argument("--reindex", action="store_true", help="只重建 catalogue.json")
+    args = ap.parse_args()
+
+    if args.reindex:
+        reindex()
+        return 0
+
+    global write_force
+    chosen = [s for s in args.sources.split(",") if s in SOURCES]
+    if not chosen:
+        sys.exit(f"无有效 source；可选：{','.join(SOURCES)}")
+
+    if args.today:
+        days = [datetime.now(ZoneInfo("UTC")).date().isoformat()]
+    elif args.recent is not None:
+        today = datetime.now(ZoneInfo("UTC")).date()
+        days = [(today - timedelta(days=i)).isoformat() for i in range(args.recent - 1, -1, -1)]
+    elif args.date:
+        days = [args.date]
+    else:
+        if not (args.start and args.end):
+            sys.exit("--start 需要 --end")
+        days = list(daterange(args.start, args.end))
+
+    log(f"global: {len(days)} 天 × {len(chosen)} 源：{days[0]} .. {days[-1]}")
+    ok, empty, failed = 0, 0, 0
+    for day in days:
+        for key in chosen:
+            label = f"{key} {day}"
+            try:
+                paths = SOURCES[key](day)
+                if paths:
+                    ok += 1
+                else:
+                    empty += 1
+                    log(f"  {label}: 无内容（正常缺失或已存在跳过）")
+            except FetchError as e:
+                failed += 1
+                log(f"  {label} FAIL {e}")
+    log(f"global 完成：written={ok} empty/skipped={empty} failed={failed}")
+    reindex()
+    if failed and failed == len(days) * len(chosen):
+        sys.exit(1)
+    return 0
+
+
+if __name__ == "__main__":
+    sys.exit(main())
