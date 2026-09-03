@@ -231,8 +231,8 @@ class GovopenParser(HTMLParser):
 def crawl_govopendata(yyyymmdd):
     iso = f"{yyyymmdd[:4]}-{yyyymmdd[4:6]}-{yyyymmdd[6:]}"
     page = http_get(GOVOPEN_DAY_URL.format(date=yyyymmdd))
-    if "content-section" not in page:
-        raise FetchError("govopendata page lacks content-section")
+    if "content-section" not in page and 'class="article-title"' not in page:
+        raise FetchError(f"govopendata EMPTY/BLOCKED: page {len(page)}B without title")
     parser = GovopenParser()
     parser.feed(page)
     items = []
@@ -241,7 +241,11 @@ def crawl_govopendata(yyyymmdd):
         if title and len(content) > 30:
             items.append({"title": title, "content": content, "url": ""})
     if len(items) < 3 or sum(len(i["content"]) for i in items) < 400:
-        raise FetchError(f"govopendata parse suspicious: {len(items)} sections")
+        if 'class="article-title"' in page:
+            # 有标题无正文：源站该日为空壳占位页，重试无意义
+            raise FetchError(f"govopendata EMPTY 404-like: no content for this day")
+        raise FetchError(f"govopendata parse suspicious: {len(items)} sections, "
+                         f"page {len(page)}B")
     return {"abstract": "", "items": items, "source": "govopendata",
             "page": GOVOPEN_DAY_URL.format(date=yyyymmdd), "iso": iso}
 
