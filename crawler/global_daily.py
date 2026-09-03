@@ -210,24 +210,32 @@ MONTHS = ["january", "february", "march", "april", "may", "june", "july",
           "august", "september", "october", "november", "december"]
 
 
-def pbs_episode_url(date):
+def pbs_episode_candidates(date):
     y, m, d = date.split("-")
-    return (f"https://www.pbs.org/newshour/show/"
-            f"{MONTHS[int(m) - 1]}-{int(d)}-{y}-pbs-news-hour-full-episode")
+    base = f"{MONTHS[int(m) - 1]}-{int(d)}-{y}"
+    return [
+        f"https://www.pbs.org/newshour/show/{base}-pbs-news-hour-full-episode",   # 新模板
+        f"https://www.pbs.org/newshour/show/{base}-pbs-newshour-full-episode",   # 旧模板
+        f"https://www.pbs.org/newshour/show/{base}-pbs-newshour",
+    ]
 
 
 def pbs_discover_episode(date):
-    """确定路径 404 时，从 latest 页发现最近的 full episode 链接。"""
-    try:
-        html = http_get(pbs_episode_url(date))
-        return pbs_episode_url(date), html
-    except FetchError:
-        pass
-    latest = http_get("https://www.pbs.org/newshour/latest")
-    m = re.search(r'href="(https://www\.pbs\.org/newshour/show/[a-z0-9-]*full-episode[a-z0-9-]*)"', latest)
-    if not m:
-        raise FetchError(f"pbs {date}: episode url not found")
-    return m.group(1), http_get(m.group(1))
+    """确定性 URL（新旧两种 slug）→ 仅近 7 天才允许回退到 latest 页发现。"""
+    for url in pbs_episode_candidates(date):
+        try:
+            return url, http_get(url)
+        except FetchError:
+            continue
+    from datetime import date as _date
+    today = datetime.now(ZoneInfo("UTC")).date()
+    target = datetime.strptime(date, "%Y-%m-%d").date()
+    if abs((today - target).days) <= 7:
+        latest = http_get("https://www.pbs.org/newshour/latest")
+        m = re.search(r'href="(https://www\.pbs\.org/newshour/show/[a-z0-9-]*full-episode[a-z0-9-]*)"', latest)
+        if m:
+            return m.group(1), http_get(m.group(1))
+    raise FetchError(f"pbs {date}: episode url not found")
 
 
 def ingest_pbs(date):
