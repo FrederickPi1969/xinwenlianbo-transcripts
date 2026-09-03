@@ -292,8 +292,8 @@ def looks_complete(path):
 # 单日编排
 # --------------------------------------------------------------------------- #
 
-def crawl_one_day(yyyymmdd, source="auto", force=False, workers=1):
-    """成功返回 'fetched'|'skipped'；失败抛异常。"""
+def crawl_one_day(yyyymmdd, source="auto", force=False, workers=1, prefer="cctv"):
+    """成功返回 'fetched'|'skipped'；失败抛异常。prefer 决定 auto 模式下先试哪个源。"""
     path = output_path(yyyymmdd)
     if not force and looks_complete(path):
         return "skipped"
@@ -305,6 +305,8 @@ def crawl_one_day(yyyymmdd, source="auto", force=False, workers=1):
         order.append("govopendata")
     if not order:
         raise FetchError(f"{yyyymmdd} 早于央视网可用范围且未选择 govopendata")
+    if prefer == "govopendata":
+        order.reverse()
 
     errors = []
     for src in order:
@@ -379,6 +381,8 @@ def parse_args():
     p.add_argument("--from-index", action="store_true",
                    help="范围模式下先读 govopendata 月份索引，只抓真实存在的日期")
     p.add_argument("--source", choices=("auto", "cctv", "govopendata"), default="auto")
+    p.add_argument("--prefer", choices=("cctv", "govopendata"), default="cctv",
+                   help="auto 模式下优先尝试的源（备份路用 govopendata 以实现异构冗余）")
     p.add_argument("--workers", type=int, default=1, help="按天并行度（默认 1）")
     p.add_argument("--force", action="store_true", help="已存在也重新抓取")
     return p.parse_args()
@@ -410,7 +414,8 @@ def main():
 
     def work(day):
         try:
-            return day, crawl_one_day(day, args.source, args.force, args.workers), None
+            return day, crawl_one_day(day, args.source, args.force, args.workers,
+                                      prefer=args.prefer), None
         except FetchError as e:
             return day, "failed", str(e)
 
