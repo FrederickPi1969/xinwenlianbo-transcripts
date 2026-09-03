@@ -1,0 +1,100 @@
+name: watchdog
+
+# 哨兵路：独立 workflow 文件、独立时段。主路 daily.yml 失效时补救，
+# 补救仍失败则开 Issue 告警（人被 GitHub 通知唤醒），恢复后自动关闭。
+
+on:
+  schedule:
+    # 北京时间 22:35（主路 21:20 失败后的第一次补救）
+    - cron: "35 14 * * *"
+    # 北京时间次日 01:35（主路 00:20 兜底之后的最终核验 + 告警升级）
+    - cron: "35 17 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  issues: write
+
+concurrency:
+  group: watchdog
+  cancel-in-progress: false
+
+jobs:
+  watchdog:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Check and heal
+        id: check
+        continue-on-error: true
+        run: python3 crawler/watchdog.py --heal --prefer cctv
+
+      - name: Rebuild index
+        if: steps.check.outcome == 'failure'
+        run: python3 crawler/build_index.py
+
+      - name: Commit and push (with rebase retry)
+        if: steps.check.outcome == 'failure'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git commit -m "data: watchdog heal $(TZ=Asia/Shanghai date +%F)" || exit 0
+          for i in 1 2 3 4 5; do
+            if git pull --rebase -q origin ${GITHUB_REF_NAME:-main} && git push -q; then exit 0; fi
+            sleep $((i * 5))
+          done
+          echo "::error::push 失败，数据已在本地提交但未推送"
+          exit 1
+
+      - name: Final verdict
+        id: verdict
+        if: always()
+        run: |
+          python3 crawler/watchdog.py --check || echo "stale=true" >> "$GITHUB_OUTPUT"
+          python3 crawler/watchdog.py --check >/dev/null 2>&1 && echo "stale=false" >> "$GITHUB_OUTPUT" || true
+
+      - name: Alert (open issue when still stale)
+        if: always()
+        env:
+          GH_TOKEN: ${{ github.token }}
+          STALE_FLAG: ${{ steps.verdict.outputs.stale }}
+        run: |
+          if [ "$STALE_FLAG" != "true" ]; then
+            echo "数据已恢复或本来就健康，检查是否有遗留告警 Issue 需要关闭"
+            issue=$(gh issue list --label "data-stale" --state open --json number --jq '.[0].number')
+            if [ -n "$issue" ]; then
+              gh issue close "$issue" --comment "✅ 数据已恢复：$(TZ=Asia/Shanghai date '+%F %T') 北京时间（watchdog 自动关闭）"
+            fi
+            exit 0
+          fi
+          body=$(python3 crawler/watchdog.py --check 2>/dev/null | python3 -c "import sys,json;print('```json\n'+sys.stdin.read()+'\n```')")
+          issue=$(gh issue list --label "data-stale" --state open --json number --jq '.[0].number')
+          if [ -n "$issue" ]; then
+            gh issue comment "$issue" --body "⏰ 仍然过期：$(TZ=Asia/Shanghai date '+%F %T') 北京时间
+
+          $body
+
+          - 运行链接：${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+          - 排查建议：手动触发 [daily](../actions/workflows/daily.yml) 与 [watchdog](../actions/workflows/watchdog.yml)；
+            若两源皆被拦，在本机执行备路（govopendata + 代理）watchdog。"
+          else
+            gh issue create \
+              --title "🚨 数据更新中断：新闻联播文字稿落后于预期" \
+              --label "data-stale" \
+              --body "主路（daily.yml, CCTV 优先）与哨兵补救（watchdog.yml）均未能拉到最新数据。
+
+          $body
+
+          - 运行链接：${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+          - 排查建议：手动触发 [daily](../actions/workflows/daily.yml) 与 [watchdog](../actions/workflows/watchdog.yml)；
+            若两源皆被拦，在本机执行备路（govopendata + 代理）watchdog。
+
+          *本 Issue 由 watchdog 自动创建，恢复后会自动关闭。*"
+          fi
