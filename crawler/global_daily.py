@@ -486,10 +486,13 @@ def main():
         days = list(daterange(args.start, args.end))
 
     log(f"global: {len(days)} 天 × {len(chosen)} 源：{days[0]} .. {days[-1]}")
+    WEEKDAY_ONLY = {"dn", "pbs"}  # 周末不播出
     ok, empty, failed = 0, 0, 0
     for day in days:
         for key in chosen:
             label = f"{key} {day}"
+            if key in WEEKDAY_ONLY and datetime.strptime(day, "%Y-%m-%d").weekday() >= 5:
+                continue  # 周末无节目，正常
             try:
                 paths = SOURCES[key](day)
                 if paths:
