@@ -95,7 +95,6 @@ news/
 | `whitehouse` | T1 | `whitehouse.gov/briefings-statements/`（列表 `<time datetime>` 定日期） | 官方 remarks/statements；无发布的日子为空 |
 | `npr` | T2 | `feeds.npr.org/{1001,1002}` + 节目页 → `npr.org/transcripts/<storyId>` | 官方 story transcript（`has-transcript` 才有）；发现路径只覆盖最近几天，深历史需官方 API |
 | `state` | T1 | `state.gov/press-releases/`（collection-result 卡片） | 官方 press statements/remarks；列表可翻至站点起点 |
-| `nhk` | T3 | NHK ONE 前页 JSON-LD → `api.web.nhk/r8/.../nd-*.json` | 日本 NHK 旗舰新闻当日条目（**标题+导语**，全文在登录门内）；RSS 已停更故走内嵌发现 |
 | `aljazeera` | T3 | RSS `aljazeera.com/xml/rss/all.xml` → 静态文章 | 半岛电视台英文（中东视角全球新闻） |
 | `euronews` | T3 | RSS → 静态文章 | 欧洲新闻台（泛欧洲覆盖） |
 | `dw-en` | T3 | RSS `rss.dw.com/rdf/rss-en-all` → 静态文章 | DW 英文主新闻（德国视角） |

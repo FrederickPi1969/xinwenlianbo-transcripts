@@ -686,10 +686,15 @@ def ingest_kbs(date):
         except FetchError as e:
             log(f"  kbs view {seq} 失败：{e}")
             continue
-        paras = [strip_html(p) for p in re.findall(r"<p[^>]*>(.*?)</p>", html, re.S)]
-        text = "\n\n".join(p for p in paras
-                           if len(p) > 80 and not p.startswith("Written:")
-                           and "KBS World" not in p[:30])
+        # 正文是散文本直接放在 body_txt div 内（不包 <p>），取整个 div 再剥标签
+        m = re.search(r'class="body_txt[^"]*"[^>]*>(.*?)(?:<div class="(?:btn|share)|$)', html, re.S)
+        if m:
+            text = strip_html(re.sub(r"(?i)<br\s*/?>", "\n", m.group(1))).strip()
+        else:
+            paras = [strip_html(p) for p in re.findall(r"<p[^>]*>(.*?)</p>", html, re.S)]
+            text = "\n\n".join(p for p in paras if len(p) > 80 and not p.startswith("Written:"))
+        text = "\n".join(ln for ln in text.splitlines()
+                         if len(ln) > 40 and "Photo :" not in ln[:12] and "KBS World" not in ln[:30])
         if text:
             out.append((title, text +
                         f"\n\n> 原文：https://world.kbs.co.kr/service/news_view.htm?lang=e&Seq_Code={seq}"))
@@ -875,11 +880,13 @@ SOURCES = {
     "state": ingest_state,
     "ak": ingest_akashvani,
     "kbs": ingest_kbs,
-    "nhk": ingest_nhk,
     "aljazeera": _make_rss_ingest("aljazeera"),
     "euronews": _make_rss_ingest("euronews"),
     "dw-en": _make_rss_ingest("dw-en"),
 }
+
+# 2026-09-04 裁撤：nhk（NHK ONE 登录门导致全文不可得，仅标题+导语不满足全文标准；
+# RSS 已停更。connector 函数保留，若未来门放开可重启）
 
 
 def reindex():
