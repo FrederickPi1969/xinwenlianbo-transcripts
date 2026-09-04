@@ -28,11 +28,13 @@ import os
 import re
 import sys
 import time
+import urllib.parse
+import urllib.request
 from datetime import datetime, timedelta
 from zoneinfo import ZoneInfo
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-from xwlb import http_get, strip_html, FetchError, log  # noqa: E402
+from xwlb import http_get, strip_html, FetchError, log, UA  # noqa: E402
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 OUT_DIR = os.path.join(BASE_DIR, "transcripts")
@@ -350,60 +352,139 @@ def ingest_whitehouse(date):
     return [path] if path else []
 
 
-# --------------------------------------------------------------------------- #
-# 5. Akashvani National Bulletins（WordPress REST）
-# --------------------------------------------------------------------------- #
-
-AK_TZ = ZoneInfo("Asia/Kolkata")
-
-
-def ingest_akashvani(date):
-    # 1) 找 bulletin 相关分类
-    cats_html = http_get("https://newsonair.gov.in/wp-json/wp/v2/categories?search=bulletin&per_page=20")
-    cats = json.loads(cats_html)
-    cat_ids = [c["id"] for c in cats if "bulletin" in (c.get("name") or "").lower()
-               or "bulletin" in (c.get("slug") or "").lower()]
-    if not cat_ids:
-        raise FetchError("akashvani: bulletin category not found")
-
-    # 2) 按日期取 posts（REST after/before，用 IST 边界）
-    d0 = datetime.fromisoformat(f"{date}T00:00:00").replace(tzinfo=AK_TZ)
-    after = d0.astimezone(ZoneInfo("UTC")).strftime("%Y-%m-%dT%H:%M:%S")
-    before = (d0 + timedelta(days=1)).astimezone(ZoneInfo("UTC")).strftime("%Y-%m-%dT%H:%M:%S")
-    posts = []
-    for page in range(1, 4):
-        url = ("https://newsonair.gov.in/wp-json/wp/v2/posts?"
-               f"categories={','.join(map(str, cat_ids))}"
-               f"&after={after}&before={before}&per_page=50&page={page}&_fields="
-               "id,date,date_gmt,link,title,content")
+def http_post_form(url, data, referer=None, timeout=30):
+    """POST 表单（Akashvani admin-ajax 用）。遵循环境变量代理。"""
+    body = urllib.parse.urlencode(data).encode()
+    headers = {"User-Agent": UA, "Content-Type": "application/x-www-form-urlencoded"}
+    if referer:
+        headers["Referer"] = referer
+    req = urllib.request.Request(url, data=body, headers=headers)
+    last_err = None
+    for attempt in range(3):
         try:
-            batch = json.loads(http_get(url))
-        except FetchError:
-            break
-        if not isinstance(batch, list) or not batch:
-            break
-        posts.extend(batch)
-        if len(batch) < 50:
-            break
-        sleep_a_bit()
-    if not posts:
-        return []
+            with urllib.request.urlopen(req, timeout=timeout) as resp:
+                return resp.read().decode(resp.headers.get_content_charset() or "utf-8", "replace")
+        except (urllib.error.URLError, TimeoutError, ConnectionError, OSError) as e:
+            last_err = type(e).__name__
+            time.sleep(1.5 + attempt)
+    raise FetchError(f"POST {url} -> {last_err}")
 
+
+# --------------------------------------------------------------------------- #
+# 5. Akashvani National Bulletins（bulletins-detail/<cat>-<N>/ 顺序 ID，页内日期权威）
+# --------------------------------------------------------------------------- #
+
+AK_CATEGORIES = ("morning-news", "midday-news", "evening-news")
+AK_ARCHIVE_URL = "https://newsonair.gov.in/bulletins-detail-archive/"
+AK_NONCE_RE = re.compile(r"security: '([a-f0-9]+)'")
+AK_LINK_RE = re.compile(r'href="(https://newsonair\.gov\.in/bulletins-detail/([a-z-]+)-(\d+)/)"')
+AK_DATE_RE = re.compile(r"(January|February|March|April|May|June|July|August|September|October|November|December)\s+(\d{1,2}),\s+(\d{4})")
+
+
+def ak_nonce():
+    page = http_get(AK_ARCHIVE_URL)
+    m = AK_NONCE_RE.search(page)
+    if not m:
+        raise FetchError("akashvani: nonce not found")
+    return m.group(1)
+
+
+def ak_max_ids():
+    """用 7 天 AJAX 查询发现各分类当前最大 ID（AJAX 日期过滤语义不可靠，仅作发现用）。"""
+    nonce = ak_nonce()
+    ids = {}
+    now = datetime.now(ZoneInfo("Asia/Kolkata"))
+    frm = (now - timedelta(days=10)).strftime("%Y-%m-%d")
+    to = now.strftime("%Y-%m-%d")
+    for cat in AK_CATEGORIES:
+        time.sleep(0.4)
+        frag = http_post_form(
+            "https://newsonair.gov.in/wp-admin/admin-ajax.php",
+            {"action": "filter_bulletins_details", "security": nonce,
+             "category": cat, "date_from": frm, "date_to": to, "paged": 1},
+            referer=AK_ARCHIVE_URL)
+        for _, c, n in AK_LINK_RE.findall(frag):
+            ids[c] = max(ids.get(c, 0), int(n))
+    if not ids:
+        raise FetchError("akashvani: max-id discovery failed")
+    return ids
+
+
+def ak_fetch_bulletin(cat, n):
+    """抓单条公报，返回 (date_iso, title, text, url) 或 None。"""
+    url = f"https://newsonair.gov.in/bulletins-detail/{cat}-{n}/"
+    try:
+        html = http_get(url)
+    except FetchError:
+        return None
+    dm = AK_DATE_RE.search(html)
+    if not dm:
+        return None
+    d_iso = datetime.strptime(f"{dm.group(1)} {dm.group(2)} {dm.group(3)}",
+                              "%B %d %Y").date().isoformat()
+    tm = re.search(r"<title>([^<]*)</title>", html)
+    title = tm.group(1).replace(" | Akashvani News", "").strip() if tm else cat
+    m = re.search(r'class="[^"]*(entry-content|single-content|post-content|detail-content)[^"]*"'
+                  r"[^>]*>(.*?)(</article|<footer)", html, re.S)
+    body_html = m.group(2) if m else html
+    paras = [strip_html(p) for p in re.findall(r"<p[^>]*>(.*?)</p>", body_html, re.S)]
+    text = "\n\n".join(p for p in paras if len(p) > 60)
+    if not text:
+        return None
+    return d_iso, title, text, url
+
+
+def ak_write_day(buckets, date):
     sections = []
-    for p in sorted(posts, key=lambda x: x["date"]):
-        title = strip_html(p["title"]["rendered"])
-        text = strip_html(p["content"]["rendered"])
-        if len(text) > 200:
-            sections.append((f"{title}", text + f"\n\n> 原文：{p['link']}"))
+    for cat in AK_CATEGORIES:
+        for (d_iso, title, text, url) in sorted(buckets.get(cat, [])):
+            if d_iso == date:
+                sections.append((title, text + f"\n\n> 原文：{url}"))
     if not sections or day_total_chars(sections) < MIN_CHARS["akashvani"]:
-        return []
-    path = write_md("akashvani", date, f"{date}.md",
+        return None
+    return write_md("akashvani", date, f"{date}.md",
                     f"Akashvani National Bulletins · {date}", sections,
-                    extra=["来源：https://newsonair.gov.in/national-bulletins/",
-                           "注意：REST after/before 按 IST 日期边界过滤"])
+                    extra=["来源：https://newsonair.gov.in/bulletins-detail-archive/",
+                           "分类：morning/midday/evening-news（英语公报）",
+                           "方法：顺序 ID 直爬，公报日期以页面为准"])
+
+
+def ingest_akashvani(date, window=25):
+    """日常模式：扫各分类 [max-window, max+2] 的 ID 窗口，按页内日期分桶。"""
+    maxids = ak_max_ids()
+    log(f"  ak max ids: {maxids}")
+    buckets = {}
+    for cat, mx in maxids.items():
+        for n in range(max(1, mx - window), mx + 3):
+            time.sleep(0.35)
+            got = ak_fetch_bulletin(cat, n)
+            if got:
+                buckets.setdefault(cat, []).append(got)
+    path = ak_write_day(buckets, date)
     if path:
-        log(f"  akashvani: {len(sections)} bulletins -> {os.path.basename(path)}")
+        log(f"  akashvani: {date} -> {os.path.basename(path)}")
     return [path] if path else []
+
+
+def ak_backfill_full():
+    """全量回填：各分类从 ID 1 走到当前 max。幂等（已存在日期跳过写入）。"""
+    maxids = ak_max_ids()
+    log(f"  ak full walk max ids: {maxids}")
+    buckets = {}
+    for cat, mx in maxids.items():
+        for n in range(1, mx + 1):
+            time.sleep(0.3)
+            got = ak_fetch_bulletin(cat, n)
+            if got:
+                buckets.setdefault(cat, []).append(got)
+            if n % 100 == 0:
+                log(f"  ak {cat}: {n}/{mx}")
+    dates = {d for lst in buckets.values() for (d, *_ ) in lst}
+    written = 0
+    for d in sorted(dates):
+        if ak_write_day(buckets, d):
+            written += 1
+    log(f"  ak full: {len(dates)} 天，新写 {written} 天")
 
 
 # --------------------------------------------------------------------------- #
@@ -573,10 +654,6 @@ SOURCES = {
     "wh": ingest_whitehouse,
     "npr": ingest_npr,
     "state": ingest_state,
-}
-
-# 已定位入口但表单词表未破解，暂挂起（见 README「暂未纳入」表）
-PENDING_SOURCES = {
     "ak": ingest_akashvani,
 }
 
@@ -628,9 +705,16 @@ def main():
                     help=f"逗号分隔：{','.join(SOURCES)}（默认全部）")
     ap.add_argument("--force", action="store_true")
     ap.add_argument("--reindex", action="store_true", help="只重建 catalogue.json")
+    ap.add_argument("--ak-full", action="store_true",
+                    help="Akashvani 全量回填（按 ID 序列走完各分类）")
     args = ap.parse_args()
 
     if args.reindex:
+        reindex()
+        return 0
+
+    if args.ak_full:
+        ak_backfill_full()
         reindex()
         return 0
 
