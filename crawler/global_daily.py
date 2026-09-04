@@ -40,6 +40,8 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 OUT_DIR = os.path.join(BASE_DIR, "transcripts")
 TZ = ZoneInfo("UTC")
 
+FORCE = False  # CLI --force 全局接线
+
 MIN_CHARS = {"cnn": 4000, "democracy-now": 2500, "pbs": 2500,
              "whitehouse": 600, "akashvani": 1200}
 
@@ -66,12 +68,12 @@ def md_header(provider, date, title, extra_lines):
 
 
 def write_md(provider, date, filename, title, sections, extra=None, force=False):
-    """sections: list[(heading, text)]；返回路径。"""
+    """sections: list[(heading, text)]；返回路径。force 或模块级 FORCE 时覆盖。"""
     year = date[:4]
     d = os.path.join(OUT_DIR, provider, year)
     os.makedirs(d, exist_ok=True)
     path = os.path.join(d, filename)
-    if not force and os.path.exists(path) and os.path.getsize(path) > 512:
+    if not (force or FORCE) and os.path.exists(path) and os.path.getsize(path) > 512:
         return None
     lines = md_header(provider, date, title, extra or [])
     for h, t in sections:
@@ -949,7 +951,8 @@ def main():
         reindex()
         return 0
 
-    global write_force
+    global FORCE
+    FORCE = args.force
     chosen = [s for s in args.sources.split(",") if s in SOURCES]
     if not chosen:
         sys.exit(f"无有效 source；可选：{','.join(SOURCES)}")
