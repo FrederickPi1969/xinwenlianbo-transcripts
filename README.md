@@ -96,11 +96,10 @@ news/
 | `npr` | T2 | `feeds.npr.org/{1001,1002}` + 节目页 → `npr.org/transcripts/<storyId>` | 官方 story transcript（`has-transcript` 才有）；发现路径只覆盖最近几天，深历史需官方 API |
 | `state` | T1 | `state.gov/press-releases/`（collection-result 卡片） | 官方 press statements/remarks；列表可翻至站点起点 |
 | `kbs` | T3 | `world.kbs.co.kr/service/news_list.htm`（静态站） | KBS WORLD Radio 英文新闻（配音频 written_news）；直连 |
-| `dw` | T3 | `learngerman.dw.com/de/<DDMMYYYY>-langsam.../a-N` | DW 每日慢速德语新闻配稿（paired_script，周一至周六）；jina 渲染 + ULSCAR 兜底 |
 | `un` | T1 | `press.un.org/en/<YYYY>/db<YYMMDD>.doc.htm`（双镜像） | UN 秘书长发言人午间简报 near-verbatim 全文；**经 Endeavor ULSCAR opencli 渲染**；历史 2022 前后起；仅 Cosmos 端运行 |
-| `yle` | T3 | `yle.fi/uutiset/osasto/selkouutiset/` 首页全文捕获 | 简明芬兰语新闻（paired_script）；ULSCAR 渲染；仅当日 |
-| `arirang` | T3 | `arirang.com/news` 首页多篇文章 | 韩国国际台英文新闻；ULSCAR jina 渲染；仅当日 |
 | `akashvani` | T1 | `newsonair.gov.in/bulletins-detail/<cat>-<N>/`（顺序 ID + 页面日期权威分桶） | 印度 AIR 英语公报（morning/midday/evening）；存档 2023-10 起；`--ak-full` 全量回填 |
+
+**已裁撤（2026-09-04，价值/成本不匹配，connector 保留可随时重启）**：Yle Selkouutiset（易读芬兰语，~2KB/天）、Arirang 首页捕获（薄且不稳）、DW 慢速德语（语言学习节目，~5KB/天）。
 
 **审计通过但暂未纳入（2026-09-04 直连 + proxy 双重复测）**：
 

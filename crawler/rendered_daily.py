@@ -281,7 +281,10 @@ def ingest_dw(date):
 # 编排
 # --------------------------------------------------------------------------- #
 
-SOURCES = {"un": ingest_un, "yle": ingest_yle, "arirang": ingest_arirang, "dw": ingest_dw}
+SOURCES = {"un": ingest_un}
+
+# 已裁撤（2026-09-04）：yle/arirang/dw 为易读语言产品或薄捕获，价值不匹配维护成本；
+# connector 函数保留在文件中，重新启用只需把键加回 SOURCES。
 
 
 def daterange(start, end):
