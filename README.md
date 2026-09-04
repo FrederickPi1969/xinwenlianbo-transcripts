@@ -101,7 +101,6 @@ news/
 | DW slow news | 站点改版后为 JS 壳（列表/正文客户端渲染） | headless 或官方 API |
 | CBC Front Burner | transcript 索引页可达，但 episode 页与 audio-api 均为 Next.js HTML 壳 | 逆向 listen 数据接口 |
 | ABC Australia AM/TWD/PM | 平台迁移 abc.net.au/listen（JS），listen API 404 | 逆向 listen 数据接口 |
-| Akashvani bulletins | `admin-ajax.php action=filter_bulletins_details` + nonce 已定位，表单词表未破解 | 逆向参数 |
 | NHK NEWS WEB EASY / Yle Selkouutiset / Arirang / VOA LE 每日区 | 首页为 JS 壳或文章列表客户端渲染，无静态链接 | headless/JSON API |
 | FT / NYT The Daily | 付费墙（T1-L 定位） | 授权订阅会话 |
 | KBS WORLD | 版权页明确限制复制/分发/AI 训练 | 需先审权，默认不采 |
