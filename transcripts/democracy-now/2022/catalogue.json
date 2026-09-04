@@ -1,5 +1,933 @@
 [
  {
+  "file": "transcripts/democracy-now/2022/2022-12-30.md",
+  "size": 7750,
+  "sections": 1,
+  "titles": [
+   "Headlines for December 30, 2022"
+  ]
+ },
+ {
+  "file": "transcripts/democracy-now/2022/2022-12-29.md",
+  "size": 10520,
+  "sections": 1,
+  "titles": [
+   "Headlines for December 29, 2022"
+  ]
+ },
+ {
+  "file": "transcripts/democracy-now/2022/2022-12-28.md",
+  "size": 7537,
+  "sections": 1,
+  "titles": [
+   "Headlines for December 28, 2022"
+  ]
+ },
+ {
+  "file": "transcripts/democracy-now/2022/2022-12-27.md",
+  "size": 9029,
+  "sections": 1,
+  "titles": [
+   "Headlines for December 27, 2022"
+  ]
+ },
+ {
+  "file": "transcripts/democracy-now/2022/2022-12-23.md",
+  "size": 8748,
+  "sections": 1,
+  "titles": [
+   "Headlines for December 23, 2022"
+  ]
+ },
+ {
+  "file": "transcripts/democracy-now/2022/2022-12-22.md",
+  "size": 10812,
+  "sections": 1,
+  "titles": [
+   "Headlines for December 22, 2022"
+  ]
+ },
+ {
+  "file": "transcripts/democracy-now/2022/2022-12-21.md",
+  "size": 8169,
+  "sections": 1,
+  "titles": [
+   "Headlines for December 21, 2022"
+  ]
+ },
+ {
+  "file": "transcripts/democracy-now/2022/2022-12-20.md",
+  "size": 10418,
+  "sections": 1,
+  "titles": [
+   "Headlines for December 20, 2022"
+  ]
+ },
+ {
+  "file": "transcripts/democracy-now/2022/2022-12-19.md",
+  "size": 11246,
+  "sections": 1,
+  "titles": [
+   "Headlines for December 19, 2022"
+  ]
+ },
+ {
+  "file": "transcripts/democracy-now/2022/2022-12-16.md",
+  "size": 11214,
+  "sections": 1,
+  "titles": [
+   "Headlines for December 16, 2022"
+  ]
+ },
+ {
+  "file": "transcripts/democracy-now/2022/2022-12-15.md",
+  "size": 9051,
+  "sections": 1,
+  "titles": [
+   "Headlines for December 15, 2022"
+  ]
+ },
+ {
+  "file": "transcripts/democracy-now/2022/2022-12-14.md",
+  "size": 8686,
+  "sections": 1,
+  "titles": [
+   "Headlines for December 14, 2022"
+  ]
+ },
+ {
+  "file": "transcripts/democracy-now/2022/2022-12-13.md",
+  "size": 10148,
+  "sections": 1,
+  "titles": [
+   "Headlines for December 13, 2022"
+  ]
+ },
+ {
+  "file": "transcripts/democracy-now/2022/2022-12-12.md",
+  "size": 7893,
+  "sections": 1,
+  "titles": [
+   "Headlines for December 12, 2022"
+  ]
+ },
+ {
+  "file": "transcripts/democracy-now/2022/2022-12-09.md",
+  "size": 11084,
+  "sections": 1,
+  "titles": [
+   "Headlines for December 09, 2022"
+  ]
+ },
+ {
+  "file": "transcripts/democracy-now/2022/2022-12-08.md",
+  "size": 8086,
+  "sections": 1,
+  "titles": [
+   "Headlines for December 08, 2022"
+  ]
+ },
+ {
+  "file": "transcripts/democracy-now/2022/2022-12-07.md",
+  "size": 8780,
+  "sections": 1,
+  "titles": [
+   "Headlines for December 07, 2022"
+  ]
+ },
+ {
+  "file": "transcripts/democracy-now/2022/2022-12-06.md",
+  "size": 9891,
+  "sections": 1,
+  "titles": [
+   "Headlines for December 06, 2022"
+  ]
+ },
+ {
+  "file": "transcripts/democracy-now/2022/2022-12-05.md",
+  "size": 11775,
+  "sections": 1,
+  "titles": [
+   "Headlines for December 05, 2022"
+  ]
+ },
+ {
+  "file": "transcripts/democracy-now/2022/2022-12-02.md",
+  "size": 7420,
+  "sections": 1,
+  "titles": [
+   "Headlines for December 02, 2022"
+  ]
+ },
+ {
+  "file": "transcripts/democracy-now/2022/2022-12-01.md",
+  "size": 9620,
+  "sections": 1,
+  "titles": [
+   "Headlines for December 01, 2022"
+  ]
+ },
+ {
+  "file": "transcripts/democracy-now/2022/2022-11-30.md",
+  "size": 9105,
+  "sections": 1,
+  "titles": [
+   "Headlines for November 30, 2022"
+  ]
+ },
+ {
+  "file": "transcripts/democracy-now/2022/2022-11-29.md",
+  "size": 10738,
+  "sections": 1,
+  "titles": [
+   "Headlines for November 29, 2022"
+  ]
+ },
+ {
+  "file": "transcripts/democracy-now/2022/2022-11-28.md",
+  "size": 10743,
+  "sections": 1,
+  "titles": [
+   "Headlines for November 28, 2022"
+  ]
+ },
+ {
+  "file": "transcripts/democracy-now/2022/2022-11-23.md",
+  "size": 8131,
+  "sections": 1,
+  "titles": [
+   "Headlines for November 23, 2022"
+  ]
+ },
+ {
+  "file": "transcripts/democracy-now/2022/2022-11-22.md",
+  "size": 8201,
+  "sections": 1,
+  "titles": [
+   "Headlines for November 22, 2022"
+  ]
+ },
+ {
+  "file": "transcripts/democracy-now/2022/2022-11-21.md",
+  "size": 10368,
+  "sections": 1,
+  "titles": [
+   "Headlines for November 21, 2022"
+  ]
+ },
+ {
+  "file": "transcripts/democracy-now/2022/2022-11-18.md",
+  "size": 8614,
+  "sections": 1,
+  "titles": [
+   "Headlines for November 18, 2022"
+  ]
+ },
+ {
+  "file": "transcripts/democracy-now/2022/2022-11-17.md",
+  "size": 8854,
+  "sections": 1,
+  "titles": [
+   "Headlines for November 17, 2022"
+  ]
+ },
+ {
+  "file": "transcripts/democracy-now/2022/2022-11-16.md",
+  "size": 8833,
+  "sections": 1,
+  "titles": [
+   "Headlines for November 16, 2022"
+  ]
+ },
+ {
+  "file": "transcripts/democracy-now/2022/2022-11-15.md",
+  "size": 10949,
+  "sections": 1,
+  "titles": [
+   "Headlines for November 15, 2022"
+  ]
+ },
+ {
+  "file": "transcripts/democracy-now/2022/2022-11-14.md",
+  "size": 10328,
+  "sections": 1,
+  "titles": [
+   "Headlines for November 14, 2022"
+  ]
+ },
+ {
+  "file": "transcripts/democracy-now/2022/2022-11-11.md",
+  "size": 11496,
+  "sections": 1,
+  "titles": [
+   "Headlines for November 11, 2022"
+  ]
+ },
+ {
+  "file": "transcripts/democracy-now/2022/2022-11-10.md",
+  "size": 11103,
+  "sections": 1,
+  "titles": [
+   "Headlines for November 10, 2022"
+  ]
+ },
+ {
+  "file": "transcripts/democracy-now/2022/2022-11-09.md",
+  "size": 12041,
+  "sections": 1,
+  "titles": [
+   "Headlines for November 09, 2022"
+  ]
+ },
+ {
+  "file": "transcripts/democracy-now/2022/2022-11-08.md",
+  "size": 7221,
+  "sections": 1,
+  "titles": [
+   "Headlines for November 08, 2022"
+  ]
+ },
+ {
+  "file": "transcripts/democracy-now/2022/2022-11-07.md",
+  "size": 10802,
+  "sections": 1,
+  "titles": [
+   "Headlines for November 07, 2022"
+  ]
+ },
+ {
+  "file": "transcripts/democracy-now/2022/2022-11-04.md",
+  "size": 8238,
+  "sections": 1,
+  "titles": [
+   "Headlines for November 04, 2022"
+  ]
+ },
+ {
+  "file": "transcripts/democracy-now/2022/2022-11-03.md",
+  "size": 11115,
+  "sections": 1,
+  "titles": [
+   "Headlines for November 03, 2022"
+  ]
+ },
+ {
+  "file": "transcripts/democracy-now/2022/2022-11-02.md",
+  "size": 10610,
+  "sections": 1,
+  "titles": [
+   "Headlines for November 02, 2022"
+  ]
+ },
+ {
+  "file": "transcripts/democracy-now/2022/2022-11-01.md",
+  "size": 10107,
+  "sections": 1,
+  "titles": [
+   "Headlines for November 01, 2022"
+  ]
+ },
+ {
+  "file": "transcripts/democracy-now/2022/2022-10-31.md",
+  "size": 10855,
+  "sections": 1,
+  "titles": [
+   "Headlines for October 31, 2022"
+  ]
+ },
+ {
+  "file": "transcripts/democracy-now/2022/2022-10-28.md",
+  "size": 10329,
+  "sections": 1,
+  "titles": [
+   "Headlines for October 28, 2022"
+  ]
+ },
+ {
+  "file": "transcripts/democracy-now/2022/2022-10-27.md",
+  "size": 9014,
+  "sections": 1,
+  "titles": [
+   "Headlines for October 27, 2022"
+  ]
+ },
+ {
+  "file": "transcripts/democracy-now/2022/2022-10-26.md",
+  "size": 9847,
+  "sections": 1,
+  "titles": [
+   "Headlines for October 26, 2022"
+  ]
+ },
+ {
+  "file": "transcripts/democracy-now/2022/2022-10-25.md",
+  "size": 11893,
+  "sections": 1,
+  "titles": [
+   "Headlines for October 25, 2022"
+  ]
+ },
+ {
+  "file": "transcripts/democracy-now/2022/2022-10-24.md",
+  "size": 9631,
+  "sections": 1,
+  "titles": [
+   "Headlines for October 24, 2022"
+  ]
+ },
+ {
+  "file": "transcripts/democracy-now/2022/2022-10-21.md",
+  "size": 8168,
+  "sections": 1,
+  "titles": [
+   "Headlines for October 21, 2022"
+  ]
+ },
+ {
+  "file": "transcripts/democracy-now/2022/2022-10-20.md",
+  "size": 12409,
+  "sections": 1,
+  "titles": [
+   "Headlines for October 20, 2022"
+  ]
+ },
+ {
+  "file": "transcripts/democracy-now/2022/2022-10-19.md",
+  "size": 9961,
+  "sections": 1,
+  "titles": [
+   "Headlines for October 19, 2022"
+  ]
+ },
+ {
+  "file": "transcripts/democracy-now/2022/2022-10-18.md",
+  "size": 10775,
+  "sections": 1,
+  "titles": [
+   "Headlines for October 18, 2022"
+  ]
+ },
+ {
+  "file": "transcripts/democracy-now/2022/2022-10-17.md",
+  "size": 9142,
+  "sections": 1,
+  "titles": [
+   "Headlines for October 17, 2022"
+  ]
+ },
+ {
+  "file": "transcripts/democracy-now/2022/2022-10-14.md",
+  "size": 10172,
+  "sections": 1,
+  "titles": [
+   "Headlines for October 14, 2022"
+  ]
+ },
+ {
+  "file": "transcripts/democracy-now/2022/2022-10-13.md",
+  "size": 9467,
+  "sections": 1,
+  "titles": [
+   "Headlines for October 13, 2022"
+  ]
+ },
+ {
+  "file": "transcripts/democracy-now/2022/2022-10-12.md",
+  "size": 8353,
+  "sections": 1,
+  "titles": [
+   "Headlines for October 12, 2022"
+  ]
+ },
+ {
+  "file": "transcripts/democracy-now/2022/2022-10-11.md",
+  "size": 10372,
+  "sections": 1,
+  "titles": [
+   "Headlines for October 11, 2022"
+  ]
+ },
+ {
+  "file": "transcripts/democracy-now/2022/2022-10-10.md",
+  "size": 8242,
+  "sections": 1,
+  "titles": [
+   "Headlines for October 10, 2022"
+  ]
+ },
+ {
+  "file": "transcripts/democracy-now/2022/2022-10-06.md",
+  "size": 10989,
+  "sections": 1,
+  "titles": [
+   "Headlines for October 06, 2022"
+  ]
+ },
+ {
+  "file": "transcripts/democracy-now/2022/2022-10-05.md",
+  "size": 9579,
+  "sections": 1,
+  "titles": [
+   "Headlines for October 05, 2022"
+  ]
+ },
+ {
+  "file": "transcripts/democracy-now/2022/2022-10-04.md",
+  "size": 9879,
+  "sections": 1,
+  "titles": [
+   "Headlines for October 04, 2022"
+  ]
+ },
+ {
+  "file": "transcripts/democracy-now/2022/2022-10-03.md",
+  "size": 8578,
+  "sections": 1,
+  "titles": [
+   "Headlines for October 03, 2022"
+  ]
+ },
+ {
+  "file": "transcripts/democracy-now/2022/2022-09-30.md",
+  "size": 10274,
+  "sections": 1,
+  "titles": [
+   "Headlines for September 30, 2022"
+  ]
+ },
+ {
+  "file": "transcripts/democracy-now/2022/2022-09-29.md",
+  "size": 11541,
+  "sections": 1,
+  "titles": [
+   "Headlines for September 29, 2022"
+  ]
+ },
+ {
+  "file": "transcripts/democracy-now/2022/2022-09-28.md",
+  "size": 8889,
+  "sections": 1,
+  "titles": [
+   "Headlines for September 28, 2022"
+  ]
+ },
+ {
+  "file": "transcripts/democracy-now/2022/2022-09-27.md",
+  "size": 8553,
+  "sections": 1,
+  "titles": [
+   "Headlines for September 27, 2022"
+  ]
+ },
+ {
+  "file": "transcripts/democracy-now/2022/2022-09-26.md",
+  "size": 11922,
+  "sections": 1,
+  "titles": [
+   "Headlines for September 26, 2022"
+  ]
+ },
+ {
+  "file": "transcripts/democracy-now/2022/2022-09-23.md",
+  "size": 9503,
+  "sections": 1,
+  "titles": [
+   "Headlines for September 23, 2022"
+  ]
+ },
+ {
+  "file": "transcripts/democracy-now/2022/2022-09-22.md",
+  "size": 7849,
+  "sections": 1,
+  "titles": [
+   "Headlines for September 22, 2022"
+  ]
+ },
+ {
+  "file": "transcripts/democracy-now/2022/2022-09-21.md",
+  "size": 8806,
+  "sections": 1,
+  "titles": [
+   "Headlines for September 21, 2022"
+  ]
+ },
+ {
+  "file": "transcripts/democracy-now/2022/2022-09-20.md",
+  "size": 9204,
+  "sections": 1,
+  "titles": [
+   "Headlines for September 20, 2022"
+  ]
+ },
+ {
+  "file": "transcripts/democracy-now/2022/2022-09-19.md",
+  "size": 11486,
+  "sections": 1,
+  "titles": [
+   "Headlines for September 19, 2022"
+  ]
+ },
+ {
+  "file": "transcripts/democracy-now/2022/2022-09-16.md",
+  "size": 11514,
+  "sections": 1,
+  "titles": [
+   "Headlines for September 16, 2022"
+  ]
+ },
+ {
+  "file": "transcripts/democracy-now/2022/2022-09-15.md",
+  "size": 7912,
+  "sections": 1,
+  "titles": [
+   "Headlines for September 15, 2022"
+  ]
+ },
+ {
+  "file": "transcripts/democracy-now/2022/2022-09-14.md",
+  "size": 8878,
+  "sections": 1,
+  "titles": [
+   "Headlines for September 14, 2022"
+  ]
+ },
+ {
+  "file": "transcripts/democracy-now/2022/2022-09-13.md",
+  "size": 8917,
+  "sections": 1,
+  "titles": [
+   "Headlines for September 13, 2022"
+  ]
+ },
+ {
+  "file": "transcripts/democracy-now/2022/2022-09-12.md",
+  "size": 8639,
+  "sections": 1,
+  "titles": [
+   "Headlines for September 12, 2022"
+  ]
+ },
+ {
+  "file": "transcripts/democracy-now/2022/2022-09-09.md",
+  "size": 10631,
+  "sections": 1,
+  "titles": [
+   "Headlines for September 09, 2022"
+  ]
+ },
+ {
+  "file": "transcripts/democracy-now/2022/2022-09-08.md",
+  "size": 9236,
+  "sections": 1,
+  "titles": [
+   "Headlines for September 08, 2022"
+  ]
+ },
+ {
+  "file": "transcripts/democracy-now/2022/2022-09-07.md",
+  "size": 8313,
+  "sections": 1,
+  "titles": [
+   "Headlines for September 07, 2022"
+  ]
+ },
+ {
+  "file": "transcripts/democracy-now/2022/2022-09-06.md",
+  "size": 11822,
+  "sections": 1,
+  "titles": [
+   "Headlines for September 06, 2022"
+  ]
+ },
+ {
+  "file": "transcripts/democracy-now/2022/2022-09-02.md",
+  "size": 11314,
+  "sections": 1,
+  "titles": [
+   "Headlines for September 02, 2022"
+  ]
+ },
+ {
+  "file": "transcripts/democracy-now/2022/2022-09-01.md",
+  "size": 8795,
+  "sections": 1,
+  "titles": [
+   "Headlines for September 01, 2022"
+  ]
+ },
+ {
+  "file": "transcripts/democracy-now/2022/2022-08-31.md",
+  "size": 8226,
+  "sections": 1,
+  "titles": [
+   "Headlines for August 31, 2022"
+  ]
+ },
+ {
+  "file": "transcripts/democracy-now/2022/2022-08-30.md",
+  "size": 9696,
+  "sections": 1,
+  "titles": [
+   "Headlines for August 30, 2022"
+  ]
+ },
+ {
+  "file": "transcripts/democracy-now/2022/2022-08-29.md",
+  "size": 8909,
+  "sections": 1,
+  "titles": [
+   "Headlines for August 29, 2022"
+  ]
+ },
+ {
+  "file": "transcripts/democracy-now/2022/2022-08-26.md",
+  "size": 10845,
+  "sections": 1,
+  "titles": [
+   "Headlines for August 26, 2022"
+  ]
+ },
+ {
+  "file": "transcripts/democracy-now/2022/2022-08-25.md",
+  "size": 9066,
+  "sections": 1,
+  "titles": [
+   "Headlines for August 25, 2022"
+  ]
+ },
+ {
+  "file": "transcripts/democracy-now/2022/2022-08-24.md",
+  "size": 10811,
+  "sections": 1,
+  "titles": [
+   "Headlines for August 24, 2022"
+  ]
+ },
+ {
+  "file": "transcripts/democracy-now/2022/2022-08-23.md",
+  "size": 8983,
+  "sections": 1,
+  "titles": [
+   "Headlines for August 23, 2022"
+  ]
+ },
+ {
+  "file": "transcripts/democracy-now/2022/2022-08-22.md",
+  "size": 9365,
+  "sections": 1,
+  "titles": [
+   "Headlines for August 22, 2022"
+  ]
+ },
+ {
+  "file": "transcripts/democracy-now/2022/2022-08-19.md",
+  "size": 10223,
+  "sections": 1,
+  "titles": [
+   "Headlines for August 19, 2022"
+  ]
+ },
+ {
+  "file": "transcripts/democracy-now/2022/2022-08-18.md",
+  "size": 7928,
+  "sections": 1,
+  "titles": [
+   "Headlines for August 18, 2022"
+  ]
+ },
+ {
+  "file": "transcripts/democracy-now/2022/2022-08-17.md",
+  "size": 9282,
+  "sections": 1,
+  "titles": [
+   "Headlines for August 17, 2022"
+  ]
+ },
+ {
+  "file": "transcripts/democracy-now/2022/2022-08-16.md",
+  "size": 9247,
+  "sections": 1,
+  "titles": [
+   "Headlines for August 16, 2022"
+  ]
+ },
+ {
+  "file": "transcripts/democracy-now/2022/2022-08-15.md",
+  "size": 11912,
+  "sections": 1,
+  "titles": [
+   "Headlines for August 15, 2022"
+  ]
+ },
+ {
+  "file": "transcripts/democracy-now/2022/2022-08-11.md",
+  "size": 7650,
+  "sections": 1,
+  "titles": [
+   "Headlines for August 11, 2022"
+  ]
+ },
+ {
+  "file": "transcripts/democracy-now/2022/2022-08-10.md",
+  "size": 10147,
+  "sections": 1,
+  "titles": [
+   "Headlines for August 10, 2022"
+  ]
+ },
+ {
+  "file": "transcripts/democracy-now/2022/2022-08-09.md",
+  "size": 8314,
+  "sections": 1,
+  "titles": [
+   "Headlines for August 09, 2022"
+  ]
+ },
+ {
+  "file": "transcripts/democracy-now/2022/2022-08-08.md",
+  "size": 9930,
+  "sections": 1,
+  "titles": [
+   "Headlines for August 08, 2022"
+  ]
+ },
+ {
+  "file": "transcripts/democracy-now/2022/2022-08-05.md",
+  "size": 9645,
+  "sections": 1,
+  "titles": [
+   "Headlines for August 05, 2022"
+  ]
+ },
+ {
+  "file": "transcripts/democracy-now/2022/2022-08-04.md",
+  "size": 10489,
+  "sections": 1,
+  "titles": [
+   "Headlines for August 04, 2022"
+  ]
+ },
+ {
+  "file": "transcripts/democracy-now/2022/2022-08-03.md",
+  "size": 8379,
+  "sections": 1,
+  "titles": [
+   "Headlines for August 03, 2022"
+  ]
+ },
+ {
+  "file": "transcripts/democracy-now/2022/2022-08-02.md",
+  "size": 9586,
+  "sections": 1,
+  "titles": [
+   "Headlines for August 02, 2022"
+  ]
+ },
+ {
+  "file": "transcripts/democracy-now/2022/2022-08-01.md",
+  "size": 7816,
+  "sections": 1,
+  "titles": [
+   "Headlines for August 01, 2022"
+  ]
+ },
+ {
+  "file": "transcripts/democracy-now/2022/2022-07-29.md",
+  "size": 9755,
+  "sections": 1,
+  "titles": [
+   "Headlines for July 29, 2022"
+  ]
+ },
+ {
+  "file": "transcripts/democracy-now/2022/2022-07-28.md",
+  "size": 9053,
+  "sections": 1,
+  "titles": [
+   "Headlines for July 28, 2022"
+  ]
+ },
+ {
+  "file": "transcripts/democracy-now/2022/2022-07-27.md",
+  "size": 8968,
+  "sections": 1,
+  "titles": [
+   "Headlines for July 27, 2022"
+  ]
+ },
+ {
+  "file": "transcripts/democracy-now/2022/2022-07-25.md",
+  "size": 9427,
+  "sections": 1,
+  "titles": [
+   "Headlines for July 25, 2022"
+  ]
+ },
+ {
+  "file": "transcripts/democracy-now/2022/2022-07-22.md",
+  "size": 9871,
+  "sections": 1,
+  "titles": [
+   "Headlines for July 22, 2022"
+  ]
+ },
+ {
+  "file": "transcripts/democracy-now/2022/2022-07-21.md",
+  "size": 12891,
+  "sections": 1,
+  "titles": [
+   "Headlines for July 21, 2022"
+  ]
+ },
+ {
+  "file": "transcripts/democracy-now/2022/2022-07-20.md",
+  "size": 8870,
+  "sections": 1,
+  "titles": [
+   "Headlines for July 20, 2022"
+  ]
+ },
+ {
+  "file": "transcripts/democracy-now/2022/2022-07-19.md",
+  "size": 9997,
+  "sections": 1,
+  "titles": [
+   "Headlines for July 19, 2022"
+  ]
+ },
+ {
+  "file": "transcripts/democracy-now/2022/2022-07-18.md",
+  "size": 11240,
+  "sections": 1,
+  "titles": [
+   "Headlines for July 18, 2022"
+  ]
+ },
+ {
+  "file": "transcripts/democracy-now/2022/2022-07-15.md",
+  "size": 8987,
+  "sections": 1,
+  "titles": [
+   "Headlines for July 15, 2022"
+  ]
+ },
+ {
+  "file": "transcripts/democracy-now/2022/2022-07-14.md",
+  "size": 8302,
+  "sections": 1,
+  "titles": [
+   "Headlines for July 14, 2022"
+  ]
+ },
+ {
+  "file": "transcripts/democracy-now/2022/2022-07-13.md",
+  "size": 9736,
+  "sections": 1,
+  "titles": [
+   "Headlines for July 13, 2022"
+  ]
+ },
+ {
   "file": "transcripts/democracy-now/2022/2022-07-12.md",
   "size": 8636,
   "sections": 1,

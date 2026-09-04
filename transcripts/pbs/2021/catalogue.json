@@ -1,5 +1,1856 @@
 [
  {
+  "file": "transcripts/pbs/2021/2021-12-31.md",
+  "size": 52179,
+  "sections": 9,
+  "titles": [
+   "Photojournalists share the stories behind images that defined 2021",
+   "Is it safe to gather for New Year's Eve? Here's what one doctor recommends",
+   "These quilts weave together America's rich, complicated history",
+   "Betty White's career spanned six decades. Here are its best moments",
+   "You can thank Mozart for the taste of this wine",
+   "Brooks and Capehart on how American democracy fared in 2021, and their hopes for 2022",
+   "Many Afghan refugees, including unaccompanied minors, remain in legal limbo in the U.S.",
+   "What we know about the 'devastating' Colorado fires",
+   "News Wrap: World rings in second pandemic New Year"
+  ]
+ },
+ {
+  "file": "transcripts/pbs/2021/2021-12-30.md",
+  "size": 53130,
+  "sections": 8,
+  "titles": [
+   "NewsHour viewers reflect on the grief, gratitude and hope they experienced in 2021",
+   "The best reads of 2021",
+   "Turkey's expanding militarized zones in Iraq raise fears of invasion, frustrate civilians",
+   "One former foster child's simple approach to fixing a broken system",
+   "2021 set a record for anti-transgender bills. Here's how you can support the community",
+   "'I know who I am': Transgender youth on the value of support, respect for their identities",
+   "Biden urged de-escalation in call with Putin, but officials still fear Ukraine invasion",
+   "News Wrap: NYC's scaled-back New Year's celebrations to proceed as planned, de Blasio says"
+  ]
+ },
+ {
+  "file": "transcripts/pbs/2021/2021-12-29.md",
+  "size": 54041,
+  "sections": 8,
+  "titles": [
+   "How prosecutors proved Ghislaine Maxwell was Epstein's 'enabler-in-chief'",
+   "Remembering NFL legend John Madden and his contributions to the game",
+   "The Republican Party is paying millions for Trump's legal bills. Here's why",
+   "Why the TANF program fails as a safety net for single mothers, other vulnerable Americans",
+   "A look at the life and legacy of Senate titan and Democratic firebrand Harry Reid",
+   "Hong Kong's pro-democracy leaders urge the West to 'step up' amid raids on free press",
+   "News Wrap: Biden, Putin to hold another video conference amid Ukraine tensions:",
+   "U.S. sees rise in pediatric COVID patients as WHO warns of global 'tsunami' of cases"
+  ]
+ },
+ {
+  "file": "transcripts/pbs/2021/2021-12-28.md",
+  "size": 53001,
+  "sections": 7,
+  "titles": [
+   "Texas doctor reflects on the lessons and loss in 2021",
+   "Armed group in Iraq demands U.S. forces withdraw by end of 2021, threatens violence",
+   "What's behind rising homelessness in America?",
+   "Why lumber costs fluctuated drastically during the pandemic, and how it affects inflation",
+   "How Russia is trying to control history in bid for geo-political strength",
+   "Understanding the new CDC guidelines for those exposed to, or suffering from, COVID-19",
+   "News Wrap: NYC public schools to open Jan. 3 with expanded testing"
+  ]
+ },
+ {
+  "file": "transcripts/pbs/2021/2021-12-27.md",
+  "size": 50398,
+  "sections": 7,
+  "titles": [
+   "Not sure what to watch? Start with our picks for 2021's best movies and TV shows",
+   "Psychologist reveals the best way schools, students can prepare to respond to shootings",
+   "Amy Walter and Asma Khalid on the omicron variant, inflation and Dem agenda",
+   "'My humanity is caught up in yours' : How Desmond Tutu dedicated his life to greater good",
+   "Myanmar military 'fighting for its life' in face of 'unprecedented' resistance to coup",
+   "Why the CDC reduced COVID quarantine time despite omicron's spread",
+   "News Wrap: Winter storm slams Northern California, Nevada"
+  ]
+ },
+ {
+  "file": "transcripts/pbs/2021/2021-12-24.md",
+  "size": 53299,
+  "sections": 8,
+  "titles": [
+   "U.S. service members perform 'Feliz Navidad'",
+   "How the pandemic helped bring artistic dreams to life",
+   "Brooks and Capehart on Democrats' legislative setbacks, Biden's pandemic response",
+   "The barriers to reentering society after prison",
+   "NASA's James Webb telescope poised to launch new golden age of astronomy",
+   "Why a judge rejected a settlement with the Sackler family for their role in opioid crisis",
+   "News Wrap: Huge storm system dumps snow, heavy rain on much of western U.S.",
+   "COVID-19 spreads holiday misery, as canceled flights strand thousands on Christmas Eve"
+  ]
+ },
+ {
+  "file": "transcripts/pbs/2021/2021-12-23.md",
+  "size": 49707,
+  "sections": 6,
+  "titles": [
+   "Joan Didion's nephew reflects on her legacy and inspirations: 'Life was her material'",
+   "A closer look at Russia-Ukraine tensions and the potential for successful diplomacy",
+   "Supreme Court to hear arguments on two vaccine mandates. Here's what to expect",
+   "News Wrap: Biden administration to invest $241M to improve ports, ease inflation",
+   "Americans face COVID testing lags ahead of holidays: 'We're very, very far behind'",
+   "How the guilty verdict in the Kim Potter trial could influence police reform"
+  ]
+ },
+ {
+  "file": "transcripts/pbs/2021/2021-12-22.md",
+  "size": 52363,
+  "sections": 7,
+  "titles": [
+   "Artist Shimon Attie uses urban, contemporary inspirations to tell refugee stories",
+   "Tigrayan forces announce retreat, but Ethiopia rejects peace overture",
+   "What Hartford has learned in its fight to raise Black vaccination rates",
+   "Frustrated health workers dread expected rise in COVID hospitalizations: 'We're exhausted'",
+   "What you need to know about the extended student loan payment pause, child tax credit",
+   "Rep. Bowman on the progressive response to Manchin's Build Back Better backtrack",
+   "News Wrap: Nearly $100B in COVID relief was stolen, Secret Service says"
+  ]
+ },
+ {
+  "file": "transcripts/pbs/2021/2021-12-21.md",
+  "size": 51035,
+  "sections": 9,
+  "titles": [
+   "A chef's Brief But Spectacular take on using food to create hope after disasters",
+   "How this Black theater group is using art as a tool to 'awaken' people",
+   "Sen. Duckworth on legislation to improve airline handling of mobility, medical devices",
+   "'This chair gives me my life back' : Disabled passengers beg airlines to handle with care",
+   "Virus resurgence in Europe triggers new restrictions amid vocal opposition",
+   "Moderate Dem. coalition chair on the consensus, flashpoints in Biden social spending bill",
+   "News Wrap: U.S. population growth hits lowest recorded rate",
+   "Dr. Walensky on the omicron variant, testing, vaccines and mask rules",
+   "Biden vows to ramp up testing, boost other health systems in response to omicron wave"
+  ]
+ },
+ {
+  "file": "transcripts/pbs/2021/2021-12-20.md",
+  "size": 51434,
+  "sections": 6,
+  "titles": [
+   "Dr. Collins reflects on career at NIH, COVID response effort, work on genome sequencing",
+   "What we've learned from the Ghislaine Maxwell trial",
+   "Tamara Keith and Amy Walter on Build Back Better setback, omicron's spread",
+   "News Wrap: Jury begins deliberations in Kim Potter trial over Daunte Wright shooting",
+   "Manchin rejects Build Back Better bill over 'inexcusable' differences with White House",
+   "Vaccines reduce hospitalizations, but slow testing and rapid omicron spread worry experts"
+  ]
+ },
+ {
+  "file": "transcripts/pbs/2021/2021-12-17.md",
+  "size": 51397,
+  "sections": 8,
+  "titles": [
+   "Grammy nominee Brandi Carlile on her comeuppance and the industry barriers she still faces",
+   "Brooks and Capehart on Trump's 'Big Lie,' Meadows' text messages, Biden domestic agenda",
+   "Exhaustive fact check finds little evidence of voter fraud, but 2020's 'Big Lie' lives on",
+   "South Africa reels under omicron wave amid vaccine lag, pans 'rushed' travel ban",
+   "Why the toys your child wants for Christmas may be out of stock",
+   "Dems reconsider tweaking filibuster as immigration, voting rights plans get stonewalled",
+   "News Wrap: Pfizer forecasts COVID-19 pandemic will last until 2024",
+   "Defense rests after Kim Potter's teary testimony in trial over Daunte Wright killing"
+  ]
+ },
+ {
+  "file": "transcripts/pbs/2021/2021-12-16.md",
+  "size": 50101,
+  "sections": 7,
+  "titles": [
+   "Exhibit showcases work of a forgotten photographer who documented the fight for equality",
+   "Biden awards Medals of Honor to three soldiers. Here's a closer look at their lives",
+   "How Italian ski resorts are trying to reopen safely using vaccine passports",
+   "Why a website with explicit directions for suicide remains active",
+   "Democrats wrangle over high-stakes agenda as crunch time approaches",
+   "News Wrap: Death toll rises to 75 after Kentucky tornadoes, 16 still missing",
+   "As the holiday season nears, concerns of a resurgent virus are growing"
+  ]
+ },
+ {
+  "file": "transcripts/pbs/2021/2021-12-15.md",
+  "size": 50917,
+  "sections": 8,
+  "titles": [
+   "Remembering bell hooks and her enormous legacy",
+   "Three experts on U.S. role and response options in Taiwan-China conflict",
+   "Mountaineer group aims to become first all-Black team to climb Everest",
+   "Melting of the Thwaites Glacier could rewrite the global coastline",
+   "What we know about the severity of omicron and possibility of 'triple whammy' this winter",
+   "News Wrap: Senate approves $770B defense spending bill",
+   "Biden surveys tornado damage in Kentucky as affected communities continue cleanup efforts",
+   "Why the Fed will raise interest rates in 2022, and how soon consumers will feel hikes"
+  ]
+ },
+ {
+  "file": "transcripts/pbs/2021/2021-12-14.md",
+  "size": 55068,
+  "sections": 8,
+  "titles": [
+   "'The Korean Vegan' cookbook is an immigrant story told through food",
+   "What's behind vacant ambassadorial posts under the Biden admin, and why it's a problem",
+   "How negligence, systemic issues lead to civilian casualties from U.S. airstrikes",
+   "The link between climate change and tornadoes is unclear. Here's what we know so far",
+   "How Fox News personalities amplified divisions, disinformation around Jan. 6",
+   "What the Jan. 6 panel hopes to learn from Meadows, and how executive privilege affects it",
+   "News Wrap: At least 60 dead after gas tanker explosion in Haiti",
+   "Tornado-hit communities brace for long-term mental health, financial impact of disaster"
+  ]
+ },
+ {
+  "file": "transcripts/pbs/2021/2021-12-13.md",
+  "size": 53157,
+  "sections": 8,
+  "titles": [
+   "Tamara Keith and Amy Walter on Jan. 6 investigation, abortion",
+   "Do safe drug consumption sites save lives? Here's what we know about NYC's new venture",
+   "Moise assassination may be linked to what he knew about Haitian drugs, arms trafficking",
+   "Older Americans make up a majority of COVID deaths. They are falling behind on boosters",
+   "Why the $380 million settlement in gymnast sexual abuse suit is just a start",
+   "News Wrap: Supreme Court declines to block New York vaccine mandate for health workers",
+   "How officials, 'everyday heroes' are supporting recovery efforts in Kentucky",
+   "Rescue and recovery efforts underway in Kentucky, other states hit by tornadoes"
+  ]
+ },
+ {
+  "file": "transcripts/pbs/2021/2021-12-10.md",
+  "size": 48418,
+  "sections": 7,
+  "titles": [
+   "Brooks and Capehart on Bob Dole legacy, threats to democracy, inflation",
+   "How Bob Dole's family, friends, and former colleagues remember him",
+   "Nobel Peace Prize winner Maria Ressa on the importance of a free press",
+   "Three experts on why democracies are facing growing threats globally",
+   "How the WH plans to tackle inflation, and how the Build Back Better bill may ease pressure",
+   "News Wrap: At least 54 dead in migrant truck crash in Mexico",
+   "How the Supreme Court's ruling on Texas abortion law could affect reproductive rights"
+  ]
+ },
+ {
+  "file": "transcripts/pbs/2021/2021-12-09.md",
+  "size": 54554,
+  "sections": 7,
+  "titles": [
+   "'Woke Racism' tackles anti-racism, performative action and its effect on Black Americans",
+   "Why PFAS are so impervious, and who is most at risk from the forever chemicals",
+   "Despite strong vaccination rate, Vermont sees COVID spike amid booster shot lag",
+   "Gen. McKenzie on U.S. policy, commitments and action in the Middle East and Asia",
+   "How a 'mass movement' based on election lies is threatening American democracy",
+   "Busy day for Biden tackling global state of democracy, COVID-19 and domestic policy",
+   "News Wrap: CDC, FDA expand booster availability to 16- and 17-year-olds"
+  ]
+ },
+ {
+  "file": "transcripts/pbs/2021/2021-12-08.md",
+  "size": 53267,
+  "sections": 8,
+  "titles": [
+   "A preacher and caregiver's Brief But Spectacular take on helping people",
+   "Sen. Thune: Vaccine mandates will have 'countereffect,' must be overturned to save jobs",
+   "The U.S. debt ceiling, explained",
+   "As some hail bill to counter military sexual assault, others decry 'missed opportunity'",
+   "Afghanistan is on the brink of mass starvation. Where is international aid?",
+   "As ex-officer faces trial in Daunte Wright killing, many worry systemic change unlikely",
+   "Supreme Court mulls church-state separation again in religious school funding case",
+   "News Wrap: Pfizer says booster offers protection against omicron variant"
+  ]
+ },
+ {
+  "file": "transcripts/pbs/2021/2021-12-07.md",
+  "size": 52523,
+  "sections": 7,
+  "titles": [
+   "Alex Gibney's 'The Forever Prisoner' reveals CIA torture tactics",
+   "Navy's water contamination flub in Hawaii follows 8 years of warning signs",
+   "Historically denied 'pivotal' loans, Black farmers still struggle to get support",
+   "Why Meadows will not cooperate with Jan. 6 panel, and what it means for the investigation",
+   "What we know about Congress' unusual solution to the debt ceiling disagreement",
+   "Biden made consequences of Ukraine invasion 'crystal clear' in call with Russia's Putin",
+   "News Wrap: U.S. will 'pay the price' for Beijing Olympics boycott, China says"
+  ]
+ },
+ {
+  "file": "transcripts/pbs/2021/2021-12-06.md",
+  "size": 50974,
+  "sections": 7,
+  "titles": [
+   "Tamara Keith and Amy Walter on Bob Dole, Georgia Gov. race, rising COVID cases",
+   "A look at the life and legacy of former GOP Majority Leader, presidential nominee Bob Dole",
+   "Pope urges compassion toward migrants in Lesbos, but doesn't openly condemn Greek pushback",
+   "VA Sec. McDonough on benefits for veterans exposed to burn pits, preventing vet suicide",
+   "How the diplomatic boycott of the Beijing Olympics may play out for the U.S.",
+   "Could omicron lead to more breakthrough COVID cases? Here's what we know",
+   "News Wrap: Tensions over Ukraine run high ahead of Biden-Putin call"
+  ]
+ },
+ {
+  "file": "transcripts/pbs/2021/2021-12-03.md",
+  "size": 44020,
+  "sections": 7,
+  "titles": [
+   "Actor André De Shields's Brief But Spectacular take on living his most authentic life",
+   "Brooks and Capehart on the future of abortion rights, government funding brinkmanship",
+   "Analyzing the shipping backlog from one of America's busiest ports",
+   "NIH director on the spread of the omicron variant amid the ongoing pandemic",
+   "News Wrap: Biden signs short-term spending bill, averting government shutdown",
+   "How Michigan educators are talking to students about the Oxford school shooting",
+   "'All kinds of red flags' as parents of accused Michigan high school shooter are charged"
+  ]
+ },
+ {
+  "file": "transcripts/pbs/2021/2021-12-02.md",
+  "size": 45770,
+  "sections": 8,
+  "titles": [
+   "A Brief But Spectacular take on talking to children about sex",
+   "Why artist Sanford Biggers remixes different forms, styles of art to express himself",
+   "Last-minute temporary funding deal may help U.S. government avoid shutdown",
+   "Dozens of suburban Detroit schools close amid threats after high school shooting",
+   "Sen. Durbin on deal to avoid shutdown, debt ceiling debate, Build Back Better bill",
+   "Does South Africa's COVID uptick signal greater threat from omicron? Here's what we know",
+   "News Wrap: Biden to re-implement Trump-era 'Remain in Mexico' asylum policy",
+   "U.S. launches new effort to fight omicron variant's spread with 'science and speed'"
+  ]
+ },
+ {
+  "file": "transcripts/pbs/2021/2021-12-01.md",
+  "size": 44367,
+  "sections": 8,
+  "titles": [
+   "Collective voice of disability community captured by new song, 'Spaces'",
+   "Officials pessimistic about agreement between U.S. and Iran amid tense talks",
+   "Vaccinated Americans reflect on breakthrough infections, 'infuriating' anti-vaccine views",
+   "India extends door-to-door vaccine campaign as omicron variant worries officials",
+   "What early evidence tells us about omicron, and how it may affect need for booster shots",
+   "News Wrap: Fourth student dies after Michigan school shooting, suspect charged with murder",
+   "U.S. to release new rules for foreign travelers amid growing concerns over omicron variant",
+   "Why the Supreme Court may reverse Roe in Mississippi abortion ban case"
+  ]
+ },
+ {
+  "file": "transcripts/pbs/2021/2021-11-30.md",
+  "size": 42071,
+  "sections": 6,
+  "titles": [
+   "How Judy Baca's murals help recover history through 'public memory'",
+   "How new revelations in the Elizabeth Holmes fraud trial reflect on Silicon Valley",
+   "How pregnant Americans may be affected by Supreme Court ruling on Mississippi abortion law",
+   "Government shutdown, Build Back Better bill, bigotry and other issues at stake in Congress",
+   "News Wrap: 3 dead, 8 injured in Michigan school shooting",
+   "Will the omicron variant require a new vaccine? An expert weighs in"
+  ]
+ },
+ {
+  "file": "transcripts/pbs/2021/2021-11-29.md",
+  "size": 44296,
+  "sections": 7,
+  "titles": [
+   "Remembering Virgil Abloh and how his path-blazing career influenced the fashion industry",
+   "How 'The 1619 Project' underscores connection between slavery and modern America",
+   "Tamara Keith and Amy Walter on omicron variant, Build Back Better bill, midterm elections",
+   "How unresolved grief could haunt children who lost a parent or caregiver to COVID",
+   "News Wrap: Iran presses for end to U.S. sanctions at nuclear talks",
+   "Dr. Fauci on the omicron variant, testing and travel",
+   "How the world is responding to the omicron variant"
+  ]
+ },
+ {
+  "file": "transcripts/pbs/2021/2021-11-26.md",
+  "size": 50825,
+  "sections": 6,
+  "titles": [
+   "Remembering the life and legacy of Stephen Sondheim, a giant in musical theater",
+   "Brooks and Capehart on new COVID-19 variant, inflation, Ahmaud Arbery verdict",
+   "Unrelenting drought leaves millions who rely on Colorado River facing an uncertain future",
+   "Why dozens of men spent most of their lives in prison after Louisiana reneged on plea deal",
+   "News Wrap: Ukraine president implicates Russia in plot to overthrow the government",
+   "Alarm grows after emergence of new omicron COVID-19 variant. Here's what you need to know"
+  ]
+ },
+ {
+  "file": "transcripts/pbs/2021/2021-11-25.md",
+  "size": 50256,
+  "sections": 8,
+  "titles": [
+   "Work of master painter Titian reunited for the first time in more than 400 years",
+   "Former head of Saudi intelligence recounts America's longstanding ties to Afghanistan",
+   "How broken faith in American institutions is creating a 'rising sense of fury'",
+   "Why cultural and political divides in the U.S. seem to be getting worse",
+   "Investigators probe utility company PG&E's role in California wildfire",
+   "Voices of gratitude on Thanksgiving Day amid the ongoing pandemic",
+   "Rising grocery prices put pressure on millions of Americans already facing food insecurity",
+   "News Wrap: Europe's COVID-19 surge raises new alarms"
+  ]
+ },
+ {
+  "file": "transcripts/pbs/2021/2021-11-24.md",
+  "size": 52014,
+  "sections": 8,
+  "titles": [
+   "Poet recounts ups and downs of the pandemic — on a literal rollercoaster",
+   "A history of how lucky turkeys came to earn presidential pardons",
+   "New book dives into problematic treatment of Black players, staff in professional sports",
+   "Dems control the House by only 3 seats. Here's how redistricting efforts could affect that",
+   "Can asteroids be veered away from Earth? New NASA spacecraft aims to find out",
+   "Migrants used as pawns in E.U.'s geopolitical tug-of-war return home traumatized",
+   "News Wrap: U.S. Thanksgiving travel nears pre-pandemic levels",
+   "Men who killed Arbery to also face federal hate crime charges. Here's what to expect"
+  ]
+ },
+ {
+  "file": "transcripts/pbs/2021/2021-11-23.md",
+  "size": 53901,
+  "sections": 7,
+  "titles": [
+   "New documentary highlights plight of missing Black women and why their cases go ignored",
+   "Vaccinating minority communities remains a challenge amid rise in COVID cases",
+   "How some school districts are coping with staff shortages, other pandemic disruptions",
+   "Why Russia may end its 'unstable ceasefire' with Ukraine, and how U.S. politics affects it",
+   "What the 'Unite the Right' trial reveals about white nationalism in the U.S.",
+   "News Wrap: Jury begins deliberating in Ahmaud Arbery trial",
+   "How tapping strategic oil reserve will affect U.S. gas prices, OPEC+"
+  ]
+ },
+ {
+  "file": "transcripts/pbs/2021/2021-11-22.md",
+  "size": 50898,
+  "sections": 8,
+  "titles": [
+   "How friendly experiments led Robert Plant and Alison Krauss to record 'Raise the Roof'",
+   "Tamara Keith and Amy Walter on Trumpism, Biden approval rating, Rittenhouse verdict",
+   "Chris Christie urges Republicans to drop election lies, conspiracies: 'This has to stop'",
+   "How the self-defense argument played out in Rittenhouse, Arbery trials",
+   "E.U. braces for tough winter as citizens protest COVID restrictions",
+   "A second Powell term will make economy run 'hotter,' expert says. Here's what that means",
+   "News Wrap: Former Trump attorney Michael Cohen completes prison sentence",
+   "What we know about the Waukesha Christmas parade crash"
+  ]
+ },
+ {
+  "file": "transcripts/pbs/2021/2021-11-19.md",
+  "size": 50618,
+  "sections": 6,
+  "titles": [
+   "Capehart and Abernathy on Rittenhouse acquittal, Build Back Better bill",
+   "Exonerated but not supported, the wrongfully convicted struggle to heal their 'wounds'",
+   "COVID boosters and what you need to know before holiday gatherings",
+   "Child care, climate change and other provisions in Build Back Better bill passed by House",
+   "News Wrap: 'Unite the Right' trial jury begins deliberations in Virginia",
+   "Does the Rittenhouse acquittal set a precedent? Two experts weigh in"
+  ]
+ },
+ {
+  "file": "transcripts/pbs/2021/2021-11-18.md",
+  "size": 48377,
+  "sections": 7,
+  "titles": [
+   "With House on the cusp of passing Build Back Better bill, big Senate fight expected",
+   "Rep. Escobar on immigration, inflation and key issues addressed by Build Back Better bill",
+   "Prison offers little to ease domestic violence trauma. This program tries to fill the gaps",
+   "Why Malcolm X's murder was revisited, and what exonerations say about U.S. justice system",
+   "Culture of silence, fear and government corruption exacerbate Honduras' drug problem",
+   "How the pandemic is contributing to alarming rise in opioid overdose deaths",
+   "News Wrap: Defense rests in Ahmaud Arbery murder trial"
+  ]
+ },
+ {
+  "file": "transcripts/pbs/2021/2021-11-17.md",
+  "size": 52662,
+  "sections": 9,
+  "titles": [
+   "What we know about tennis star Peng Shuai and China's censorship of the #MeToo movement",
+   "How arrest records become 'invisible handcuffs' that keep people unemployed",
+   "How the COVAX vaccine program is faring, and what challenges developing nations still face",
+   "The Build Back Better bill wants to lower prescription drug costs. Does it go far enough?",
+   "Georgia's murder statute and how the Ahmaud Arbery trial may play out",
+   "Gosar censure shows Dem. 'double standard,' Rep. Malliotakis says",
+   "Rep. Gosar censured over anime video that depicted violence against Democrats",
+   "Heavy rains flood and isolate parts of U.S. Pacific Northwest, Canada",
+   "News Wrap: Overdose deaths hit record high during the pandemic"
+  ]
+ },
+ {
+  "file": "transcripts/pbs/2021/2021-11-16.md",
+  "size": 50947,
+  "sections": 7,
+  "titles": [
+   "'Buried past' of America's first Koreatown uncovered in California's Riverside",
+   "America's prison population is aging, but care options for older parolees remain limited",
+   "'All eyes on Cuba' : How Cuban Americans see U.S. role in Cuba's struggle for democracy",
+   "Aid groups struggle to continue humanitarian aid for starving, injured Afghans",
+   "Key miscalculations that impacted inflation, and how Biden's spending bill could affect it",
+   "Nuclear weapons, Taiwan and other key issues addressed on Biden-Xi call",
+   "News Wrap: Pfizer seeks emergency use authorization for its pill to treat COVID-19"
+  ]
+ },
+ {
+  "file": "transcripts/pbs/2021/2021-11-15.md",
+  "size": 54097,
+  "sections": 8,
+  "titles": [
+   "Journalist Andrea Elliott's Brief But Spectacular take on seeing the unseen",
+   "What undecided parents need to know about the COVID vaccine for kids",
+   "Tamara Keith and Lisa Lerer on infrastructure law, Bannon indictment, Leahy retirement",
+   "After decades in prison, finding new life mentoring at-risk youth",
+   "What we know about a 2019 U.S. airstrike in Syria and its alleged cover-up",
+   "News Wrap: Trump ally Steve Bannon appears in court on contempt charges",
+   "2 mayors on how and when new infrastructure law will help their cities",
+   "The historic investments in the new infrastructure law and how they could affect inflation"
+  ]
+ },
+ {
+  "file": "transcripts/pbs/2021/2021-11-12.md",
+  "size": 51834,
+  "sections": 7,
+  "titles": [
+   "'Internet will open my eyes' : Bringing broadband to rural Alaska",
+   "How Henry Kissinger mastered careful diplomacy in the Middle East",
+   "Capehart and Abernathy on congressional bipartisanship, inflation, redistricting",
+   "What Aaron Rodgers' controversy tells us about vaccine skepticism in professional sports",
+   "U.N. says Ethiopia to ease blockade of aid for Tigray, but no official agreement in sight",
+   "News Wrap: Bannon indicted on contempt charges for defying congressional subpoena",
+   "The key issues that remain unresolved at COP26"
+  ]
+ },
+ {
+  "file": "transcripts/pbs/2021/2021-11-11.md",
+  "size": 50606,
+  "sections": 7,
+  "titles": [
+   "'Unknown' : A diverse musical commemoration of unidentified slain soldiers",
+   "Bataclan attack survivors and victims' loved ones on resulting hate, compassion",
+   "Trump-era Opportunity Zones meant to help low-income communities exploited by investors",
+   "The pandemic may not end anytime soon, but these tools can help stem its impact",
+   "Analyzing WH plan to aid veterans suffering from burn pit exposure, suicidal ideations",
+   "News Wrap: Death toll from Astroworld festival crowd surge rises to 9",
+   "As COP26 winds down, is a breakthrough climate agreement in sight?"
+  ]
+ },
+ {
+  "file": "transcripts/pbs/2021/2021-11-10.md",
+  "size": 51585,
+  "sections": 8,
+  "titles": [
+   "How Frida Kahlo's signature style honored her heritage and queer identity",
+   "What's next after judge denied Trump request to withhold Jan 6. docs from House committee",
+   "Growing number of young Americans feel climate anxiety. Here's what they need to cope",
+   "EU says Lukashenko using refugee crisis to 'destabilize' region, overwhelm Polish border",
+   "Colorado hospitals overwhelmed by young, 'dramatically ill' unvaccinated COVID patients",
+   "Why Kyle Rittenhouse's murder trial got fiery after he took the stand",
+   "News Wrap: 900,000 kids ages 5 to 11 got COVID shot in first week, White House says",
+   "What's driving U.S. inflation and how price pressures could be reduced"
+  ]
+ },
+ {
+  "file": "transcripts/pbs/2021/2021-11-09.md",
+  "size": 52881,
+  "sections": 8,
+  "titles": [
+   "A Brief But Spectacular take on making a living on a living planet",
+   "New book provides a glimpse into private life of beloved journalist Cokie Roberts",
+   "Why there was an attempt to assassinate Iraq's PM",
+   "Where Democrats and Republicans agree, disagree on abortion, police, climate and more",
+   "How developing nations pay the price for climate goals missed by wealthier countries",
+   "White House 'confident' Congress will pass Build Back Better bill",
+   "Remembering Max Cleland, former senator and Vietnam War veteran",
+   "News Wrap: Prosecution rests case in Rittenhouse murder trial"
+  ]
+ },
+ {
+  "file": "transcripts/pbs/2021/2021-11-08.md",
+  "size": 54197,
+  "sections": 8,
+  "titles": [
+   "How photographer Jeff Wall's pictures duplicate 'magic' of large-scale paintings",
+   "Tamara Keith and Amy Walter on bipartisan infrastructure bill, lessons from Virginia",
+   "What went wrong at the Astroworld Festival and how panic played a role in the crowd surge",
+   "14 million Afghans need food assistance to survive, but most foreign aid remains frozen",
+   "States sue over new Biden vaccine rule for businesses, claim federal overreach",
+   "What's at stake at COP26 as climate activists decry 'empty promises'",
+   "Energy Sec. Granholm on how infrastructure bill will ease inflation, supply jam",
+   "News Wrap: U.S. reopens to vaccinated international travelers"
+  ]
+ },
+ {
+  "file": "transcripts/pbs/2021/2021-11-05.md",
+  "size": 51188,
+  "sections": 8,
+  "titles": [
+   "Remembering 'warrior statesman' Colin Powell",
+   "Louise Erdrich's 'The Sentence' explores racial tensions in a divided Minneapolis",
+   "Capehart and Abernathy on Virginia elections, Build Back Better plan, Colin Powell",
+   "How Daniel Ortega 'demolished' democracy in Nicaragua",
+   "Dwindling aid, crumbling economy and ISIS add to Afghans' hardships under Taliban rule",
+   "The latest jobs report showed strong gains, but a worker shortage still exists. Here's why",
+   "News Wrap: Pfizer says its COVID-19 pill cuts hospitalization, death risk by 90%",
+   "New divides among House Dems throw fate of infrastructure, social spending bill in limbo"
+  ]
+ },
+ {
+  "file": "transcripts/pbs/2021/2021-11-04.md",
+  "size": 45812,
+  "sections": 7,
+  "titles": [
+   "New book shows how disinformation, mistrust worsened pandemic in the U.S.",
+   "Glacier ice samples act as records of climate change's impact on Earth",
+   "How conflict between Tigrayan, Ethiopian forces is destabilizing the region",
+   "Majority-white jury in Ahmaud Arbery case like a 'relic of the old South,' expert says",
+   "Pelosi says Build Back Better bill 'solidly paid for,' but Senate passage still uncertain",
+   "News wrap: Judge in Rittenhouse murder trial dismisses juror over joke about Jacob Blake",
+   "Sec. Walsh on new federal vaccine rules and penalties for non-compliant businesses"
+  ]
+ },
+ {
+  "file": "transcripts/pbs/2021/2021-11-03.md",
+  "size": 52840,
+  "sections": 7,
+  "titles": [
+   "David Driskell's art spotlighted Black life. It's 'about time' America saw his work",
+   "What the pandemic taught us about American preparedness",
+   "D.C.'s door-to-door COVID vaccine program hopes to increase trust among the hesitant",
+   "Supreme Court mulls limits of Second Amendment in New York gun law case",
+   "News Wrap: Senate Republicans block voting rights bill for the fourth time in 2021",
+   "Why the Dem strategy in Virginia failed, and how Youngkin flipped the state",
+   "How a loss in Virginia, close race in New Jersey could affect Dem midterm plan"
+  ]
+ },
+ {
+  "file": "transcripts/pbs/2021/2021-11-02.md",
+  "size": 64127,
+  "sections": 10,
+  "titles": [
+   "A Brief But Spectacular take on rebuilding and diversifying the Appalachian economy",
+   "What early exit polls reveal about Virginia Gov. race, and how it reflects on Democrats",
+   "College students' stress levels are 'bubbling over.' Here's why, and how schools can help",
+   "China's timeline to ditch coal, adopt green technology may be too slow to help climate",
+   "Analyzing long-term impact, side effects and risks of COVID shot for kids",
+   "Expert fears partisan actors may replace election workers who quit over threats",
+   "Dems may plan vote on on infrastructure, Build Back Better bill as early as this week",
+   "Here are the latest promises made by Biden, global leaders at U.N. climate summit",
+   "News Wrap: Facebook to shut down facial recognition system, delete data",
+   "The 'perfect storm' that may have tipped scales in Youngkin's favor"
+  ]
+ },
+ {
+  "file": "transcripts/pbs/2021/2021-11-01.md",
+  "size": 52421,
+  "sections": 7,
+  "titles": [
+   "Tamara Keith and Amy Walter on Jan 6. riot intel, VA Gov. race, U.N. climate summit",
+   "Online threats, armed protestors and other red flags law enforcement ignored before Jan. 6",
+   "Analyzing Kyle Rittenhouse's self-defense claims as jury selection begins in his trial",
+   "McAuliffe, Youngkin's dead heat may be decided by Virginia voters' views on education",
+   "Supreme Court considers 'chilling effect,' enforcement of Texas abortion law",
+   "The Earth is at a tipping point. Here's what's at stake if we don't act on climate change",
+   "News Wrap: 6% of NYC's work force placed on unpaid leave for defying vaccine mandate"
+  ]
+ },
+ {
+  "file": "transcripts/pbs/2021/2021-10-29.md",
+  "size": 52666,
+  "sections": 8,
+  "titles": [
+   "TikTok's 'devious licks' challenge countered by new 'angelic yields' trend",
+   "New Netflix series on Kaepernick is a 'springboard' to conversations on race, privilege",
+   "Brooks and Capehart on Build Back Better plan, Biden overseas trip, VA Gov. race and more",
+   "Minneapolis residents split on reducing police role, establishing public safety department",
+   "Why police, firefighters are fighting vaccine mandates and what that means for their jobs",
+   "What we know about Taliban rule in Afghanistan, classified documents about the U.S. war",
+   "News Wrap: U.S. inflation hits 30-year high, prices rise 4.5% in a year",
+   "Biden admits to 'clumsy' handling of nuclear submarine deal in meeting with Macron"
+  ]
+ },
+ {
+  "file": "transcripts/pbs/2021/2021-10-28.md",
+  "size": 52623,
+  "sections": 7,
+  "titles": [
+   "A Brief But Spectacular take on protecting 'Black genius'",
+   "Honoring the federal employees who are solving America's biggest problems",
+   "What we know about Sudan's ongoing civil disobedience after military coup",
+   "Oil giants deny spreading climate disinformation as they face Dem heat on Capitol Hill",
+   "CDC director on vaccinating children, booster guidance, vaccine hesitancy",
+   "News Wrap: Protesters demand climate action in Glasgow ahead of COP26",
+   "Biden lauds House Dem compromise on Build Back Better plan, but Senate approval uncertain"
+  ]
+ },
+ {
+  "file": "transcripts/pbs/2021/2021-10-27.md",
+  "size": 47253,
+  "sections": 6,
+  "titles": [
+   "Philadelphia's 'Liberty' exhibit spotlights role of people of color in American Revolution",
+   "Bolsonaro may face criminal charges for botching COVID response over 'false dilemma'",
+   "How Minnesota's lack of teachers of color hurts students, and what reform could look like",
+   "Politics of masks, critical race theory fueling heated school board elections",
+   "A billionaire tax is unlikely. Here's other ways Dems want to pay for their spending bill",
+   "Paid family leave, billionaire tax likely cut from spending bill over Manchin opposition"
+  ]
+ },
+ {
+  "file": "transcripts/pbs/2021/2021-10-26.md",
+  "size": 50229,
+  "sections": 8,
+  "titles": [
+   "Drought-stricken California faces rise in water theft by illegal marijuana farms",
+   "Jobs requiring college degrees disqualify most U.S. workers — especially workers of color",
+   "One Afghan refugee on her 'desperate hope' for her homeland, life in the U.S.",
+   "Kids' mental health, safety in the spotlight as social media execs face Congress",
+   "Why cuts to proposed federal paid leave policy could be a 'huge loss' to Americans",
+   "U.S. Northeast, Midwest hit by big storms; West Coast recovers from 'bomb cyclones'",
+   "News Wrap: FDA advisers back Pfizer vaccine for kids 5 to 11",
+   "Dems make progress in Biden agenda talks, but agreement may still take time"
+  ]
+ },
+ {
+  "file": "transcripts/pbs/2021/2021-10-25.md",
+  "size": 53392,
+  "sections": 8,
+  "titles": [
+   "Viral 'devious licks' TikTok challenge encourages kids to steal from school",
+   "Tamara Keith and Amy Walter on Biden agenda, Virginia Gov. race, midterms",
+   "Benton Harbor's Black community fuming over 'environmental racism,' water crisis",
+   "Facebook's leadership had 'no appetite' to fact check political ads, combat disinformation",
+   "Former U.S. diplomat who spent decades working on Afghanistan discusses deal with Taliban",
+   "GOP lawmakers were 'intimately involved' in Jan. 6 protest planning, new report shows",
+   "News Wrap: Sudan Prime Minister detained, 7 protesters killed in military coup",
+   "The core unresolved issues holding up Biden's social spending bills"
+  ]
+ },
+ {
+  "file": "transcripts/pbs/2021/2021-10-22.md",
+  "size": 51178,
+  "sections": 8,
+  "titles": [
+   "Nebraska couple dedicate life to breeding rare San Clemente Island goats",
+   "Journalist Terence Smith reflects on decades of reporting on American presidents, wars",
+   "How artist Mariano Rodríguez's work honored his Cuban heritage while breaking rules",
+   "Brooks and Capehart on voting rights, Build Back Better agenda, VA Gov. race",
+   "Internal DHS documents reveal migrant abuse as border crossings hit record high",
+   "What you need to know about mixing and matching COVID vaccines, getting boosters",
+   "News Wrap: Pfizer says its vaccine is 91% effective at preventing COVID among kids 5-11",
+   "The Supreme Court will hear the case against Texas' abortion law. Here's what to expect"
+  ]
+ },
+ {
+  "file": "transcripts/pbs/2021/2021-10-21.md",
+  "size": 48349,
+  "sections": 7,
+  "titles": [
+   "A Brief But Spectacular take on the disability rights movement",
+   "Uganda's Batwa tribe, considered conservation refugees, see little government support",
+   "How this 'vulture' hedge fund's gutting of local newsrooms could hurt Americans",
+   "Group aims to reintroduce Jaguars — once nearly hunted to extinction — to Argentina",
+   "How Dem debate over Biden climate agenda could affect U.S. economy",
+   "Here's what to expect after House vote holding Bannon in contempt",
+   "News Wrap: Haitian gang threatens to kill captive U.S. missionaries unless ransom is paid"
+  ]
+ },
+ {
+  "file": "transcripts/pbs/2021/2021-10-20.md",
+  "size": 50767,
+  "sections": 8,
+  "titles": [
+   "Tuba player Richard Antoine White's journey from homelessness to 'belonging' on stage",
+   "Pilot oxygen backup system offers new hope for Ugandan hospitals plagued by power cuts",
+   "Chappelle Netflix special is 'hate speech disguised as jokes,' advocate says",
+   "Idlib, Syria's final rebel stronghold, struggles to get lifesaving aid amid COVID spike",
+   "Why Biden's approval rating is sinking and how Americans view democracy, justice",
+   "Sen. Kaine on next moves for voting reform after GOP blocked Dem measure",
+   "What parents need to know about vaccinating young children against COVID-19",
+   "News Wrap: NYC to mandate COVID vaccine for all public employees"
+  ]
+ },
+ {
+  "file": "transcripts/pbs/2021/2021-10-19.md",
+  "size": 54619,
+  "sections": 8,
+  "titles": [
+   "Roger Dangel's replica Oval Office holds historical artifacts that transcend time",
+   "Many Jews fleeing Nazi rule spent years hiding in forests. A new book tells their stories",
+   "How Ahmaud Arbery's killing spurred a national reckoning on race",
+   "Sec. Cardona on combating COVID's impact on student mental health, forgiving student loans",
+   "How federal emergency aid helped offset costs for students in historically Black schools",
+   "Why the Jan. 6 panel is pursuing a contempt vote for Steve Bannon",
+   "News Wrap: DHS Sec. Alejandro Mayorkas tests positive for COVID-19",
+   "Progressives, moderate Dems close to agreement on Biden's legislative agenda"
+  ]
+ },
+ {
+  "file": "transcripts/pbs/2021/2021-10-18.md",
+  "size": 52191,
+  "sections": 8,
+  "titles": [
+   "Tamara Keith and Amy Walter on Democratic negotiations over Biden agenda, voter views",
+   "How Colin Powell was the nexus of America's 'momentous' decisions",
+   "Remembering the life and legacy of Colin Powell, a national security trailblazer",
+   "Can the world's whitest paint save Earth?",
+   "'Striketober' : Growing number of U.S. workers are pushing back against employers",
+   "Kidnapping of American missionaries in Haiti a jab at the U.S., expert says",
+   "How Biden's legislative agenda is faring in Congress",
+   "News Wrap: Jury selection begins in Ahmaud Arbery trial"
+  ]
+ },
+ {
+  "file": "transcripts/pbs/2021/2021-10-15.md",
+  "size": 51218,
+  "sections": 7,
+  "titles": [
+   "A Florida sheriff's Brief But Spectacular take on mental illness in county jails",
+   "Lost to history, Questlove documentary brings iconic 1969 concert back to life",
+   "Missouri city honors Black doctor whose land was taken decades ago through eminent domain",
+   "Brooks and Capehart on supply-chain bottlenecks, Republican pushback to vaccine mandates",
+   "International community joins forces as ransomware attacks create major disruptions",
+   "FDA panel backs another shot for some Johnson & Johnson COVID-19 vaccine recipients",
+   "News Wrap: Suicide attack in Afghanistan kills 47, wounds dozens"
+  ]
+ },
+ {
+  "file": "transcripts/pbs/2021/2021-10-14.md",
+  "size": 48374,
+  "sections": 8,
+  "titles": [
+   "Industrial sites often create toxic waste. Julie Bargmann uses it to transform landscapes",
+   "How fires, dry conditions are drastically increasing air pollution across California",
+   "Targeted assassinations, violent protest crackdowns keep Iraqi voters away from polls",
+   "Missouri's Medicaid expansion aims to benefit low-income workers, but sign-ups still lag",
+   "Film and TV workers are on the verge of a massive strike. Here's why",
+   "Benton Harbor's water has had excess lead for years. Residents are only now receiving help",
+   "Why energy prices are spiking globally and how it affects green initiatives",
+   "News Wrap: FDA advisory panel backs Moderna booster for seniors, other high-risk groups"
+  ]
+ },
+ {
+  "file": "transcripts/pbs/2021/2021-10-13.md",
+  "size": 50083,
+  "sections": 8,
+  "titles": [
+   "Rural U.S. hospitals stretched thin after nurse shortage exacerbated by the pandemic",
+   "Why election integrity and voter trust are in the spotlight in Fulton County, Georgia",
+   "How U.S. can help crumbling Afghan economy and support international aid efforts",
+   "2 reasons why Boston Marathon bomber case is being heard in the Supreme Court",
+   "Government, private sector cooperation necessary to clear supply bottleneck, expert says",
+   "Sec. Raimondo 'optimistic' about clearing supply logjam at U.S. ports by Christmas",
+   "News Wrap: Energy costs may soar by up to 54% amid this winter's colder temperatures",
+   "How Biden plans to combat 'longstanding weaknesses' in American supply chain"
+  ]
+ },
+ {
+  "file": "transcripts/pbs/2021/2021-10-12.md",
+  "size": 44658,
+  "sections": 7,
+  "titles": [
+   "How Gruden's emails expose NFL's regressive attitude, and what change should look like",
+   "How the pandemic spurred American students to pursue health care careers",
+   "Tennessee judge jailed minors on bogus charges following playground fights, cursing",
+   "Schiff book reveals how Republican loyalty to Trump threatened democracy",
+   "N. Korea flexes nuclear power amid regional arms race, wants U.S. to end 'hostile policy'",
+   "News Wrap: White House rebukes Texas Gov. Abbott over vaccine mandate ban",
+   "The latest health guidance on taking aspirin as heart attack, stroke preventative"
+  ]
+ },
+ {
+  "file": "transcripts/pbs/2021/2021-10-11.md",
+  "size": 49540,
+  "sections": 9,
+  "titles": [
+   "A Brief But Spectacular take on overcoming breast cancer",
+   "How poetry helps this young Afghan refugee 'empty' her pains and share her dreams",
+   "Rapper Common, Rev. Moss on helping Chicago heal and the 'plot' against Black America",
+   "A look at the life of A.Q. Khan, scientist behind Pakistan's nuclear weapons program",
+   "Many Greenville residents struggled to get fire insurance. Then the Dixie Fire came",
+   "Tamara Keith and Amy Walter on Trump Iowa rally, Biden approval rating",
+   "Trump renews claims of 'rigged' election in Iowa as he endorses 2022 Republican candidates",
+   "How Native Americans view Biden's restoration of national monuments Trump shrank",
+   "News Wrap: Southwest canceled more than 2,000 flights over the weekend"
+  ]
+ },
+ {
+  "file": "transcripts/pbs/2021/2021-10-08.md",
+  "size": 50750,
+  "sections": 6,
+  "titles": [
+   "How Bill T. Jones' 'Deep Blue Sea' explores the collective 'we' of the American people",
+   "Brooks and Tumulty on debt, social spending, Jan. 6 investigation, Supreme Court",
+   "Fiona Hill reflects on impeachment testimony, Trump presidency and opportunity in America",
+   "Why the Nobel Peace Prize was won by 2 journalists, and what that means for press freedom",
+   "The pandemic pushed millions of U.S. workers to join the 'Great Resignation.' Here's why",
+   "News Wrap: Biden rejects Trump request to withhold WH records from Jan. 6 committee"
+  ]
+ },
+ {
+  "file": "transcripts/pbs/2021/2021-10-07.md",
+  "size": 53091,
+  "sections": 8,
+  "titles": [
+   "Climate change's uneven impact on communities of color compounded by uneven flow of aid",
+   "Deportation to turmoiled Haiti an act of 'violence' against migrants, advocate says",
+   "Overwhelmed by COVID patients, Alaska's health care workers also face harassment",
+   "Texas clinics resume abortions past 6-week mark, but women fear access may be temporary",
+   "How false fraud claims are eroding integrity of American election system",
+   "As Senate examines Trump's bid to overturn 2020 loss, GOP voters still buy fraud claims",
+   "News Wrap: More than 120,000 U.S. children lost a caregiver to COVID-19",
+   "Some in GOP unhappy with McConnell over short-term debt deal with Dems"
+  ]
+ },
+ {
+  "file": "transcripts/pbs/2021/2021-10-06.md",
+  "size": 51657,
+  "sections": 7,
+  "titles": [
+   "After public barbs, Schumer and McConnell on brink of agreement in private debt talks",
+   "The complicated life and legacy of Robert Indiana, artist behind iconic 'LOVE' sculpture",
+   "Florida has a dengue problem. The solution may be more mosquitoes",
+   "Congress should raise debt ceiling for the long term, White House economic adviser says",
+   "Ethiopia's 'sophisticated campaign' to withhold food, fuel and other aid from Tigray",
+   "News Wrap: White House to invest $1 billion to boost at-home rapid COVID testing",
+   "American pharmacies face trial in Ohio over role in opioid crisis"
+  ]
+ },
+ {
+  "file": "transcripts/pbs/2021/2021-10-05.md",
+  "size": 53637,
+  "sections": 8,
+  "titles": [
+   "A Brief But Spectacular take on the importance of creating a global health system",
+   "New book shows how failure to implement quick, accurate testing compounded COVID's spread",
+   "Russia sees dialogue opportunity with Taliban decades after its own messy Afghanistan exit",
+   "Politics of vaccine, mask mandates complicate return to normal on college campuses",
+   "Gov. Newsom on $123B California schools plan, oil spill clean up and climate change",
+   "Why Biden pitched infrastructure bill in Michigan amid congressional stalemate",
+   "Facebook whistleblower asks Congress to regulate tech giant's influence on users",
+   "News Wrap: Johnson & Johnson asks FDA to approve its COVID-19 booster shot"
+  ]
+ },
+ {
+  "file": "transcripts/pbs/2021/2021-10-04.md",
+  "size": 53489,
+  "sections": 9,
+  "titles": [
+   "Pakistani musician Arooj Aftab's 'neo-Sufi' music blends Rumi with reggae and more",
+   "Tamara Keith and Amy Walter on debt limit, infrastructure, new Supreme Court term",
+   "What caused the Facebook outage and how it affected global users, businesses",
+   "Supreme Court resumes in-person arguments with abortion, guns, religious freedom on agenda",
+   "'Pandora Papers' expose how world leaders and the ultra-rich move their money",
+   "Southern California oil spill could be 'ecological disaster,' take weeks to clean up",
+   "Biden officials to enforce Trump trade deal with China, work toward 'durable coexistence'",
+   "News Wrap: UN condemns Libya's treatment of migrants seeking passage to Europe",
+   "Biden accuses GOP of playing 'Russian roulette' with economy in debt ceiling standoff"
+  ]
+ },
+ {
+  "file": "transcripts/pbs/2021/2021-10-01.md",
+  "size": 53283,
+  "sections": 7,
+  "titles": [
+   "Brooks and Capehart on infrastructure, reconciliation priorities, Virginia Gov. election",
+   "Sexual abuse allegations upend National Women's Soccer League, FIFA to investigate",
+   "How Brexit played a role in Britain's gas shortages",
+   "Mistrust, access issues keep Europe's asylum seekers, undocumented migrants unvaccinated",
+   "Merck's antiviral pill may help beat COVID-19, but vaccines and testing still needed",
+   "News Wrap: California to mandate COVID vaccine for schoolchildren",
+   "Biden shrugs off infrastructure vote delay, is confident about passing both major bills"
+  ]
+ },
+ {
+  "file": "transcripts/pbs/2021/2021-09-30.md",
+  "size": 52079,
+  "sections": 7,
+  "titles": [
+   "Why discovery of DNA's double helix was based on 'rip-off' of female scientist's data",
+   "Mozambicans fleeing IS-affiliated insurgents feel failed by government, exploited by big business",
+   "Exploring Evergrande's financial failures and why China's government is stepping in",
+   "Only 32% of pregnant Americans are vaccinated, with divide worsening along racial lines",
+   "Why Manchin, Sinema are holding out on reconciliation, and how their constituents feel",
+   "News Wrap: Number of active-duty military suicides jumped 15% in 2020",
+   "Where infrastructure negotiations stand ahead of expected vote"
+  ]
+ },
+ {
+  "file": "transcripts/pbs/2021/2021-09-29.md",
+  "size": 56486,
+  "sections": 8,
+  "titles": [
+   "The show must go on: Broadway hopes reopening boom will pay off debts worsened by pandemic",
+   "Here's what contributed to the extinction of ivory-billed woodpecker, 22 other species",
+   "California's giant sequoias are pillars of living history. Climate change may kill them",
+   "Two experts on how $3.5T spending bill could affect health and child care, taxes and more",
+   "Vaccine mandates can become a 'political battleground,' former FDA commissioner says",
+   "News Wrap: Milley says years of bad decisions to blame for Afghanistan pullout failures",
+   "Sen. Durbin on fate of infrastructure and reconciliation bills, debt ceiling, abortion",
+   "White House races against the clock to save infrastructure bill from doom"
+  ]
+ },
+ {
+  "file": "transcripts/pbs/2021/2021-09-28.md",
+  "size": 53780,
+  "sections": 8,
+  "titles": [
+   "Journalist Kara Swisher's Brief But Spectacular take on Big Tech power, responsibility",
+   "Many Ugandan children forced into hard labor, sex trafficking as COVID closes schools",
+   "Americans may soon pay more for milk, cheese as rising heat stresses livestock",
+   "New York hospitals, nursing homes offer vaccine incentives and brace for staff shortages",
+   "Private Dem talks on major bills more positive than public appearances, Rep. Yarmuth says",
+   "Climate, drug prices, child care and other issues at stake in reconciliation rift",
+   "News Wrap: Italy sees largest migrant rush in 5 years as 700 arrive on boat in Sicily",
+   "Milley, military leaders contradict Biden on support for complete Afghanistan withdrawal"
+  ]
+ },
+ {
+  "file": "transcripts/pbs/2021/2021-09-27.md",
+  "size": 54917,
+  "sections": 8,
+  "titles": [
+   "Black experience, culture finds its way to the Met stage as opera vows more diversity",
+   "Tamara Keith and Amy Walter on reconciliation stalemate, Arizona vote count",
+   "Why trade jobs are unpopular, and how low-wage workers can get better opportunities",
+   "Germany's deadlock election highlights voters' generational divide",
+   "Rep. Gottheimer 'incredibly optimistic' Dems will pass both infrastructure, reconciliation",
+   "Here's the latest on the infrastructure, reconciliation bill stalemate",
+   "How prejudice affects official search for missing Indigenous women, other women of color",
+   "News Wrap: R&B star R. Kelly found guilty of racketeering, immoral acts across state lines"
+  ]
+ },
+ {
+  "file": "transcripts/pbs/2021/2021-09-24.md",
+  "size": 47271,
+  "sections": 7,
+  "titles": [
+   "Artist Shahzia Sikander's work explores a plethora of extraordinary realities",
+   "A Brief But Spectacular take on going from crisis to opportunity post-pandemic",
+   "Brooks and Capehart on Democratic infighting, raising debt ceiling, border crisis",
+   "Germany faces tight race to replace Angela Merkel, with climate change as top voter issue",
+   "How Arizona's election review is providing a national playbook for disgruntled politicians",
+   "News Wrap: CDC approves boosters for older, high-risk Americans and frontline workers",
+   "Biden again urges Congress to pass infrastructure, reconciliation bills amid stalemate"
+  ]
+ },
+ {
+  "file": "transcripts/pbs/2021/2021-09-23.md",
+  "size": 51575,
+  "sections": 7,
+  "titles": [
+   "How artist Roberto Lugo is upending porcelain traditions with his personal, cultural roots",
+   "U.S. and E.U. climate envoys on how China, developing nations can help combat crisis",
+   "Justice Breyer on 'procedural decision' behind Texas abortion law, politics on the bench",
+   "Lack of access, infrastructure and government accountability hurt Ugandan vaccine goals",
+   "Here's the latest on the fate of Haitian migrants in Texas, Biden response to backlash",
+   "News Wrap: California bars worker productivity quotas used by Amazon, other warehouses",
+   "How 'fits and starts' of booster science, rollout may affect U.S. vaccination goals"
+  ]
+ },
+ {
+  "file": "transcripts/pbs/2021/2021-09-22.md",
+  "size": 50555,
+  "sections": 8,
+  "titles": [
+   "How America faced 'Peril' in final days of Trump presidency",
+   "Louisiana's parishes feel 'forgotten' in the dark weeks after Hurricane Ida",
+   "Rep. Jayapal on progressive priorities, compromise on reconciliation and infrastructure",
+   "Extending government funding and raising debt ceiling face uphill Senate battle",
+   "EU's top diplomat says it can deploy military forces without U.S., NATO approval",
+   "News Wrap: Senate Dems, GOP end police reform talks, face stalemate over debt ceiling",
+   "China's vaccine faces scrutiny as Indonesians die despite shots, U.S. pledges donations",
+   "U.S. plan to share Pfizer shots globally 'too little and too late,' ex-CDC director says"
+  ]
+ },
+ {
+  "file": "transcripts/pbs/2021/2021-09-21.md",
+  "size": 48778,
+  "sections": 6,
+  "titles": [
+   "As high temperatures hurt Sicily's food production, rising sea levels threaten housing",
+   "Inmates released to home confinement during pandemic fear 'devastating' reincarceration",
+   "Bill Gates on vaccine equity, boosters, climate, his foundation and Epstein meetings",
+   "How COVID-19's death toll and social impact compares to past U.S. pandemics",
+   "News Wrap: White House continues deporting Haitian migrants in Texas as Dems decry move",
+   "As Biden touts American democracy, here are the issues allies want U.S. to deliver on"
+  ]
+ },
+ {
+  "file": "transcripts/pbs/2021/2021-09-20.md",
+  "size": 52637,
+  "sections": 8,
+  "titles": [
+   "Tamara Keith and Amy Walter on Biden immigration policy, reconciliation bill",
+   "Colombia's President Duque on environmental terrorism, migration and democracy",
+   "What pediatricians are prioritizing in Pfizer data about vaccinating kids ages 5 to 11",
+   "News Wrap: U.S. to ease restrictions on vaccinated foreign travelers in November",
+   "How financial 'black swans' may be driving market drops",
+   "Can Dems overcome Senate parliamentarian's blow to their immigration push?",
+   "How the White House plans to combat the 'silent killer' of rising heat levels",
+   "As U.S. deports Haitian migrants, fate of DACA immigrants also hangs in the balance"
+  ]
+ },
+ {
+  "file": "transcripts/pbs/2021/2021-09-17.md",
+  "size": 53241,
+  "sections": 8,
+  "titles": [
+   "An inside look at Ken Burns' latest film 'Muhammad Ali'",
+   "Brooks and Capehart on border politics, Biden's job approval, U.S. and France tensions",
+   "Russian government continues to silence rivals as parliamentary elections begin",
+   "U.S. Capitol Police prepare for far-right rally in support of Jan. 6 insurrectionists",
+   "Thousands of migrants amass at the Texas border as federal authorities ramp up relief",
+   "News Wrap: France recalling ambassadors from U.S., Australia over submarine deal",
+   "Pentagon admits error in U.S. drone strike that killed 10 civilians in Afghanistan",
+   "Key FDA advisory committee rejects COVID vaccine boosters for the general population"
+  ]
+ },
+ {
+  "file": "transcripts/pbs/2021/2021-09-16.md",
+  "size": 51006,
+  "sections": 8,
+  "titles": [
+   "What returning to school looks and feels like in 'unpredictable, unprecedented times'",
+   "Actor Riz Ahmed on increasing Muslim representation in Hollywood",
+   "Facebook probe looks at how the company handles its 'negative side effects'",
+   "Ordinary people are taking the law into their own hands to counter cartel threat",
+   "Hospitals in sparsely vaccinated areas prepare to ration care",
+   "Democrats push to pass 'historic legislation' but major obstacles remain",
+   "France furious over new U.S. pact meant to confront China's growing ambitions in Asia",
+   "News Wrap: New migrant emergency builds along the Texas border with Mexico"
+  ]
+ },
+ {
+  "file": "transcripts/pbs/2021/2021-09-15.md",
+  "size": 51262,
+  "sections": 7,
+  "titles": [
+   "Rita Dove's 'Playlist for the Apocalypse' is her plea for unity, collective well-being",
+   "Can understanding business strategy help you parent better? One economist thinks so",
+   "Fentanyl is making its way into various drugs sold in the U.S. Here's how it gets there",
+   "Trump may be losing popularity, but is 'Trumpism?' Here's what California's recall shows",
+   "Simone Biles, Aly Raisman and other gymnasts on how FBI 'betrayed' them, 'enabled' Nassar",
+   "News Wrap: Afghanistan's women's soccer team escape to Pakistan",
+   "How U.S., UK and Australia plan to counter China's rise through strategic partnership"
+  ]
+ },
+ {
+  "file": "transcripts/pbs/2021/2021-09-14.md",
+  "size": 52762,
+  "sections": 7,
+  "titles": [
+   "A secret look at a Mexican cartel's low-tech, multimillion-dollar fentanyl operation",
+   "CDC director on COVID boosters, global vaccine supply, evolving virus science",
+   "Despite concerns about voter enthusiasm, Newsom's fate looks good in California recall",
+   "Former Afghan police women being killed, forced into hiding after Taliban takeover",
+   "Sen. Barrasso on 'epic failure' of Afghanistan exit, 'reckless' $3.5T spending bill",
+   "News Wrap: More than half a million lose power as Tropical Storm Nicholas hits Texas",
+   "Why Milley checked nuclear procedures, called China in final days of Trump presidency"
+  ]
+ },
+ {
+  "file": "transcripts/pbs/2021/2021-09-13.md",
+  "size": 52262,
+  "sections": 7,
+  "titles": [
+   "Exposure related health conditions still trouble 9/11 first responders 20 years later",
+   "Tamara Keith and Amy Walter on $3.5T Dem bill, California recall election",
+   "Boston's changing demographics on display in mayoral race dominated by women of color",
+   "American Academy of Pediatrics urges FDA to approve COVID vaccines for children under 12",
+   "Sen. Sanders on raising corporate and wealth taxes, combating climate change",
+   "Afghanistan's economy, emergency services suffer as U.S. debates Taliban diplomacy",
+   "News Wrap: 1 million NYC kids return to school as de Blasio vows 'gold standard' of safety"
+  ]
+ },
+ {
+  "file": "transcripts/pbs/2021/2021-09-10.md",
+  "size": 49270,
+  "sections": 7,
+  "titles": [
+   "Teens facing off at U.S. Open final create 'fairy tale moment' for tennis fans",
+   "Educators reflect on the significance of teaching about 9/11",
+   "Smithsonian Institution pieces together 9/11 history through personal, poignant relics",
+   "Brooks and Capehart on the anniversary of 9/11, the politics of vaccinations",
+   "How the attacks of 9/11 reshaped America's role in the world",
+   "What Biden's vaccine mandates mean for millions of Americans in the workplace",
+   "News Wrap: Taliban allows more people to leave Afghanistan including 19 Americans"
+  ]
+ },
+ {
+  "file": "transcripts/pbs/2021/2021-09-09.md",
+  "size": 48751,
+  "sections": 7,
+  "titles": [
+   "Flight 77 crashed just below Robert Hogue's Pentagon office. Here's his story",
+   "New York's 9/11 first responders are battling a new kind of mass trauma",
+   "Dr. Fauci on vaccine mandates, reopening schools, booster shots",
+   "Why the ATF is often leaderless and how it affects the agency's work",
+   "Scattered thunderstorms, lack of power complicate Louisiana recovery efforts",
+   "Many Afghans haven't eaten in weeks as Taliban rule triggers humanitarian crisis",
+   "News Wrap: Justice Department sues Texas over 6-week abortion ban"
+  ]
+ },
+ {
+  "file": "transcripts/pbs/2021/2021-09-08.md",
+  "size": 50229,
+  "sections": 8,
+  "titles": [
+   "How 9/11 weighs heavy on the generation born after the 2001 attacks",
+   "Remembering the 40 heroes aboard Flight 93 and how they thwarted 9/11 hijackers",
+   "Indiana's small, Black farmers struggle to keep their farms running",
+   "Did Cuomo's ouster show the #MeToo movement was co-opted? Two experts weigh in",
+   "Elizabeth Holmes' trial over alleged fraudulent blood testing technology begins",
+   "Why is Newsom facing recall? Here's what you need to know about California's politics",
+   "As overrun Idaho hospitals ration care, doctors fear a COVID peak may still be weeks away",
+   "News Wrap: Trial begins for 2015 Paris terrorist attacks by Islamic State"
+  ]
+ },
+ {
+  "file": "transcripts/pbs/2021/2021-09-07.md",
+  "size": 48017,
+  "sections": 8,
+  "titles": [
+   "This art exhibition explores American identity and life by the sea",
+   "The 'direct line' between national unity after 9/11 and partisan polarization in 2021",
+   "Middletown lost the most residents on 9/11 after NYC. Here's how the community is healing",
+   "Much of Africa is struggling with vaccine access. Should Western nations rethink boosters?",
+   "Most of New Orleans regains power, but many across Gulf Coast still waiting",
+   "News Wrap: Texas Gov. Greg Abbott signs bill limiting all-night, mail-in voting",
+   "Two experts on Afghanistan's 'caretaker' government and its ties to other terrorist groups",
+   "What we know about the Taliban men who will form Afghanistan's interim government"
+  ]
+ },
+ {
+  "file": "transcripts/pbs/2021/2021-09-06.md",
+  "size": 54307,
+  "sections": 9,
+  "titles": [
+   "Chef Tu David Phu's Brief But Spectacular take on the memory of taste",
+   "Tamara Keith and Amy Walter on child tax credit, abortion",
+   "A look at the impact of the federal increase in food stamps, child tax credit",
+   "American Muslims remember how 9/11 changed America as they knew it",
+   "Taliban takeover threatens Afghan agriculture as farmers fear being forced to grow poppy",
+   "Despite vaccines' positive impact, unvaccinated hotspots and delta raise COVID numbers",
+   "Taliban gain control of Panjshir Valley but are yet to form an official government",
+   "News Wrap: DOJ vows to protect abortion access in Texas, will challenge ban",
+   "Hundreds of thousands of Americans still without power in Ida's aftermath"
+  ]
+ },
+ {
+  "file": "transcripts/pbs/2021/2021-09-03.md",
+  "size": 49015,
+  "sections": 7,
+  "titles": [
+   "Live music events get new life amid rising vaccinations and open spaces",
+   "Gerson and Capehart on Afghanistan exit, jobs report, Texas abortion ban",
+   "Dover Air Force Base chaplain reflects on the 'forever' sacrifice of America's longest war",
+   "Is the U.S. headed for a hiring slowdown? Analyzing the sobering new jobs report",
+   "News Wrap: Afghan women protest Taliban rule in Kabul, demand equal rights",
+   "Nearly a decade after Hurricane Sandy, NYC's outer boroughs see 'bare minimum' investment",
+   "Biden visits Louisiana as Gulf Coast, Northeast recover from Ida's toll"
+  ]
+ },
+ {
+  "file": "transcripts/pbs/2021/2021-09-02.md",
+  "size": 51629,
+  "sections": 7,
+  "titles": [
+   "This Detroit exhibition puts American car culture on display",
+   "College athletes say ability to profit off their fame has been a 'long time coming'",
+   "Taliban's 'fragmented' leadership puts aid efforts for Afghan civilians, refugees at risk",
+   "Texas women seeking abortions after 6 weeks have few out-of-state options",
+   "News Wrap: Biden administration to invest $3 billion in COVID vaccine production",
+   "Ida's aftermath shows need to address climate change, invest in infrastructure",
+   "Despite being downgraded to a storm, Ida pummeled East Coast states"
+  ]
+ },
+ {
+  "file": "transcripts/pbs/2021/2021-09-01.md",
+  "size": 56946,
+  "sections": 8,
+  "titles": [
+   "How sensors, rewiring nerves could help prosthetics feel and function like real limbs",
+   "Tensions rise in Lampedusa, a small Italian island, over swell of economic migrants",
+   "Taliban members have vastly different ideas to govern Afghanistan. Which will prevail?",
+   "Texas is using sovereign immunity to restrict abortions. Why is the Supreme Court silent?",
+   "Thick vegetation, inaccessible terrain complicate Caldor Fire response",
+   "News Wrap: 3 police officers, 2 paramedics indicted in death of Elijah McClain",
+   "How FEMA is tackling the 'extremely challenging' rescues, recovery after Hurricane Ida",
+   "Some Louisiana parishes may be without power for months"
+  ]
+ },
+ {
+  "file": "transcripts/pbs/2021/2021-08-31.md",
+  "size": 53484,
+  "sections": 8,
+  "titles": [
+   "This dissolvable pacemaker could make heart surgery less invasive",
+   "'The Afghanistan Papers' exposes the U.S.'s shaky Afghanistan strategy",
+   "UN says Taliban cooperating with aid workers, allowing food distribution operations",
+   "News Wrap: Caldor Fire intensifies, prompts mass evacuations by Lake Tahoe",
+   "Sen. Cassidy: Hurricane Ida shows need for infrastructure investment — including broadband",
+   "'I can't take care of you': Louisiana's Jefferson Parish struggles with rescue resources",
+   "Millions in Louisiana struggle with heat, loss of power in the aftermath of Ida",
+   "Biden defends Afghanistan exit again as Taliban declares victory over U.S."
+  ]
+ },
+ {
+  "file": "transcripts/pbs/2021/2021-08-30.md",
+  "size": 52217,
+  "sections": 7,
+  "titles": [
+   "Remembering the U.S. service members who lost their lives during the Afghanistan exit",
+   "Tamara Keith and Amy Walter on Afghanistan exit, COVID-19",
+   "How veterans helped extract Afghan allies in face of 'inconsistent' evacuation plan",
+   "News Wrap: U.S. Education Department investigating mask mandate bans in 5 GOP-led states",
+   "'It looks like a war zone' : Hurricane Ida floods Louisiana's Plaquemines Parish",
+   "16 years after Hurricane Katrina, Ida takes 'significant' toll on Louisiana",
+   "What's left behind in Afghanistan after 'heartbreak' of U.S. departure"
+  ]
+ },
+ {
+  "file": "transcripts/pbs/2021/2021-08-27.md",
+  "size": 53859,
+  "sections": 7,
+  "titles": [
+   "In 'Flag Day,' Sean and Dylan Penn aim to break cinema's 'three thought rule'",
+   "Paralympic athletes to watch in Tokyo",
+   "Brooks and Capehart on Kabul attack, Jan. 6 investigation, voting rights",
+   "As 1.2 million households face eviction, only 11% of federal rental assistance distributed",
+   "News Wrap: Florida judge reverses DeSantis order banning school mask mandates",
+   "Comparing strategies and challenges of evacuating Afghanistan with Vietnam exit",
+   "As Afghans bury those killed in Kabul attack, sense of abandonment and anger at U.S. rises"
+  ]
+ },
+ {
+  "file": "transcripts/pbs/2021/2021-08-26.md",
+  "size": 53200,
+  "sections": 6,
+  "titles": [
+   "Texas' homeless suffer due to lack of public housing as public camping is criminalized",
+   "African nations struggle with vaccine access, public mistrust and disinformation",
+   "Despite rise in delta cases, U.S. police forces pushback against vaccine mandates",
+   "News Wrap: COVID could claim 100,000 more U.S. lives by end of 2021",
+   "Analyzing the risk to U.S. troops remaining in Afghanistan until Aug. 31",
+   "Biden vows to 'hunt' ISIS-K as evacuations continue amid Kabul blast chaos"
+  ]
+ },
+ {
+  "file": "transcripts/pbs/2021/2021-08-25.md",
+  "size": 53308,
+  "sections": 7,
+  "titles": [
+   "How apprenticeships can bridge the employment gap for workers without college degrees",
+   "When will young children be eligible for the COVID vaccine? An expert weighs in",
+   "What to know about the eviction moratorium as it nears expiration again",
+   "Biden promised humane immigration at the southern border. Did he deliver?",
+   "News Wrap: WHO says its search for COVID origins has stalled due to cold trail",
+   "Can the U.S. safely evacuate Afghanistan by the Aug. 31 deadline? Two experts weigh in",
+   "Afghanistan evacuees wait hours in the heat due to bottleneck backlog at Kabul airport"
+  ]
+ },
+ {
+  "file": "transcripts/pbs/2021/2021-08-24.md",
+  "size": 52602,
+  "sections": 8,
+  "titles": [
+   "A Brief But Spectacular take on embracing refugees to build a stronger society",
+   "Lessons from Bill Pinkney's historic solo sail around the world",
+   "10 days after devastating Haiti earthquake, many survivors finally get medical attention",
+   "Health workers face 'indescribable' mental, physical exhaustion as COVID fills hospitals",
+   "Why moderate Democrats opposed Pelosi's plans for two major spending bills",
+   "News Wrap: White House urges businesses, states to mandate vaccines",
+   "As Afghan women see shrinking public spaces, one activist reveals how the world can help",
+   "Does the U.S. have any leverage with the Taliban?"
+  ]
+ },
+ {
+  "file": "transcripts/pbs/2021/2021-08-23.md",
+  "size": 55097,
+  "sections": 8,
+  "titles": [
+   "How America's writers are joining forces in hopes to bridge divides",
+   "Black men trust their barbers. A Madison barbershop is using that to improve their health",
+   "Errin Haines and Lisa Lerer on Afghanistan evacuations, infrastructure debate",
+   "U.S. has no clear bureaucratic plan for Afghan evacuees",
+   "Afghan children get left behind, go missing amid chaos at Kabul's airport",
+   "Major flooding leaves 22 dead in Tennessee amid devastating 'loss and heartache'",
+   "News Wrap: Capitol Police shooting of Jan. 6 rioter Ashli Babbitt found 'lawful'",
+   "Dr. Fauci on Pfizer vaccine's FDA approval, approving Moderna and Johnson & Johnson shots"
+  ]
+ },
+ {
+  "file": "transcripts/pbs/2021/2021-08-20.md",
+  "size": 41247,
+  "sections": 5,
+  "titles": [
+   "Gerson and Capehart on Afghanistan, school mask mandates",
+   "Examining the politicization of school mask mandates in Florida's Broward County",
+   "The U.S. ignored corruption within the Afghan government. Did that lead to its fall?",
+   "News Wrap: FDA to grant full approval to Pfizer's COVID vaccine next week",
+   "Frustrated by ill-prepared evacuation plan, anxious Afghans rush airport gates"
+  ]
+ },
+ {
+  "file": "transcripts/pbs/2021/2021-08-19.md",
+  "size": 46940,
+  "sections": 7,
+  "titles": [
+   "A dancer and choreographer's Brief But Spectacular take on communicating through movement",
+   "'Nearly every acre' in California has potential to burn, state fire official warns",
+   "Texas doctor urges vaccines amid 'dire shortage' of health workers, ICU beds",
+   "News Wrap: Man behind Capitol bomb threat surrenders after 5 hour police standoff",
+   "What went wrong in the U.S. withdrawal from Afghanistan? Two lawmakers weigh in",
+   "Evacuating Afghans who helped U.S. a 'high priority,' national security official says",
+   "Thousands of Afghans can't access the airport. Those who can recall Taliban threats, abuse"
+  ]
+ },
+ {
+  "file": "transcripts/pbs/2021/2021-08-18.md",
+  "size": 45559,
+  "sections": 7,
+  "titles": [
+   "'America needs to catch up': Sec. Raimondo on the pandemic's unequal toll on women",
+   "Can qualified immunity and police accountability coexist? Two experts weigh in",
+   "Why Haiti's rescue efforts and resources should be controlled by Haitians",
+   "Taliban interrogating women activists, creating a 'climate of fear and intimidation'",
+   "News Wrap: Caldor Fire ravages California's Grizzly Flats",
+   "Surgeon general on booster shots for Americans, vaccinating the world",
+   "Chaos, cries for help outside Kabul airport as Taliban crack down on protesters"
+  ]
+ },
+ {
+  "file": "transcripts/pbs/2021/2021-08-17.md",
+  "size": 44135,
+  "sections": 7,
+  "titles": [
+   "Billie Jean King reveals how a $1 contract shaped professional women's tennis",
+   "Katie Ledecky on her Tokyo wins, mental health and gender equality in sports",
+   "How booster shots could help protect Americans from the delta variant",
+   "News Wrap: Tropical Storm Grace batters Haiti after deadly earthquake",
+   "Despite Taliban promises, Afghan women fear losing their freedoms and lives",
+   "Can the Taliban be trusted to keep their promise of reasonable rule? Two experts weigh in",
+   "Taliban leaders promise softer rule, but their actions send a different message"
+  ]
+ },
+ {
+  "file": "transcripts/pbs/2021/2021-08-16.md",
+  "size": 43607,
+  "sections": 7,
+  "titles": [
+   "Sec. Haaland on the significance of Native American representation",
+   "Tamara Keith and Amy Walter on U.S. role in Afghanistan fallout, midterm elections",
+   "Haitians left homeless by 7.2 magnitude earthquake now brace for storm",
+   "News Wrap: New York mandates COVID vaccines for all health care workers",
+   "Does the fallout in Afghanistan hurt American credibility?",
+   "Taliban takeover of Afghanistan is an 'American catastrophe,' H.R. McMaster says",
+   "Inside the desperate, dangerous scramble to evacuate Kabul as Taliban seizes control"
+  ]
+ },
+ {
+  "file": "transcripts/pbs/2021/2021-08-13.md",
+  "size": 49670,
+  "sections": 7,
+  "titles": [
+   "This author traveled across the country to ask: What does it mean to be Latino?",
+   "Capehart and Gerson on the Taliban's march across Afghanistan, dire climate change data",
+   "How the Twin Cities is trying to close the racial gap in home ownership",
+   "News Wrap: Third vaccine dose recommended for people with weakened immune systems",
+   "What should the U.S. role in Afghanistan be now?",
+   "'It's an abandonment.' Afghanistan's ambassador on her nation's view of the U.S. withdrawal",
+   "Taliban closes in on Afghan capital as U.S. forces arrive to speed withdrawal"
+  ]
+ },
+ {
+  "file": "transcripts/pbs/2021/2021-08-12.md",
+  "size": 53120,
+  "sections": 8,
+  "titles": [
+   "She started an underground clean needle exchange and changed lives",
+   "'Why did the U.S. lose in Afghanistan?' A new book explores decades of mistakes",
+   "America is becoming more urban, more diverse and less white, 2020 Census reveals",
+   "A new wave of delta variant infections in China drives fresh lockdowns",
+   "Employee vaccine mandate is 'about saving lives,' United Airlines CEO Kirby says",
+   "Dr. Fauci explains booster shots and the delta variant's threat to children",
+   "News Wrap: Record heat drives wildfires across Italy",
+   "'Shock' and anger across Afghanistan as Taliban blitz through cities"
+  ]
+ },
+ {
+  "file": "transcripts/pbs/2021/2021-08-11.md",
+  "size": 51483,
+  "sections": 8,
+  "titles": [
+   "How the pandemic exposes rifts in America that exist among regions, races and classes",
+   "Minnesota students come together to bring water to schools in the developing world",
+   "Experimental technology works to bring back sense of touch for those living with paralysis",
+   "The Taliban now control two-thirds of Afghanistan. How did it happen so quickly?",
+   "Russia struggles against the delta variant and low vaccination rates",
+   "The challenges of returning to in-person classes in a state spiking with COVID-19",
+   "Democrats push for broader investments in jobs, families and tackling the climate crisis",
+   "News Wrap: Jailed Russian opposition leader Alexei Navalny is facing new criminal charges"
+  ]
+ },
+ {
+  "file": "transcripts/pbs/2021/2021-08-10.md",
+  "size": 53815,
+  "sections": 8,
+  "titles": [
+   "A nurse practitioner's Brief But Spectacular take on combating loneliness",
+   "Michigan exhibit shows why a chair can be more than a place to sit",
+   "California prison inmates become a critical resource for fighting wildfires",
+   "As millions of students return to the classroom, parents remain divided on mask mandates",
+   "U.S. Energy Secretary Jennifer Granholm on the infrastructure bill and climate change",
+   "News Wrap: A surge in COVID-19 infections is pushing hospitals to the breaking point",
+   "Biden in reach of key legislative priority as Senate backs bipartisan infrastructure bill",
+   "New York Gov. Andrew Cuomo to resign facing multiple allegations of sexual harassment"
+  ]
+ },
+ {
+  "file": "transcripts/pbs/2021/2021-08-09.md",
+  "size": 51954,
+  "sections": 8,
+  "titles": [
+   "As Tokyo Olympics come to a close, a look back at the highs and lows",
+   "Tamara Keith and Amy Walter on the infrastructure deal, Congress' agenda, Cuomo's future",
+   "U.S. Senate nears passage of $1 trillion infrastructure plan",
+   "How the Biden administration is addressing mounting housing insecurity",
+   "Rep. Billy Long on Missouri's COVID-19 surge: 'It's a pretty dire situation right now'",
+   "Afghan security forces teeter on the brink of collapse amid Taliban onslaught",
+   "News Wrap: Dixie Fire 20 percent contained, military to require COVID-19 vaccinations",
+   "U.N. panel paints grim future for humanity without drastic action to combat climate change"
+  ]
+ },
+ {
+  "file": "transcripts/pbs/2021/2021-08-06.md",
+  "size": 53138,
+  "sections": 8,
+  "titles": [
+   "A Brief But Spectacular take on being an architect",
+   "Brooks and Capehart on the politics of COVID-19, Ohio elections, accusations against Cuomo",
+   "Hungary's crackdown on its LGBTQ community prompts condemnation from European leaders",
+   "Delta-driven surge spurs governments, major companies to mandate vaccinations",
+   "How the infrastructure deal aims to bolster our aging transportation network",
+   "U.S. economy powers back from pandemic losses, but concerns remain over the delta variant",
+   "California's Dixie Fire burns its way into the record books",
+   "News Wrap: Battles brew over masking up in schools to ward off COVID-19"
+  ]
+ },
+ {
+  "file": "transcripts/pbs/2021/2021-08-05.md",
+  "size": 50550,
+  "sections": 7,
+  "titles": [
+   "Nationwide restrictions on ballot box access raise alarms for democracy advocates",
+   "Remembering Richard Trumka, a giant in the world of labor and unions",
+   "Breaking down the infrastructure bill's impact on climate change",
+   "Why the White House is pushing for more electric vehicles on the road",
+   "How Maryland Gov. Larry Hogan is responding to the delta threat",
+   "Health care workers battle Louisiana's COVID-19 surge, low vaccination rates",
+   "News Wrap: CDC's new eviction moratorium faces early legal challenge"
+  ]
+ },
+ {
+  "file": "transcripts/pbs/2021/2021-08-04.md",
+  "size": 50594,
+  "sections": 7,
+  "titles": [
+   "This advocate says justice system is our failure to imagine anything besides punishment",
+   "ACLU: Biden administration making excuses for not changing this Trump-era asylum policy",
+   "1 year after Beirut explosion, Lebanon still in crisis",
+   "Why keeping delta variant in check is so important to our economy",
+   "As housing costs boom, how home-buyers in one city search for affordability",
+   "How the infrastructure bill delivers on clean water -- and how it falls short",
+   "News Wrap: As COVID cases rise, concern over global vaccines and potential boosters grows"
+  ]
+ },
+ {
+  "file": "transcripts/pbs/2021/2021-08-03.md",
+  "size": 51345,
+  "sections": 8,
+  "titles": [
+   "Artist Mel Kendrick on seeing the other side of things",
+   "Ethiopian government appears determined to target Tigray as humanitarian crisis deepens",
+   "Worsening wildfires in California's wine country threaten low-wage farm workers",
+   "How infrastructure funding to expand broadband access could create a 'generational shift'",
+   "News Wrap: COVID-19 vaccination mandates spread in the U.S. as the delta variant surges",
+   "Millions of renters are facing evictions. Will the government step in to help?",
+   "Former Cuomo aide: 'he embraced me a little bit too tight, too long'",
+   "Biden calls on Cuomo to resign after sexual harassment findings"
+  ]
+ },
+ {
+  "file": "transcripts/pbs/2021/2021-08-02.md",
+  "size": 52621,
+  "sections": 8,
+  "titles": [
+   "Analyzing wins, losses and what's to come for American athletes in Tokyo",
+   "Tamara Keith and Amy Walter on infrastructure negotiations, Trump's fundraising success",
+   "Severe drought reignites decades-old conflict between Oregon ranchers, Indigenous peoples",
+   "Afghans fear Taliban retribution as group expands control, executes critics",
+   "'No signs of plateauing' in Florida's COVID cases as DeSantis refuses to mandate masks",
+   "News Wrap: Firefighters contain 80 percent of Oregon Bootleg Fire; lift evacuations in California",
+   "Infrastructure bill sees momentum but could still face hurdles ahead",
+   "Why the evictions ban was allowed to expire and what's next for vulnerable renters"
+  ]
+ },
+ {
+  "file": "transcripts/pbs/2021/2021-07-30.md",
+  "size": 53538,
+  "sections": 8,
+  "titles": [
+   "A geologist's Brief But Spectacular take on calling out harassment and sexism in science",
+   "Marcia Chatelain examines McDonald's' mixed impact on Black America",
+   "Brooks and Dionne on vaccine hesitancy, Capitol Police testimony, infrastructure",
+   "Hong Kong residents worry vague new immigration law could let China ban them from leaving",
+   "CIA still investigating cause of 'Havana Syndrome' ailments affecting U.S. diplomats",
+   "First Afghan interpreters, their families arrive in the U.S. on special visas",
+   "News Wrap: Trump tax returns must go to Congress, DOJ tells Treasury",
+   "What to know about the CDC's delta variant study and how it affects vaccinated Americans"
+  ]
+ },
+ {
+  "file": "transcripts/pbs/2021/2021-07-29.md",
+  "size": 51775,
+  "sections": 8,
+  "titles": [
+   "Artist Mario Moore's work seeks to enshrine Black Americans' presence",
+   "Idaho ranchers torn between hunting and deterrents for gray wolves harming their livestock",
+   "What Suni Lee's gymnastics gold win means to Hmong Americans",
+   "Japan ignored months of protests to host the Olympics. The opposition is still growing",
+   "News Wrap: Congress approves $2 billion in emergency spending for Capitol security",
+   "Missouri public health official abused by hostile crowd over support for mask mandate",
+   "Vaccine, mask opponents are fueling the delta variant's death toll. Will incentives help?",
+   "Partisan attacks over mask mandates, vaccines underscore deep divide over COVID"
+  ]
+ },
+ {
+  "file": "transcripts/pbs/2021/2021-07-28.md",
+  "size": 53076,
+  "sections": 7,
+  "titles": [
+   "Greeks split over pathway, elevator construction for disabled Parthenon visitors",
+   "Gen. Brown on extremism in the Air Force and threats from China, Afghanistan",
+   "Simone Biles embodies both the aspirations and struggles of Black America",
+   "As rising violent crime turns Atlanta into a 'warzone,' residents disagree on a solution",
+   "What renters, landlords should expect as the federal eviction moratorium expires",
+   "News Wrap: Pelosi calls McCarthy a 'moron' as House leaders trade barbs over mask rules",
+   "Bipartisan infrastructure deal a 'giant step forward' despite compromise, Sen. Tester says"
+  ]
+ },
+ {
+  "file": "transcripts/pbs/2021/2021-07-27.md",
+  "size": 51687,
+  "sections": 7,
+  "titles": [
+   "The 'insurmountable' weight of expectations on Simone Biles, other professional athletes",
+   "U.S. 'really messed it up' in Afghanistan, says Pakistan Prime Minister Imran Khan",
+   "Why an 'uphill battle' awaits lawmakers investigating Jan. 6 insurrection",
+   "Electrocuted, beaten, abused: Capitol Police recall their own 'vulnerability' on Jan. 6",
+   "Uniquely challenging West U.S. wildfires usher in a 'new era of firefighting'",
+   "News Wrap: Georgia man pleads guilty to 4 of 8 Asian spa killings, gets life sentence",
+   "Dr. Fauci on CDC's reimposed mask guidelines, vaccine requirements and GOP criticism"
+  ]
+ },
+ {
+  "file": "transcripts/pbs/2021/2021-07-26.md",
+  "size": 51196,
+  "sections": 8,
+  "titles": [
+   "These tight-knit retirees are helping breast cancer survivors feel like 'Boobless Wonders'",
+   "Tamara Keith and Amy Walter on vaccines, infrastructure, Jan. 6 committee",
+   "The manufacturing sector needs workers. Training high schoolers could help fill that void",
+   "Greek authorities crackdown on critical nonprofits amid backlash for refugee pushback",
+   "Why are Tunisians protesting? Understanding the country's crisis of democracy",
+   "Why the infrastructure deal is still under discussion",
+   "News Wrap: Biden to pull U.S. combat forces from Iraq by end of year",
+   "Should your doctor be vaccinated? Frontline workers face calls for mandatory inoculation"
+  ]
+ },
+ {
+  "file": "transcripts/pbs/2021/2021-07-23.md",
+  "size": 52520,
+  "sections": 7,
+  "titles": [
+   "How Latinos changed baseball in America",
+   "Brooks and Capehart on Jan. 6 committee, infrastructure, budget, vaccine hesitancy",
+   "Here's how Border Patrol apprehends, aids migrants stranded at the U.S.-Mexico border",
+   "Rising number of children struggle with COVID's effects, especially in Black and Latino communities",
+   "Hong Kong police arrest authors of a children's book in latest free speech crackdown",
+   "Quiet Olympics opening ceremony sees loud public protest over virus concerns",
+   "News Wrap: Federal appeals court finds CDC eviction moratorium unlawful"
+  ]
+ },
+ {
+  "file": "transcripts/pbs/2021/2021-07-22.md",
+  "size": 54228,
+  "sections": 7,
+  "titles": [
+   "Is Facebook putting company over country? New book explores its role in misinformation",
+   "17-year-old makes color changing sutures that detect infection",
+   "Migrants left adrift at sea after boat pushback from Greek coast guard",
+   "GOP Sen. Capito on funding infrastructure, raising debt ceiling and increasing taxes",
+   "News Wrap: DOJ announces strike force to tackle suspect gun networks",
+   "U.S. surgeon general on the 'most powerful tools' to combat the delta variant",
+   "U.S. officials re-emphasize importance of COVID vaccines, investigating virus' origins"
+  ]
+ },
+ {
+  "file": "transcripts/pbs/2021/2021-07-21.md",
+  "size": 48627,
+  "sections": 8,
+  "titles": [
+   "A look at 'Greek Freak' Giannis Antetokounmpo's journey from hardships to hero",
+   "Need a new summer read? Here's a diverse list to pick from",
+   "For girls with mothers in prison, a summer camp offers much-needed support",
+   "How the opioids settlement will impact communities affected by addiction",
+   "The world is striving to fully adopt clean energy. Will we succeed in time?",
+   "What Americans should know about the delta variant, masks — regardless of vaccine status",
+   "News Wrap: GOP blocks debate on bipartisan infrastructure deal",
+   "Pelosi blocked Trump allies Jordan, Banks from Jan. 6 committee. Now what?"
+  ]
+ },
+ {
+  "file": "transcripts/pbs/2021/2021-07-20.md",
+  "size": 52034,
+  "sections": 7,
+  "titles": [
+   "How U.S. officials worked to prevent coups, Waco-like sieges in Trump's final year",
+   "Belarusian opposition leader on Lukashenko's dictatorship, underground protests, U.S. aid",
+   "Sanders: GOP 'nervous' about 'overdue' progressive policies in budget, infrastructure bill",
+   "The bipartisan infrastructure deal may be in jeopardy. Democrats have a 'Plan B'",
+   "Californians scramble for fresh water as taps, wells run dry",
+   "West U.S. wildfires are so extreme that they're creating lightning, fire whirls",
+   "News Wrap: U.S. COVID cases up 200% in 2 weeks with delta variant behind 83% of them"
+  ]
+ },
+ {
+  "file": "transcripts/pbs/2021/2021-07-19.md",
+  "size": 49431,
+  "sections": 7,
+  "titles": [
+   "The American athletes to watch during the Tokyo Olympics",
+   "Tamara Keith and Amy Walter on immigration, COVID misinformation, 2022 polls",
+   "A conflict journalist on the unique challenges of reporting on COVID in Holmfirth, England",
+   "As Biden releases first Guantanamo detainee, could the camp's closure be far behind?",
+   "As U.S., allies condemn Chinese cyberattacks, report exposes governments' use of spyware",
+   "News Wrap: Stocks slump as COVID-19 restrictions return",
+   "Dr. Fauci on delta variant, risks to children, breakthrough COVID and booster shots"
+  ]
+ },
+ {
+  "file": "transcripts/pbs/2021/2021-07-16.md",
+  "size": 51191,
+  "sections": 7,
+  "titles": [
+   "Brooks and Capehart on Indigenous boarding schools, Biden budget, child tax credit",
+   "Can Americans resolve partisan divides to create a national child care system?",
+   "Analyzing the U.S. business advisory for Hong Kong and how it could affect global finances",
+   "Sec. Haaland on healing from the indoctrination, dehumanization at Indian boarding schools",
+   "Climate models predicted extreme weather fluctuations. Can the damage be reversed?",
+   "News Wrap: Fire crews pull away from Oregon Bootleg Fire over safety concerns",
+   "Arkansas hospitals expect COVID admissions to double by August due to the unvaccinated"
+  ]
+ },
+ {
+  "file": "transcripts/pbs/2021/2021-07-15.md",
+  "size": 48745,
+  "sections": 7,
+  "titles": [
+   "How artist Firelei Báez transforms spaces to build connections",
+   "Could the military child care system be a model for the nation?",
+   "How the pandemic drove rents higher and made housing inequality worse",
+   "New revelations show Trump's threats against democracy are 'still very real,' Panetta says",
+   "U.S. military leaders worried Trump might attempt a coup to stay in power, new book claims",
+   "Child tax credit should boost working families, Treasury Secretary Yellen says",
+   "U.S. Surgeon General warns against vaccine misinformation on social media"
+  ]
+ },
+ {
+  "file": "transcripts/pbs/2021/2021-07-14.md",
+  "size": 57284,
+  "sections": 8,
+  "titles": [
+   "A formerly incarcerated artist's Brief But Spectacular take on rehabilitation through art",
+   "Parents in Shickley, Nebraska desperately needed child care. The public school stepped up",
+   "Britney Spears can now hire her own counsel — for the first time in 13 years",
+   "Young, modern Afghans fear 'losing everything' as Taliban regains ground",
+   "Supply 'bottlenecks' are driving a consumer price surge. Here's how that affects inflation",
+   "Chaos in South Africa as riots, looting follow Zuma's jailing",
+   "News Wrap: Tokyo sees highest COVID cases since May, days before Olympic Games",
+   "What's in Democrats' $3.5 trillion budget plan? Here's what we know so far"
+  ]
+ },
+ {
+  "file": "transcripts/pbs/2021/2021-07-13.md",
+  "size": 54254,
+  "sections": 8,
+  "titles": [
+   "Sonya Clark on the Confederate truce flag and creating a collective work of healing",
+   "Combining job training, child care could be 'magic road' to single moms' economic security",
+   "How Trump's team struggled to tell him no, enabled election falsehoods",
+   "Oregon Bootleg Fire, nation's largest, keeps doubling in size",
+   "Dems in Congress lack 'sense of urgency' on voting rights, NAACP president says",
+   "Texas Dems encouraging federal takeover of elections, GOP Rep. Taylor says",
+   "Fire at Iraq COVID hospital leaves 92 dead, more than 100 injured",
+   "News Wrap: Consumer prices see 5.4% year on year rise, White House says surge temporary"
+  ]
+ },
+ {
+  "file": "transcripts/pbs/2021/2021-07-12.md",
+  "size": 52165,
+  "sections": 7,
+  "titles": [
+   "Tamara Keith and Amy Walter on rewriting the Capitol attack, defunding police",
+   "The market controls child care costs in the U.S. Can that be changed?",
+   "Is the Pfizer booster shot necessary to beat the delta variant? An expert weighs in",
+   "Mayor Bowser on D.C.'s rising gun violence, new police hires and their accountability",
+   "Exploring the conspiracies, chaos in the assassination investigation in Haiti",
+   "News Wrap: Biden holds White House meeting on gun control as U.S. sees spike in violence",
+   "Why are Cubans protesting? Examining the nation's disappointment with the Communist Party"
+  ]
+ },
+ {
+  "file": "transcripts/pbs/2021/2021-07-09.md",
+  "size": 48897,
+  "sections": 7,
+  "titles": [
+   "Brooks and Tumulty on earmarks, Afghanistan withdrawal, NYC mayor's race",
+   "What is an earmark? Examining the pros and cons of the congressional provision",
+   "Heatwaves are becoming more common. Here's how the U.S. must plan for them",
+   "UN votes to keep sole humanitarian border crossing open to starving Syrians",
+   "Many in Missouri are unvaccinated. Hospitals are paying the price as delta variant spreads",
+   "Who will replace Jovenel Moïse? Exploring his assassination and Haiti's future",
+   "News Wrap: Vaccinated teachers, students can ditch masks inside schools, CDC says"
+  ]
+ },
+ {
+  "file": "transcripts/pbs/2021/2021-07-08.md",
+  "size": 52625,
+  "sections": 7,
+  "titles": [
+   "Japanese public worried Olympics may be a superspreader event despite spectator ban",
+   "Indigenous survivor describes her 'haunting experience' of boarding school abuse",
+   "Baby boomers on their role in social change and how luck affected their prosperity",
+   "How the Supreme Court's ruling on Arizona may embolden Texas' attempts to restrict voting",
+   "Condo boards can be notoriously secretive. Will the Surfside collapse change that?",
+   "Poorer nations are 'perilously at risk' as delta variant spreads. Can the U.S. help?",
+   "News Wrap: Biden prepones, defends U.S. pullout from Afghanistan"
+  ]
+ },
+ {
+  "file": "transcripts/pbs/2021/2021-07-07.md",
+  "size": 51912,
+  "sections": 7,
+  "titles": [
+   "An environmental health advocate's Brief But Spectacular take on America's dirty secret",
+   "'OK, boomer': What's behind millennials' growing resentment for their predecessors?",
+   "Afghan militias forced to fight Taliban blame America's 'abandonment'",
+   "100% of military sexual assault survivors feel 'trapped,' have suicidal ideations",
+   "Eric Adams on NYC's mayoral race, public safety, economy and COVID plan",
+   "News Wrap: 'Zero chance' of finding the missing in Surfside alive, officials say",
+   "Who assassinated the Haitian president, and why? Here's what we know so far"
+  ]
+ },
+ {
   "file": "transcripts/pbs/2021/2021-07-06.md",
   "size": 53748,
   "sections": 8,
