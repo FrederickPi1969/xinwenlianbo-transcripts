@@ -700,13 +700,13 @@ def main():
     g.add_argument("--recent", type=int, metavar="N")
     g.add_argument("--date")
     g.add_argument("--start")
+    g.add_argument("--ak-full", action="store_true",
+                   help="Akashvani 全量回填（按 ID 序列走完各分类）")
     ap.add_argument("--end")
     ap.add_argument("--sources", default=",".join(SOURCES),
                     help=f"逗号分隔：{','.join(SOURCES)}（默认全部）")
     ap.add_argument("--force", action="store_true")
     ap.add_argument("--reindex", action="store_true", help="只重建 catalogue.json")
-    ap.add_argument("--ak-full", action="store_true",
-                    help="Akashvani 全量回填（按 ID 序列走完各分类）")
     args = ap.parse_args()
 
     if args.reindex:
