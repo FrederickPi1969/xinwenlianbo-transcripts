@@ -37,10 +37,12 @@ jobs:
 
       - name: Ingest global transcripts
         run: |
-          if [ -n "${{ inputs.date }}" ]; then
-            python3 crawler/global_daily.py --date "${{ inputs.date }}"
+          DATE="${{ inputs.date }}"
+          DAYS="${{ inputs.days }}"
+          if [ -n "$DATE" ]; then
+            python3 crawler/global_daily.py --date "$DATE"
           else
-            python3 crawler/global_daily.py --recent "${{ inputs.days }}"
+            python3 crawler/global_daily.py --recent "${DAYS:-3}"
           fi
 
       - name: Prune CNN window (2GB rule)
