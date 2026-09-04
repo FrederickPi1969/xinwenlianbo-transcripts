@@ -89,6 +89,7 @@ news/
 | `whitehouse` | T1 | `whitehouse.gov/briefings-statements/`（列表 `<time datetime>` 定日期） | 官方 remarks/statements；无发布的日子为空 |
 | `npr` | T2 | `feeds.npr.org/{1001,1002}` + 节目页 → `npr.org/transcripts/<storyId>` | 官方 story transcript（`has-transcript` 才有）；发现路径只覆盖最近几天，深历史需官方 API |
 | `state` | T1 | `state.gov/press-releases/`（collection-result 卡片） | 官方 press statements/remarks；列表可翻至站点起点 |
+| `akashvani` | T1 | `newsonair.gov.in/bulletins-detail/<cat>-<N>/`（顺序 ID + 页面日期权威分桶） | 印度 AIR 英语公报（morning/midday/evening）；存档 2023-10 起；`--ak-full` 全量回填 |
 
 **审计通过但暂未纳入（2026-09-04 直连 + proxy 双重复测）**：
 
