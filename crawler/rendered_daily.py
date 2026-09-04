@@ -125,13 +125,18 @@ def md_clean(text):
 
 def ingest_un(date):
     yy, ymd = date[2:4], date.replace("-", "")[2:]
-    url = f"https://press.un.org/en/{date[:4]}/db{ymd}.doc.htm"
+    urls = [f"https://press.un.org/en/{date[:4]}/db{ymd}.doc.htm",
+            f"https://www.un.org/press/en/{date[:4]}/db{ymd}.doc.htm"]
     try:
-        got = ulscar_text([url])
-    except (TimeoutError, RuntimeError) as e:
+        got = ulscar_text(urls)
+    except Exception as e:
         log(f"  un {date} ULSCAR 失败：{e}")
         return []
-    text = md_clean(got[0][1]) if got else ""
+    text = ""
+    for _, t in got:
+        if t:
+            text = md_clean(t)
+            break
     if len(text) < MIN_CHARS["un"] or "Briefing" not in text:
         return []  # 当日无简报（周末/假日）或渲染失败
     # 去掉页尾主题标签列表
@@ -142,7 +147,7 @@ def ingest_un(date):
     tm = re.search(r"# (.+)", text)
     path = write_md("un", date, f"{date}.md", tm.group(1) if tm else f"{title} · {date}",
                     [("全文", text)],
-                    extra=[f"官方页：{url}", "transcript_kind: official near-verbatim（ULSCAR opencli 渲染）"])
+                    extra=[f"官方页：{urls[0]}", "transcript_kind: official near-verbatim（ULSCAR opencli 渲染）"])
     if path:
         log(f"  un: {len(text)} chars -> {os.path.basename(path)}")
     return [path] if path else []
