@@ -89,6 +89,8 @@ news/
 | `whitehouse` | T1 | `whitehouse.gov/briefings-statements/`（列表 `<time datetime>` 定日期） | 官方 remarks/statements；无发布的日子为空 |
 | `npr` | T2 | `feeds.npr.org/{1001,1002}` + 节目页 → `npr.org/transcripts/<storyId>` | 官方 story transcript（`has-transcript` 才有）；发现路径只覆盖最近几天，深历史需官方 API |
 | `state` | T1 | `state.gov/press-releases/`（collection-result 卡片） | 官方 press statements/remarks；列表可翻至站点起点 |
+| `kbs` | T3 | `world.kbs.co.kr/service/news_list.htm`（静态站） | KBS WORLD Radio 英文新闻（配音频 written_news）；直连 |
+| `dw` | T3 | `learngerman.dw.com/de/<DDMMYYYY>-langsam.../a-N` | DW 每日慢速德语新闻配稿（paired_script，周一至周六）；jina 渲染 + ULSCAR 兜底 |
 | `un` | T1 | `press.un.org/en/<YYYY>/db<YYMMDD>.doc.htm`（双镜像） | UN 秘书长发言人午间简报 near-verbatim 全文；**经 Endeavor ULSCAR opencli 渲染**；历史 2022 前后起；仅 Cosmos 端运行 |
 | `yle` | T3 | `yle.fi/uutiset/osasto/selkouutiset/` 首页全文捕获 | 简明芬兰语新闻（paired_script）；ULSCAR 渲染；仅当日 |
 | `arirang` | T3 | `arirang.com/news` 首页多篇文章 | 韩国国际台英文新闻；ULSCAR jina 渲染；仅当日 |
@@ -107,7 +109,6 @@ news/
 | ABC Australia AM/TWD/PM | 平台迁移 abc.net.au/listen（JS），listen API 404 | 逆向 listen 数据接口 |
 | NHK NEWS WEB EASY / Yle Selkouutiset / Arirang / VOA LE 每日区 | 首页为 JS 壳或文章列表客户端渲染，无静态链接 | headless/JSON API |
 | FT / NYT The Daily | 付费墙（T1-L 定位） | 授权订阅会话 |
-| KBS WORLD | 版权页明确限制复制/分发/AI 训练 | 需先审权，默认不采 |
 
 ABC/NBC/CBS 晚间新闻：按审计维持 Fallback 定位（Internet Archive 闭字幕 / Vanderbilt），不与官方 transcript 混层，未纳入本仓库。
 

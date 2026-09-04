@@ -211,10 +211,77 @@ def ingest_arirang(date):
 
 
 # --------------------------------------------------------------------------- #
+# 4. DW Langsam gesprochene Nachrichten（learngerman.dw.com，ULSCAR 渲染）
+# --------------------------------------------------------------------------- #
+
+DW_SECTION = "https://learngerman.dw.com/de/langsam-gesprochene-nachrichten/s-60040332"
+DW_LINK_RE = re.compile(r"\((https://learngerman\.dw\.com/de/(\d{8})-langsam-gesprochene-nachrichten/a-\d+)")
+
+
+def jina_read(url, timeout=60):
+    """直连 r.jina.ai 渲染（返回含链接的 markdown；ULSCAR 提取不带链接时的兜底）。"""
+    import urllib.request
+    req = urllib.request.Request(f"https://r.jina.ai/{url}",
+                                 headers={"User-Agent": "Mozilla/5.0"})
+    with urllib.request.urlopen(req, timeout=timeout) as resp:
+        return resp.read().decode("utf-8", "replace")
+
+
+def ingest_dw(date):
+    ddmmyyyy = date[8:10] + date[5:7] + date[0:4]
+    # 发现链接：直连 jina（保留 markdown 链接）
+    try:
+        listing = jina_read(DW_SECTION)
+    except Exception as e:
+        log(f"  dw {date} 列表失败：{e}")
+        return []
+    target = None
+    for m in DW_LINK_RE.finditer(listing):
+        if m.group(2) == ddmmyyyy:
+            target = m.group(1)
+            break
+    if not target:
+        return []  # 当日无节目（周日）或列表未含
+    # 正文：jina 直读（JS 应用），薄渲染时 ULSCAR 兜底 + 重试
+    body = ""
+    for attempt in range(3):
+        try:
+            body = md_clean(jina_read(target))
+        except Exception:
+            body = ""
+        if len(body) >= 800:
+            break
+        try:
+            got2 = ulscar_text([target], attempts=1)
+            alt = md_clean(got2[0][1]) if got2[0][1] else ""
+            if len(alt) > len(body):
+                body = alt
+        except Exception:
+            pass
+        if len(body) >= 800:
+            break
+        time.sleep(8)
+    m = re.search(r"\d{2}\.\d{2}\.\d{4}[^\n]*\n", body)
+    if m:
+        body = body[m.start():]
+    if len(body) < 800:
+        log(f"  dw {date}: 渲染过薄（{len(body)}）")
+        return []
+    path = write_md("dw", date, f"{date}.md",
+                    f"DW Langsam gesprochene Nachrichten · {date}",
+                    [("Tagesnachrichten（慢速德语配稿）", body)],
+                    extra=[f"官方页：{target}",
+                           "transcript_kind: paired_script（每日慢速德语新闻配稿，周一至周六）"])
+    if path:
+        log(f"  dw: {len(body)} chars -> {os.path.basename(path)}")
+    return [path] if path else []
+
+
+# --------------------------------------------------------------------------- #
 # 编排
 # --------------------------------------------------------------------------- #
 
-SOURCES = {"un": ingest_un, "yle": ingest_yle, "arirang": ingest_arirang}
+SOURCES = {"un": ingest_un, "yle": ingest_yle, "arirang": ingest_arirang, "dw": ingest_dw}
 
 
 def daterange(start, end):

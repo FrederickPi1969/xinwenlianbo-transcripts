@@ -644,6 +644,67 @@ def ingest_state(date):
 
 
 # --------------------------------------------------------------------------- #
+# 8. KBS WORLD Radio English News（静态站）
+# --------------------------------------------------------------------------- #
+
+KBS_LIST_URL = "https://world.kbs.co.kr/service/news_list.htm?lang=e&page={page}"
+KBS_ITEM_RE = re.compile(
+    r'news_view\.htm\?lang=e&(?:amp;)?Seq_Code=(\d+)"[^>]*>([^<]{5,150})</a>\s*</h2>\s*'
+    r'<p class="date">Written: (\d{4}-\d{2}-\d{2})')
+
+
+def ingest_kbs(date):
+    sections, seen, stop = [], set(), False
+    for page in range(1, 7):
+        try:
+            html = http_get(KBS_LIST_URL.format(page=page))
+        except FetchError as e:
+            log(f"  kbs list page{page} 失败：{e}")
+            break
+        items = KBS_ITEM_RE.findall(html)
+        if not items:
+            break
+        older = False
+        for seq, title, wdate in items:
+            if seq in seen:
+                continue
+            seen.add(seq)
+            if wdate < date:
+                older = True
+            elif wdate == date:
+                sections.append((seq, re.sub(r"\s+", " ", title).strip()))
+        if older:
+            break
+        sleep_a_bit()
+    if not sections:
+        return []
+    out = []
+    for seq, title in sections:
+        sleep_a_bit()
+        try:
+            html = http_get(f"https://world.kbs.co.kr/service/news_view.htm?lang=e&Seq_Code={seq}")
+        except FetchError as e:
+            log(f"  kbs view {seq} 失败：{e}")
+            continue
+        paras = [strip_html(p) for p in re.findall(r"<p[^>]*>(.*?)</p>", html, re.S)]
+        text = "\n\n".join(p for p in paras
+                           if len(p) > 80 and not p.startswith("Written:")
+                           and "KBS World" not in p[:30])
+        if text:
+            out.append((title, text +
+                        f"\n\n> 原文：https://world.kbs.co.kr/service/news_view.htm?lang=e&Seq_Code={seq}"))
+    if not out:
+        return []
+    path = write_md("kbs", date, f"{date}.md",
+                    f"KBS WORLD Radio English News · {date}", out,
+                    extra=["来源：https://world.kbs.co.kr/service/news_list.htm?lang=e",
+                           "transcript_kind: written_news（配音频的官方英文新闻）"])
+    if path:
+        log(f"  kbs: {len(out)} items -> {os.path.basename(path)}")
+    return [path] if path else []
+
+
+# --------------------------------------------------------------------------- #
 # 编排
 # --------------------------------------------------------------------------- #
 
@@ -655,6 +716,7 @@ SOURCES = {
     "npr": ingest_npr,
     "state": ingest_state,
     "ak": ingest_akashvani,
+    "kbs": ingest_kbs,
 }
 
 
