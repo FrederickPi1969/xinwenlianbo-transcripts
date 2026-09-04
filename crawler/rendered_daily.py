@@ -80,8 +80,8 @@ def _usable(text):
     return not any(m.lower() in head.lower() for m in CHALLENGE_MARKERS)
 
 
-def ulscar_text(urls, attempts=3):
-    """返回 [(url, text)]；对失败/挑战页自动整批重试（ULSCAR 多通路回退有随机性）。"""
+def ulscar_text(urls, attempts=5, backoff=15):
+    """返回 [(url, text)]；对失败/挑战页自动整批重试（ULSCAR opencli worker 池小，需耐心退避）。"""
     pending = list(urls)
     out = {u: "" for u in urls}
     for attempt in range(attempts):
@@ -91,7 +91,7 @@ def ulscar_text(urls, attempts=3):
             results = ulscar_fetch(pending)
         except (TimeoutError, RuntimeError) as e:
             log(f"  ulscar attempt {attempt} 失败：{e}")
-            time.sleep(5)
+            time.sleep(backoff)
             continue
         still = []
         for u, r in zip(pending, results):
@@ -102,8 +102,8 @@ def ulscar_text(urls, attempts=3):
                 still.append(u)
         pending = still
         if pending:
-            log(f"  ulscar attempt {attempt}: {len(pending)} 个 URL 未取到，重试")
-            time.sleep(4)
+            log(f"  ulscar attempt {attempt}: {len(pending)} 个 URL 未取到，{backoff}s 后重试")
+            time.sleep(backoff)
     return [(u, out[u]) for u in urls]
 
 
