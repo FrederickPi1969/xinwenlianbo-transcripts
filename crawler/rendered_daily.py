@@ -132,13 +132,11 @@ def ingest_un(date):
     except Exception as e:
         log(f"  un {date} ULSCAR 失败：{e}")
         return []
-    text = ""
-    for _, t in got:
-        if t:
-            text = md_clean(t)
-            break
+    candidates = [md_clean(t) for _, t in got if t]
+    text = max(candidates, key=len, default="")   # 双镜像取最完整渲染
     if len(text) < MIN_CHARS["un"] or "Briefing" not in text:
-        return []  # 当日无简报（周末/假日）或渲染失败
+        log(f"  un {date}: 渲染过薄（{len(text)} chars），放弃")
+        return []
     # 去掉页尾主题标签列表
     text = re.sub(r"\n(Middle East|Israel|Lebanon|Nepal|Madagascar|Syria|State of Palestine"
                   r"|Humanitarian issues|Peacekeeping|[\w ]+)(\n[\w &-]+){10,}\s*$",
