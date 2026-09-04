@@ -705,6 +705,164 @@ def ingest_kbs(date):
 
 
 # --------------------------------------------------------------------------- #
+# 9. RSS 每日摘要源（区域覆盖层：written_news，非逐字稿）
+# --------------------------------------------------------------------------- #
+
+from email.utils import parsedate_to_datetime
+
+RSS_SOURCES = {
+    "aljazeera": {
+        "feed": "https://www.aljazeera.com/xml/rss/all.xml",
+        "tz": ZoneInfo("Asia/Qatar"),
+        "name": "Al Jazeera English",
+        "desc": "半岛电视台英文（中东/卡塔尔视角全球新闻）",
+        "max_items": 40,
+    },
+    "euronews": {
+        "feed": "https://www.euronews.com/rss?level=theme&name=news",
+        "tz": ZoneInfo("Europe/Paris"),
+        "name": "Euronews",
+        "desc": "欧洲新闻台（欧洲视角，英法语系）",
+        "max_items": 40,
+    },
+    "dw-en": {
+        "feed": "https://rss.dw.com/rdf/rss-en-all",
+        "tz": ZoneInfo("Europe/Berlin"),
+        "name": "DW English Top News",
+        "desc": "德意志之声英文主新闻（区别于已裁撤的慢速德语学习节目）",
+        "max_items": 40,
+    },
+}
+
+NAV_NOISE_RE = re.compile(r"^(Show navigation|Skip to|Sign up|Menu|Search|Live|play$)"
+                          r"|Navigation menu|All rights reserved|Cookie|Subscribe")
+
+
+def _rss_items(xml):
+    """兼容 RSS <item> 与 RDF <item> 两种形态。"""
+    blocks = re.findall(r"<item[^>]*>(.*?)</item>", xml, re.S)
+    out = []
+    for b in blocks:
+        t = re.search(r"<title>(?:<!\[CDATA\[)?([^<\]]+)", b)
+        l = re.search(r"<link>([^<]+)</link>|<link rdf:resource=\"([^\"]+)\"", b)
+        d = re.search(r"<pubDate>([^<]+)</pubDate>|<dc:date>([^<]+)</dc:date>", b)
+        link = (l.group(1) or l.group(2)) if l else None
+        date_raw = (d.group(1) or d.group(2)) if d else None
+        pub = None
+        if date_raw:
+            try:
+                pub = parsedate_to_datetime(date_raw.strip())
+            except ValueError:
+                try:
+                    pub = datetime.fromisoformat(date_raw.replace("Z", "+00:00"))
+                except ValueError:
+                    pub = None
+        out.append((t.group(1).strip() if t else "", link, pub))
+    return out
+
+
+def rss_article_text(url):
+    try:
+        html = http_get(url)
+    except FetchError:
+        return None
+    paras = [strip_html(p) for p in re.findall(r"<p[^>]*>(.*?)</p>", html, re.S)]
+    keep = []
+    for p in paras:
+        if len(p) < 90 or NAV_NOISE_RE.search(p):
+            continue
+        # 必须像句子（含终止标点且非纯链接/菜单）
+        if not re.search(r"[.。！？!?\"」』]", p):
+            continue
+        if len(re.findall(r"\s", p)) / max(len(p), 1) > 0.25:  # 空格占比过高≈菜单
+            continue
+        keep.append(p)
+    return "\n\n".join(keep[:30]) or None
+
+
+def ingest_rss_digest(key, date):
+    cfg = RSS_SOURCES[key]
+    try:
+        xml = http_get(cfg["feed"])
+    except FetchError as e:
+        raise FetchError(f"{key} feed: {e}")
+    sections = []
+    for title, link, pub in _rss_items(xml):
+        if pub is None or link is None:
+            continue
+        if pub.astimezone(cfg["tz"]).date().isoformat() != date:
+            continue
+        if len(sections) >= cfg["max_items"]:
+            break
+        sleep_a_bit()
+        text = rss_article_text(link)
+        if text and len(text) > 200:
+            sections.append((title, text + f"\n\n> 原文：{link}"))
+    if not sections:
+        return []
+    path = write_md(key, date, f"{date}.md", f"{cfg['name']} · {date}", sections,
+                    extra=[f"RSS：{cfg['feed']}", f"说明：{cfg['desc']}",
+                           "transcript_kind: written_news（官方文字报道，非播出逐字稿）"])
+    if path:
+        log(f"  {key}: {len(sections)} 篇 -> {os.path.basename(path)}")
+    return [path] if path else []
+
+
+def _make_rss_ingest(key):
+    return lambda date: ingest_rss_digest(key, date)
+
+
+for _key in RSS_SOURCES:
+    pass  # 占位说明：动态注入见下方 SOURCES
+
+
+# --------------------------------------------------------------------------- #
+# 9b. NHK News Web（日本，首页内嵌 JSON-LD → 静态文章页）
+# --------------------------------------------------------------------------- #
+
+NHK_FRONT = "https://www3.nhk.or.jp/news/n-news/"
+NHK_ARTICLE_RE = re.compile(
+    r'\\"id\\":\\"na-(k\d{11})\\".*?'
+    r'\\"datePublished\\":\\"(\d{4}-\d{2}-\d{2})T[\d:+]+09:00')
+
+
+def ingest_nhk(date):
+    front = http_get(NHK_FRONT)
+    ids, seen = [], set()
+    for ndid, d in re.findall(r'\\"id\\":\\"(nd-(\d{8})de\d+)\\"', front):
+        if d == date.replace("-", "") and ndid not in seen:
+            seen.add(ndid)
+            ids.append(ndid)
+    sections = []
+    for ndid in ids[:30]:
+        time.sleep(0.4)
+        try:
+            req = urllib.request.Request(
+                f"https://api.web.nhk/r8/t/newsarticle/na/{ndid}.json",
+                headers={"User-Agent": UA,
+                         "Referer": "https://www3.nhk.or.jp/n-news/"})
+            with urllib.request.urlopen(req, timeout=20) as r:
+                d = json.loads(r.read().decode("utf-8", "replace"))
+        except Exception:
+            continue
+        title = d.get("headline") or ndid
+        lead = d.get("abstract") or d.get("description") or ""
+        if lead:
+            sections.append((title, lead +
+                             f"\n\n> API：https://api.web.nhk/r8/t/newsarticle/na/{ndid}.json"
+                             f"\n> 页面：{d.get('canonical', '')}"))
+    if not sections:
+        return []
+    path = write_md("nhk", date, f"{date}.md", f"NHK ニュース · {date}", sections,
+                    extra=["发现：https://www3.nhk.or.jp/news/n-news/（内嵌 JSON-LD）",
+                           "说明：NHK 旗舰新闻当日条目（标题+导语）；全文页已迁入 NHK ONE 登录门",
+                           "transcript_kind: headline_plus_lead（非全文）"])
+    if path:
+        log(f"  nhk: {len(sections)} 条（标题+导语）-> {os.path.basename(path)}")
+    return [path] if path else []
+
+
+# --------------------------------------------------------------------------- #
 # 编排
 # --------------------------------------------------------------------------- #
 
@@ -717,6 +875,10 @@ SOURCES = {
     "state": ingest_state,
     "ak": ingest_akashvani,
     "kbs": ingest_kbs,
+    "nhk": ingest_nhk,
+    "aljazeera": _make_rss_ingest("aljazeera"),
+    "euronews": _make_rss_ingest("euronews"),
+    "dw-en": _make_rss_ingest("dw-en"),
 }
 
 

@@ -95,6 +95,10 @@ news/
 | `whitehouse` | T1 | `whitehouse.gov/briefings-statements/`（列表 `<time datetime>` 定日期） | 官方 remarks/statements；无发布的日子为空 |
 | `npr` | T2 | `feeds.npr.org/{1001,1002}` + 节目页 → `npr.org/transcripts/<storyId>` | 官方 story transcript（`has-transcript` 才有）；发现路径只覆盖最近几天，深历史需官方 API |
 | `state` | T1 | `state.gov/press-releases/`（collection-result 卡片） | 官方 press statements/remarks；列表可翻至站点起点 |
+| `nhk` | T3 | NHK ONE 前页 JSON-LD → `api.web.nhk/r8/.../nd-*.json` | 日本 NHK 旗舰新闻当日条目（**标题+导语**，全文在登录门内）；RSS 已停更故走内嵌发现 |
+| `aljazeera` | T3 | RSS `aljazeera.com/xml/rss/all.xml` → 静态文章 | 半岛电视台英文（中东视角全球新闻） |
+| `euronews` | T3 | RSS → 静态文章 | 欧洲新闻台（泛欧洲覆盖） |
+| `dw-en` | T3 | RSS `rss.dw.com/rdf/rss-en-all` → 静态文章 | DW 英文主新闻（德国视角） |
 | `kbs` | T3 | `world.kbs.co.kr/service/news_list.htm`（静态站） | KBS WORLD Radio 英文新闻（配音频 written_news）；直连 |
 | `un` | T1 | `press.un.org/en/<YYYY>/db<YYMMDD>.doc.htm`（双镜像） | UN 秘书长发言人午间简报 near-verbatim 全文；**经 Endeavor ULSCAR opencli 渲染**；历史 2022 前后起；仅 Cosmos 端运行 |
 | `akashvani` | T1 | `newsonair.gov.in/bulletins-detail/<cat>-<N>/`（顺序 ID + 页面日期权威分桶） | 印度 AIR 英语公报（morning/midday/evening）；存档 2023-10 起；`--ak-full` 全量回填 |
