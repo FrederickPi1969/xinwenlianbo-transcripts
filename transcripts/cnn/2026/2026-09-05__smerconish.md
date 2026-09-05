@@ -2,7 +2,7 @@
 
 - 数据源：cnn
 - 日期：2026-09-05
-- 抓取时间：2026-09-05T22:04:44+00:00
+- 抓取时间：2026-09-05T23:27:23+00:00
 - 官方 archive：https://transcripts.cnn.com/show/smer/date/2026-09-05
 
 ## [01] Did Not Air 9-10a ET
