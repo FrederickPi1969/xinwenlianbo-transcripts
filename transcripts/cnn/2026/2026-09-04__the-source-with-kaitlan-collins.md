@@ -2,7 +2,7 @@
 
 - 数据源：cnn
 - 日期：2026-09-04
-- 抓取时间：2026-09-05T23:23:19+00:00
+- 抓取时间：2026-09-06T09:55:37+00:00
 - 官方 archive：https://transcripts.cnn.com/show/skc/date/2026-09-04
 
 ## [01] Did Not Air
