@@ -2,7 +2,7 @@
 
 - 数据源：cnn
 - 日期：2026-09-05
-- 抓取时间：2026-09-07T09:55:17+00:00
+- 抓取时间：2026-09-07T15:11:54+00:00
 - 官方 archive：https://transcripts.cnn.com/show/foavb/date/2026-09-05
 
 ## [01] Did Not Air 8-9a ET
