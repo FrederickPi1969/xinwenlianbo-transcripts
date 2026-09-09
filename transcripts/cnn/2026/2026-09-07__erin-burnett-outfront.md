@@ -2,7 +2,7 @@
 
 - 数据源：cnn
 - 日期：2026-09-07
-- 抓取时间：2026-09-08T23:43:25+00:00
+- 抓取时间：2026-09-09T09:55:36+00:00
 - 官方 archive：https://transcripts.cnn.com/show/ebo/date/2026-09-07
 
 ## [01] Did Not Air 7-8p ET
