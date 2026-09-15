@@ -1,10 +1,35 @@
 [
  {
+  "file": "transcripts/cnn/2026/2026-09-14__what-we-know-with-max-foster.md",
+  "size": 42724,
+  "sections": 1,
+  "titles": [
+   "[01] Trump Dismisses Calls For More A.I. Guardrails; Anthropic CEO: People Could Lose Control Of A.I.; China Rejects Suggestions It Poses An A.I. Governance Risk; Trump Says Unification Of Ireland A \"Natural Thing\"; Democrats And Republicans Spar Over Limiting A.I. Growth; Kyiv: Russian Drone Strike \"Quite Likely\" A Targeted Attack"
+  ]
+ },
+ {
+  "file": "transcripts/cnn/2026/2026-09-14__the-source-with-kaitlan-collins.md",
+  "size": 50197,
+  "sections": 1,
+  "titles": [
+   "[01] Supreme Court Rejects Trump's Plan To Limit Mail-In Voting In Midterms; Anthropic CEO: \"I'm Still Worried\" AI Could Wipe Out Humans; ProPublica: Putin-Connected Oligarch Bankrolled Trump Jr.'s Wedding"
+  ]
+ },
+ {
   "file": "transcripts/cnn/2026/2026-09-14__the-situation-room.md",
   "size": 17889,
   "sections": 1,
   "titles": [
    "[01] Big Tech Leaders Call for A.I. Slowdown Amid Safety Concerns; D.C. Police Search for Single Mother Who Vanished Ten Days Ago; Rushing Floodwaters Swamp Connecticut Neighborhoods"
+  ]
+ },
+ {
+  "file": "transcripts/cnn/2026/2026-09-14__the-lead-with-jake-tapper.md",
+  "size": 92049,
+  "sections": 2,
+  "titles": [
+   "[01] Trump Dismisses A.I. Concerns; Trump Tells Zelenskyy To Stop Targeting Russian Oil Refineries; Trump Dismisses China Spying Concerns; Tense Phone Call & Resignation Upend Probe Into Trump's Top Foes; Rep. Jared Huffman (D-CA) Is Interviewed About His New Book On Threat Of Christian Nationalism; Stars Arrive For 78th Primetime Emmy Awards",
+   "[02] Trump Dismisses A.I. Alarms As A Hoax; Exclusive Interview With Gov. Gavin Newsom (D-CA); Sen. Mitch McConnell (R-KY) Spotted For First Time Since Hospitalization; Paxton Silent After Texas Republican Spews Xenophobia Online; Stars Arrive For 78th Primetime Emmy Awards"
   ]
  },
  {
@@ -25,6 +50,14 @@
   ]
  },
  {
+  "file": "transcripts/cnn/2026/2026-09-14__laura-coates-live.md",
+  "size": 47429,
+  "sections": 1,
+  "titles": [
+   "[01] Supreme Court Rejects Trump's Bid To Limit Mail-In Voting; Trump Dismisses A.I. Warnings; ProPublica: Putin-Connected Oligarch Bankrolled Trump Jr.'s Wedding; Macklemore Dropped From Ed Sheeran Tour Over \"Free Palestine\" Remark"
+  ]
+ },
+ {
   "file": "transcripts/cnn/2026/2026-09-14__isa-soares-tonight.md",
   "size": 47425,
   "sections": 1,
@@ -38,6 +71,14 @@
   "sections": 1,
   "titles": [
    "[01] GOP Wisconsin Gov. Candidate Tom Tiffany Escapes Sinking Plane After Emergency Lake Landing; New CNN Analysis: North Carolina Most Likely Senate Seat To Flip; Kansas GOP Sen. Marshall Faces \"Shame On You\" Chants When Asked About Suing Patients Over Medical Debt; Johnson Appeals To Trump For Tech Leaders Meeting On AI Guardrails; AI Safety Becoming Major Topic On Midterm Campaign Trail; Never Trump Republican Lays Out How To Beat Him In New Book"
+  ]
+ },
+ {
+  "file": "transcripts/cnn/2026/2026-09-14__erin-burnett-outfront.md",
+  "size": 49963,
+  "sections": 1,
+  "titles": [
+   "[01] Oil Spikes Amid Rationing And Fears Of Global Crisis; Trump Jr. & Wife Confirm Russian Oligarch Paid For Part Of Wedding; Supreme Court Rejects Trump's Plan To Limit Mail-In Voting In Midterms; Ex- OpenAI Researcher: 70 Percent Chance A.I. Leads To Global Catastrophe"
   ]
  },
  {
@@ -58,6 +99,14 @@
   ]
  },
  {
+  "file": "transcripts/cnn/2026/2026-09-14__cnn-s-the-arena-with-kasie-hunt.md",
+  "size": 44233,
+  "sections": 1,
+  "titles": [
+   "[01] Trump Dismisses A.I. Concerns As A \"Hoax\", Worrying White House Officials; Senate Returns Amid New A.I. Doom Warnings; U.S. Airman Describes Being Shot Down Over Iran, Evading Capture; CNN Live From Emmy's Red Carpet"
+  ]
+ },
+ {
   "file": "transcripts/cnn/2026/2026-09-14__cnn-newsroom.md",
   "size": 199476,
   "sections": 6,
@@ -68,6 +117,14 @@
    "[20] Concerns Mounting over Anthropic CEO's A.I. Slowdown; Center- Left Bloc Leads Swedish Parliament Elections as Counting of Votes Continue; German Alexander Zverev Claims U.S. Open Tennis Men's Singles Champion",
    "[21] CNN International: Ukrainian Passenger Train Struck By Russian Drones; Oman: Iran-Gulf Talks on Reopening Of Hormuz Postponed; Trump Dismisses A.I. Concerns As CEOs Call For Slowdown; Trump Shrugs Off A.I. Warnings, Citing China Competition; 129 Missing After Indonesian Ferry Capsizes In Rough Seas",
    "[22] CNN International: Trump Visits Ireland As Gas Prices Rise Amid War With Iran; Airman Shot Down In Iran Recounts His Dramatic Rescue; South Korean Corals Worry Divers"
+  ]
+ },
+ {
+  "file": "transcripts/cnn/2026/2026-09-14__cnn-newsnight-with-abby-phillip.md",
+  "size": 49525,
+  "sections": 1,
+  "titles": [
+   "[01] Supreme Court Rejects Trump's Plan To Limit Mail Ballots; Trump Rejects A.I. Regulation Despite Urgent Warnings; A.I. Industry's Pleas For Guardrails Dismissed By Trump, GOP; Gavin Newsom Tackles His 2028 Plans In A CNN Interview; Russian Oligarch Reportedly Pays Donald Trump's Son For A Wedding"
   ]
  },
  {
@@ -90,6 +147,14 @@
   "titles": [
    "[01] CNN Headlines: Democrats and GOP Split About Calls to Regulate Artificial Intelligence; Amazon Pauses Operations with Cargo Airline Involved in the Deadly Miami Runway Crash; Severe Weather Slams Parts of U.S. Northeast, Leaving Roads Flooded and Drivers Stranded",
    "[02] CNN Headlines: Trump Dismisses A.I. Concerns As CEOs Call For Slowdown; Senate Back On Capitol Hill After 5-Week Recess, Will Mitch McConnell Return?; Zverev Defeats Shelton To Claim Men's Single Title In U.S. Open Championship"
+  ]
+ },
+ {
+  "file": "transcripts/cnn/2026/2026-09-14__anderson-cooper-360-degrees.md",
+  "size": 44779,
+  "sections": 1,
+  "titles": [
+   "[01] One-On-One With Anthropic's CEO Dario Amodei; Trump Dismisses A.I. Alarms As A \"Hoax\", Worries White House Officials; Anthropic CEO Calls For Stronger Regulation Of AI; Tech Rivals Agree With Anthropic CEO On Call For AI Slow Down"
   ]
  },
  {
