@@ -802,7 +802,11 @@ def ingest_rss_digest(key, date):
         if len(sections) >= cfg["max_items"]:
             break
         sleep_a_bit()
-        text = rss_article_text(link)
+        try:
+            text = rss_article_text(link)
+        except Exception as e:  # 单篇异常（编码/解析等）跳过，不影响当日其余条目
+            log(f"  {key}: 文章抓取失败，跳过 {link} ({type(e).__name__}: {e})")
+            continue
         if text and len(text) > 200:
             sections.append((title, text + f"\n\n> 原文：{link}"))
     if not sections:
@@ -988,6 +992,9 @@ def main():
             except FetchError as e:
                 failed += 1
                 log(f"  {label} FAIL {e}")
+            except Exception as e:  # 意外异常同样只计失败，不让单源拖垮整轮
+                failed += 1
+                log(f"  {label} FAIL {type(e).__name__}: {e}")
     log(f"global 完成：written={ok} empty/skipped={empty} failed={failed}")
     reindex()
     if failed and failed == len(days) * len(chosen):

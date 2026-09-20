@@ -36,6 +36,7 @@ import sys
 import threading
 import time
 import urllib.error
+import urllib.parse
 import urllib.request
 from datetime import date, datetime, timedelta
 from html.parser import HTMLParser
@@ -73,6 +74,10 @@ def log(msg):
 
 def http_get(url, timeout=30, attempts=3):
     """GET 文本，带重试与指数退避。遵循环境变量代理设置。"""
+    # 部分 RSS（如 DW）的文章链接含非 ASCII 字符（如 ü、é 等变音字母），
+    # http.client 请求行只接受 ASCII；这里按 IRI→URI 做百分号转义。
+    # safe 保留 RFC 3986 保留字与 '%'，避免对已有转义二次编码。
+    url = urllib.parse.quote(url, safe=":/?#[]@!$&'()*+,;=%")
     last_err = None
     for attempt in range(1, attempts + 1):
         req = urllib.request.Request(url, headers={
