@@ -1,10 +1,75 @@
 [
  {
+  "file": "transcripts/cnn/2026/2026-09-29__the-story-is-with-elex-michaelson.md",
+  "size": 84207,
+  "sections": 2,
+  "titles": [
+   "[01] U.S. and China Agree to Cut Tariffs; Trump Team Planning Aggressive Midterm Campaign Schedule; Mexico Charts Harsh Conditions as Hurricane Polo Nears Coast; SpaceX's Starship Returns to Earth After First Orbital Trip; Growing Calls for Government Oversight of A.I. Models; Five Men Released on Bail Amid U.K. Air Base Investigation; Pope Leo XIV Wraps Up 4-Day Trip to France",
+   "[02] OpenAI Cancels Release Of Newest Model Due To Safety Concerns; Top AI Executives To Meet At White House On Tuesday; Prosecutor Reopens Probe Into Cornell Gang Rape Allegations; Mexico Charts Harsh Conditions As Hurricane Polo Nearby Cost; Bloomberg Screentime To Discuss AI's Impact In Hollywood; Children in U.S. Immigration Courts Alone as They Fight Deportation; Ousted Disney CEO Airs Grievances in New Book; Lebron James Sets Expectations High with 76ers"
+  ]
+ },
+ {
+  "file": "transcripts/cnn/2026/2026-09-29__the-situation-room.md",
+  "size": 44821,
+  "sections": 2,
+  "titles": [
+   "[01] Jack Smith Testifies Before Senate Committee on Trump Investigations; Lindsay Clancy Back in Court for First Time Since Murder Case Mistrial",
+   "[02] Interview With Rep. Lori Trahan (D-MA); Trump Meets With Tech Leaders; Lindsay Clancy Back in Court"
+  ]
+ },
+ {
+  "file": "transcripts/cnn/2026/2026-09-29__cnn-this-morning.md",
+  "size": 50293,
+  "sections": 2,
+  "titles": [
+   "[01] OpenAI Cancels Release of New Model Over Safety Concerns; Investigation Reopened Into Alleged Gang Rape at Cornell; Vulnerable Iowa Republicans Join Trump for Steel Announcement",
+   "[02] Former Federal Prosecutor Ankush Khardori is Interviewed about Jack Smith; Conservatives Revolt over Arkansas Welfare Ad; Paxton's Estranged Wife Speaks Out; Mariachi Band Plays National Anthem"
+  ]
+ },
+ {
+  "file": "transcripts/cnn/2026/2026-09-29__cnn-newsroom.md",
+  "size": 109293,
+  "sections": 4,
+  "titles": [
+   "[19] Sources Say Donald Trump Is Open To Iran Sanctions Relief For Nuclear Deal; OpenAI Pauses Training Until New Safeguards Are In Place; Five Men Released On Bail Amid U.K. Air Base Investigation; FBI Database Hack Exposed Personal Information of Entire FBI Workforce; Kyiv Mayor Says Two Killed in Strike on Science Academy; France's Public Sector to Strike Nationwide Over Pay; Protesters Demand Spanish Government Limit Evictions; at Least 21 Killed in Nepal as Heavy Rain Renews Flooding; Hurricane Polo Makes Landfall in Baja California Sur, Mexico; Pope Leo XIV Completes Four-Day Visit to France; Pope Says Concerns About A.I. Should Be Taken Seriously; Prosecutors Reopen Cornell University Gang Rape Investigation; SpaceX's Starship Returns to Earth After First Orbital Trip",
+   "[20] Trump Open to Easing Iran Sanctions; Five British Terror Plot Suspects Freed on Bail; Two Killed in Strike on Science Academy; SpaceX's Starship Makes Fiery Splashdown; Pope Leo XIV Completes Four- Day Visit to France; Nvidia Launches Tool to Stop A.I. Agents from Going Rogue",
+   "[21] CNN International: Official: U.S.-Iran Having \"Positive\" Talks Through Mediators; Hurricane Polo Makes Landfall In Baja California Sur, Mexico; Funding Cuts Hit Agencies That Deal With Natural Disasters; Five Men Released On Bail Amid U.K. Air Base Investigation; Pope Leo XIV Completes Four-Day Visit To France",
+   "[22] CNN International: Russian Drones Hit Kyiv Science Academy; Protesters Demand Spanish Government Limit Evictions; Children In U.S. Immigration Courts Alone As They Fight"
+  ]
+ },
+ {
+  "file": "transcripts/cnn/2026/2026-09-29__cnn-news-central.md",
+  "size": 61101,
+  "sections": 3,
+  "titles": [
+   "[01] Soon, Lindsay Clancy Back in Court for First Time Since Mistrial; A.I. Leaders to Meet Trump Amid Safety, Regulation Debate; FBI Grapples With Fallout from Massive Data Breach",
+   "[02] Republicans Spend Big To Save Ken Paxton's Texas Senate Bid; Prosecutors Reopen Investigation Into Cornell Gang Rape Allegations; U.S. Senate Passes \"Protect College Sports Act.\" Aired 7:30-8a ET",
+   "[03] Interview with Sen. Dick Durbin (D-IL): Ex-Special Counsel Jack Smith to Testify on Trump Prosecution; Iran's Hormuz Chokehold Weakens as Mideast Oil Exports Rebound; Lindsay Clancy Back in Court for First Time Since Mistrial; New Ban Impacts $80 Million Worth of Canadian Alcoholic Beverages"
+  ]
+ },
+ {
+  "file": "transcripts/cnn/2026/2026-09-29__cnn-live-event-special.md",
+  "size": 38254,
+  "sections": 2,
+  "titles": [
+   "[01] CNN Headlines: Source: Trump To Meet With Top A.I. Executives Today; Lindsay Clancy Returns To Court Today; Prosecutors Reopen Investigation Into Alleged Cornell Gang Rape",
+   "[02] CNN Headlines: Migrant Children Facing Immigration Court Without Lawyers; Trump To Meet With Top AI Executives Today; Princess Diana's Brother Accuses King Charles Of Being \"Elated\" After Her Death"
+  ]
+ },
+ {
   "file": "transcripts/cnn/2026/2026-09-28__what-we-know-with-max-foster.md",
   "size": 41700,
   "sections": 1,
   "titles": [
    "[01] Five Men Arrested On Suspicion Of Terrorist Plot Against British Air Base Released On Bail; Trump Speaking At The White House; Trump Announces New Steel Plant, Biggest In U.S. History; SpaceX Launches Most Powerful Rocket Ever Into Orbit; UAE Confirms Netanyahu Visited, Met President"
+  ]
+ },
+ {
+  "file": "transcripts/cnn/2026/2026-09-28__the-source-with-kaitlan-collins.md",
+  "size": 47529,
+  "sections": 1,
+  "titles": [
+   "[01] White House Airs Another Taxpayer-Funded Ad; Trump Criticizes U.K. For Releasing Terrorism Suspects On Bail; Prosecutors Reopen Investigation Into Alleged Gang Rape At Cornell"
   ]
  },
  {
@@ -17,11 +82,28 @@
   ]
  },
  {
+  "file": "transcripts/cnn/2026/2026-09-28__the-lead-with-jake-tapper.md",
+  "size": 95450,
+  "sections": 2,
+  "titles": [
+   "[01] Woman Sues Cornell And Chi Phi Fraternity Over Alleged Gang Rape. Alleged Terror Plot Near U.K. Base Used By U.S. Bombers; Rep. Mike Flood (R-NE), Is Interviewed About GOP Preps Trump Midterm Push Amid Low Presidential Approval; Estranged Wife Of TX Senate Candidate Ken Paxton Tells Women's Group To Support GOP Candidates \"Even If We're Mad At Them\"; Blanche: Trump's Press Ban Is Driven By National Security Concerns",
+   "[02] Trump's New Comments On 2026 Midterm Elections; U.N. Says, Deadly U.S. Strike On Iran School May Have Been War Crime; The Battle For Control Of Congress; NY Prosecutors Reopen Investigation After Former Student Files Lawsuit Over Alleged Gang Rape At Cornell University; Trump Contradicts U.S. Ambassador's Statement, Says He Did Not Discuss Possibility Of U.S. Selling Weapons to China"
+  ]
+ },
+ {
   "file": "transcripts/cnn/2026/2026-09-28__the-brief-with-jim-sciutto.md",
   "size": 43755,
   "sections": 1,
   "titles": [
    "[01] CNN International: Arrests in Alleged U.K. Terrorist Plot; Trump Open to Iran Sanctions Relief; Kyiv Academy Attacked; NVIDIA Vows to Help Prevent Rogue A.I.; Nepal Hit by Fresh Disaster Weeks After Deadly Floods; Growing Challenges for Palestinians; SpaceX Launches Most Powerful Rocket Ever into Orbit"
+  ]
+ },
+ {
+  "file": "transcripts/cnn/2026/2026-09-28__quest-means-business.md",
+  "size": 46120,
+  "sections": 1,
+  "titles": [
+   "[01] NVIDIA Launches Tool To Keep A.I. From Going Rogue; Suspects On Bail After Arrests In Alleged U.K. Base Plot; SpaceX Starship Rocket Deploys Satellites, Returns To Earth; Trump: United States Will Win War, Gas Prices Will Fall \"Very Soon\"; Diesel Prices Rise As United States Considers Export Curbs; CEO Of Greenland Energy Company Speaks To CNN; Inside South Africa's Film Industry"
   ]
  },
  {
@@ -34,12 +116,36 @@
   ]
  },
  {
+  "file": "transcripts/cnn/2026/2026-09-28__laura-coates-live.md",
+  "size": 49330,
+  "sections": 1,
+  "titles": [
+   "[01] Trump's Self-Promoting Ads Risk Backfiring as GOP Voices Concern; Investigation Re-Opened; CNN, MS NOW, Politico Issue New Filing Over White House Press Ban; Pumping the A.I. Breaks; MAGA Diehards Fed Up"
+  ]
+ },
+ {
+  "file": "transcripts/cnn/2026/2026-09-28__isa-soares-tonight.md",
+  "size": 44883,
+  "sections": 1,
+  "titles": [
+   "[01] Five Men Suspected Of Plotting An Attack On A U.K. Airbase Used By American Bombers Has Been Released On Bail; Israeli Prime Minister Benjamin Netanyahu Makes An Unannounced Trip To The UAE; President Trump Poised To Hit The Campaign Trail For The Midterms; CNN Goes Inside Trump's Strategy For November Elections; Investigation Reopens Into Alleged Gang Rape At Cornell University; Nepal Hit By Fresh Disaster Weeks After Deadly Floods"
+  ]
+ },
+ {
   "file": "transcripts/cnn/2026/2026-09-28__inside-politics.md",
   "size": 39172,
   "sections": 2,
   "titles": [
    "[01] Grassley: Elect A GOP Governor In Iowa In Case I Die; Two MAGA Rally Devotees Tell Playbook They've Turned On Trump; Taxpayer-Funded Trump Ad Warns Of America's \"Final Battle\"; AOC's 2028 Road Map: Re- Election Or Higher Officer? Aired 12-12:30p ET",
    "[02] AOC Takes Progressive Campaign To Rural New York; Anthropic's CEO Dines With Trump At White House; Bill Gates: AI Could \"Cause A Billion Deaths\"; White House To Host AI Leaders Amid Warnings Of Doom; American And Canadian Voters Discuss Visiting Other Country Amid Trade War; New Era Of Panda-Diplomacy Between Beijing & Washington"
+  ]
+ },
+ {
+  "file": "transcripts/cnn/2026/2026-09-28__erin-burnett-outfront.md",
+  "size": 47378,
+  "sections": 1,
+  "titles": [
+   "[01] GOP Senator: Trump Ads \"Shouldn't Be Paid For With Taxpayer Dollars\"; Trump Contradict U.S. Ambassador On Talk Of Weapon Sales To China; FBI Operating Under Assumption Hackers Stole Data On All Employees"
   ]
  },
  {
@@ -60,6 +166,14 @@
   ]
  },
  {
+  "file": "transcripts/cnn/2026/2026-09-28__cnn-s-the-arena-with-kasie-hunt.md",
+  "size": 47219,
+  "sections": 1,
+  "titles": [
+   "[01] White House Releases Another Pro-Trump Ad Paid For By U.S. Government; Today: Deadline For CNN & Others To Ask Judge To Extend Block On Trump's White House Ban; Speaker Johnson: \"Chinese Psyop\" Behind A.I., Data Center Concerns"
+  ]
+ },
+ {
   "file": "transcripts/cnn/2026/2026-09-28__cnn-newsroom.md",
   "size": 191679,
   "sections": 6,
@@ -70,6 +184,14 @@
    "[20] Trump Calls Latest Hormuz Strait Proposal Unacceptable, Expects More Talks with Iran; Bangkok's Disaster Zone Declared in 50 Districts Following Massive Floods; New Batch of Pandas Arrived in the U.S. as Panda Diplomacy Continues",
    "[21] Iran Awaiting \"Definitive\" U.S. Response To Hormuz Proposal; Five Men Held On Suspicion Of Terror, Explosives Offenses; Nor'easter Weakening But Still Threatens Parts Of U.S.; Protesters In Madrid Demand Relief From High Housing Costs; Pope Leo XIV Begins Final Day Of France Trip",
    "[22] Iran: Awaiting Definitive U.S. Response To Hormuz Proposal; Floods And Landslides Kill At Least 14 In Nepal; 10 Months Of Drought Is Devastating Honduras"
+  ]
+ },
+ {
+  "file": "transcripts/cnn/2026/2026-09-28__cnn-newsnight-with-abby-phillip.md",
+  "size": 49637,
+  "sections": 1,
+  "titles": [
+   "[01] Trump Personally Driving Taxpayer-Funded Ads Promoting Himself; Trump Adviser Says, Midterms are Going To Be F***ing Rough; Trump Denies Discussing U.S. Selling Weapons To China's Xi; GOP Blasts Sarah Huckabee Sanders' New Welfare Ad; Ken Paxton's Estranged Wife Appeals To All Women To Vote GOP"
   ]
  },
  {
@@ -91,6 +213,14 @@
   "titles": [
    "[01] CNN Headlines: President Trump Now Expecting Talks with Iran to Resume This Week After Rejecting Their Proposal to Reopen the Strait of Hormuz; Former American Idol Caleb Flynn Pushes Back on Allegations that He Killed His Wife; Brutal Nor'easter that Hammered Parts of the U.S. East Coast is Slowly Starting to Ease Up",
    "[02] CNN Headlines: Iran: Awaiting \"Definitive\" U.S. Response To Hormuz Proposal; Testimony Resumes In Murder Trial Of One-Time \"American Idol\" Contestant; Five Men Held On Suspicion Of Terror, Explosives Offenses"
+  ]
+ },
+ {
+  "file": "transcripts/cnn/2026/2026-09-28__anderson-cooper-360-degrees.md",
+  "size": 48918,
+  "sections": 1,
+  "titles": [
+   "[01] Trump To Hold Midterm Campaign Blitz In Several Red States; Source: Trump Personally Driving Pro-Trump Taxpayer Funded Ads; Prosecutors Reopen Investigation Into Cornell Gang Rape Allegations; In First Year Back In Office, Trump Made More Than $1 Billion From Cryptocurrency Ventures; OpenAI Won't Release New AI Model Over Safety Concerns; Trump To Host Top AI Leaders At White House Tomorrow; Malcolm Gladwell On How Both Sides Of Gun Debate Traffic In Dishonesties; Two Giant Pandas On Loan From China, Arrive At Zoo Atlanta"
   ]
  },
  {
