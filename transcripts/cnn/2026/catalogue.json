@@ -1,5 +1,61 @@
 [
  {
+  "file": "transcripts/cnn/2026/2026-09-30__the-story-is-with-elex-michaelson.md",
+  "size": 87108,
+  "sections": 2,
+  "titles": [
+   "[01] Affordability, Immigration, A.I. Among Top Midterm Issues; Becerra and Hilton to Meet in California Governor Debate; Supreme Court Allows Trump to Resume Controversial Deportations; France's Public Sector Workers Strike Over Pay, Budget Cuts; U.S. Troops Leave Iraq after 23-Year Military Presence; More Than 100 Israeli Settlers Attack West Bank Village; Cornell Students Speak Out as Rape Investigation Unfolds; Manchester City Found Guilty of Financial Rule Breaches",
+   "[02] Becerra, Hilton To Face Off In California Governor Debate; Google's Co-Founder Has Spent More Than $100 Million To Oppose A Billionaire Tax; U.S. Supreme Court Sides With Trump Administration In Third-Country Deportations; Russian Attack Kills Two, Wounds Four in Kyiv; A.I. Execs Agree to \"Self-Police\" after White House Meeting; New York AG to Review Cornell's Response to Rape Allegations; Six Flags to Close Roller Coaster after Years of Injuries; L.A. Restaurant Survives COVID but Not the Rising Costs"
+  ]
+ },
+ {
+  "file": "transcripts/cnn/2026/2026-09-30__the-situation-room.md",
+  "size": 21286,
+  "sections": 1,
+  "titles": [
+   "[01] Reports Say, Jane Doe Discussed Rape With Cornell Police; Netanyahu Says, Pilot May Have Attempted to Hijack and Crash Jet En Route to Tel Aviv"
+  ]
+ },
+ {
+  "file": "transcripts/cnn/2026/2026-09-30__cnn-this-morning.md",
+  "size": 50417,
+  "sections": 2,
+  "titles": [
+   "[01] 'Violent Incident' Between Pilots Sparks Emergency Diversion of Israel-Bound Flight; Trump, Big A.I. Tech CEOs Produce Self-Policing Document; El-Sayed Tries to Attract MAHA Voters with New Health Policy",
+   "[02] Emergency Diversion of Israel-Bound Flight; Trump's Chatbot Contradicts His Claims; Senator Schmitt Mixes up Sports Teams in Smith Hearing"
+  ]
+ },
+ {
+  "file": "transcripts/cnn/2026/2026-09-30__cnn-newsroom.md",
+  "size": 106708,
+  "sections": 4,
+  "titles": [
+   "[19] Growing Calls For Government Oversight Of A.I. Models; More Than 100 Israeli Settlers Attack West Bank Village; Public Sector Workers Strike Over Pay And Budget Cuts In France; WSJ Reporter Pens Memoir After 16 Months in Russian Prison; Trump Deportations to Continue Despite Human Rights Concerns; Remnants of Polo Dissipate Over Northwestern Mexico; Tropical Storm Rachel Threatens Mexico With More Heavy Rain; Morocco's King Appoints First Woman Prime Minister; Sailing Competition Requires at Least One Woman on Each Crew",
+   "[20] A.I. Heads Agree to Self-Police A.I. Development After Meeting with Trump; Protests Continue Over Spain Despite Government's New Measures to Mitigate Housing Crisis",
+   "[21] CNN International: Sources: \"Violent Incident\" Between Pilots Prompts Diversion; U.S. Imposes More Sanctions To Isolate Iran Economically; A.I. Execs Agree To \"Self-Police\" After White House Meeting; Public Sector Workers Strike Over Pay, Budget Cuts; Aired 4- 4:30a ET",
+   "[22] CNN International: Ukraine: Three Killed In Russian Strikes On Kyiv Region; WSJ Reporter Pens Memoir After16 Months In Russian Prison; Israel's Former Security Chief Says He Will Sue Netanyahu For Defamation Over October 7 Blame"
+  ]
+ },
+ {
+  "file": "transcripts/cnn/2026/2026-09-30__cnn-news-central.md",
+  "size": 61013,
+  "sections": 3,
+  "titles": [
+   "[01] Flight to Tel Aviv Diverts to Saudi Arabia After Violent Incident; New York Attorney General to Review Cornell Response to Gang Rape Allegation; Trump Rejects Regulation of A.I. Despite Industry's Warnings",
+   "[02] Report: Trump Ads Cost Taxpayers At Least $2.5 Million; Polymarket Announces New Safeguards As Calls Grow For Regulation; Sec. RFK Jr.: AI Is \"Better Informed\" Than Doctors",
+   "[03] Flight to Tel Aviv Diverts to Saudi Arabia After Violent Incident; Interview with Rep. Mike Quigley (D-IL): Flydubai Incident Could Be a Terror Attack Attempt; Top Execs Sign Commitment to Self- Police AI Models; Trump Ads Cost Taxpayers at Least $2.5 Million; Polymarket Announces New Safeguards as Calls Grow for Regulation"
+  ]
+ },
+ {
+  "file": "transcripts/cnn/2026/2026-09-30__cnn-live-event-special.md",
+  "size": 38861,
+  "sections": 2,
+  "titles": [
+   "[01] CNN Headlines: A.I. Execs Agree To \"Self-Police\" After White House Meeting; Jury Finds Former \"American Idol\" Contestant Caleb Flynn Guilty Of Murdering His Wife; Defense Attorney Claims It's Not Clear Lindsay Clancy Killed Her Children; NY A.G. Reviews Cornell's Response To Rape Allegations As D.A. Reopens Investigation",
+   "[02] CNN Headlines: AI Execs Agree To \"Self-Police\" After White House Meeting; Jury Finds Former \"AMERICAN IDOL\" Contestant Guilty Of Murdering His Wife; NY AG Reviews Cornell's Response To Rape Allegations As D.A. Reopens Investigation"
+  ]
+ },
+ {
   "file": "transcripts/cnn/2026/2026-09-29__what-we-know-with-max-foster.md",
   "size": 49589,
   "sections": 1,
@@ -17,12 +73,45 @@
   ]
  },
  {
+  "file": "transcripts/cnn/2026/2026-09-29__the-source-with-kaitlan-collins.md",
+  "size": 48007,
+  "sections": 1,
+  "titles": [
+   "[01] Trump \"Officially\" Changes The Name Of AI To Super Intelligence; GOP Senator's Perjury Trap For Jack Smith Backfires; NY A.G. To Review Cornell's Response To Rape Allegations"
+  ]
+ },
+ {
   "file": "transcripts/cnn/2026/2026-09-29__the-situation-room.md",
   "size": 44821,
   "sections": 2,
   "titles": [
    "[01] Jack Smith Testifies Before Senate Committee on Trump Investigations; Lindsay Clancy Back in Court for First Time Since Murder Case Mistrial",
    "[02] Interview With Rep. Lori Trahan (D-MA); Trump Meets With Tech Leaders; Lindsay Clancy Back in Court"
+  ]
+ },
+ {
+  "file": "transcripts/cnn/2026/2026-09-29__the-lead-with-jake-tapper.md",
+  "size": 83467,
+  "sections": 2,
+  "titles": [
+   "[01] Trump & Tech Execs Sign Statement On A.I. \"Self-Policing\"; Sen. Angela Alsobrooks (D-MD), Is Interviewed About Now: Secy. Kennedy & VP Vance Close Out MAHA Summit In D.C.; NY Prosecutors Reopen Investigation After Former Student Files Over Alleged Gang Rape At Cornell University; Key Senate, Governors Races In Battleground Georgia; CNN Inside Immigration Court As Children Fight To Stay In U.S",
+   "[02] Hawks Confusion Sparks Embarrassing Moment For GOP Senator; Six Flags Shuts Down X2 Roller Coaster After CNN Investigation; Five Weeks Until Midterm Election Day; WSJ Reporter Evan Gershkovich Details His Time In Russian Prison; NHL On TNT Debuts Wednesday With Flyers Hosting Penguins"
+  ]
+ },
+ {
+  "file": "transcripts/cnn/2026/2026-09-29__the-brief-with-jim-sciutto.md",
+  "size": 42420,
+  "sections": 1,
+  "titles": [
+   "[01] CNN International: Trump On A.I.: Self-Regulations Is Very Important; U.S. Ban On $1 Billion In Canadian Goods Takes Effect; More Than 100 Israeli Settlers Attack West Bank Village; E.U. Considers NATO-Style Response To Russian Hybrid Attacks; Premier League Finds Man City Guilty Of Financial Wrongdoing"
+  ]
+ },
+ {
+  "file": "transcripts/cnn/2026/2026-09-29__quest-means-business.md",
+  "size": 46841,
+  "sections": 1,
+  "titles": [
+   "[01] OpenAI Holds Back Release Of New Model Out Of Caution; Trump Hosts Top A.I. Executives At The White House; Trump's Ban On Canadian Booze Takes Effect; U.S. Supreme Court Lets Third-Country Deportations Resume; Lindsay Clancy In Court For The First Time Since Murder Case Mistrial; Inside South Africa's Film Industry; E.U. Considers NATO-Style Response To Russian Hybrid Attacks"
   ]
  },
  {
@@ -35,12 +124,36 @@
   ]
  },
  {
+  "file": "transcripts/cnn/2026/2026-09-29__laura-coates-live.md",
+  "size": 45042,
+  "sections": 1,
+  "titles": [
+   "[01] GOP Senator Botches Attack on Jack Smith; Top A.I. Execs Sign Commitment to \"Self-Police\" After Trump Meeting; New Push to Change NY Rape Law After Cornell Gang Rape Allegations; Lindsay Clancy's Attorney Tries Out a Stunning New Defense Claim"
+  ]
+ },
+ {
+  "file": "transcripts/cnn/2026/2026-09-29__isa-soares-tonight.md",
+  "size": 45761,
+  "sections": 1,
+  "titles": [
+   "[01] President Donald Trump Hosts Tech Executives For Talks On Whether Artificial Intelligence Is Outpacing Its Safeguards; More Than 100 Israeli Settlers Attack A Palestinian Family Overnight, Setting Their Home On Fire; Republicans Grill Former Special Counsel Jack Smith On Capitol Hill Over Trump Probes; New York To Review Cornell Response To Rape Allegations; Trump Speaking After A.I. Meeting At The WH; Suspected Terror Plot In The U.K.; 100-Plus Israeli Settlers Attack Occupied West Bank Village"
+  ]
+ },
+ {
   "file": "transcripts/cnn/2026/2026-09-29__inside-politics.md",
   "size": 40189,
   "sections": 2,
   "titles": [
    "[01] Now: Jack Smith Testifying On Trump Investigations; Smith Defends Secret Subpoenas For Lawmaker Phone Records; Jack Smith: \"I Will Not Be Silenced\" By Trump's Threats; AOC: Big Tech Chiefs Want To \"Make Sure None Of Us Have Jobs\"; Beshear Reflects On How Faith Drives His Politics In New Book",
    "[02] Trump Signs Executive Order Directing Fed Agencies To Integrate With New AI Powered Govt. Website; Soon: AI Leaders Meet With Trump Amid Safety, Regulation Debate; GOP Sen. Pete Ricketts Facing Challenge From Independent; Farmers Feel Impact Of Iran War With High Diesel, Fertilizer Prices; How Texas Became A Republican Midterm \"Money Pit\"; National Democrats Launch First Super PAC Ad In Texas"
+  ]
+ },
+ {
+  "file": "transcripts/cnn/2026/2026-09-29__erin-burnett-outfront.md",
+  "size": 43888,
+  "sections": 1,
+  "titles": [
+   "[01] GOP Senator's Perjury Trap For Jack Smith Backfires; Trump Ads Have Cost Taxpayers At Least $2.5 Million; New Calls For Review Of Cornell's Handling Of Rape Allegations"
   ]
  },
  {
@@ -62,6 +175,14 @@
   ]
  },
  {
+  "file": "transcripts/cnn/2026/2026-09-29__cnn-s-the-arena-with-kasie-hunt.md",
+  "size": 44923,
+  "sections": 1,
+  "titles": [
+   "[01] Just In: Trump Comments On \"Great\" Meeting With A.I. Execs; New: Vance Acknowledges \"Headwinds\" For GOP In Midterms; Former Special Counsel Jack Smith Defends Trump Prosecution; Trump Personally Helped Orchestrate Taxpayer-Funded Ads Promoting Himself & His Policies, A Source Tells CNN"
+  ]
+ },
+ {
   "file": "transcripts/cnn/2026/2026-09-29__cnn-newsroom.md",
   "size": 109293,
   "sections": 4,
@@ -70,6 +191,14 @@
    "[20] Trump Open to Easing Iran Sanctions; Five British Terror Plot Suspects Freed on Bail; Two Killed in Strike on Science Academy; SpaceX's Starship Makes Fiery Splashdown; Pope Leo XIV Completes Four- Day Visit to France; Nvidia Launches Tool to Stop A.I. Agents from Going Rogue",
    "[21] CNN International: Official: U.S.-Iran Having \"Positive\" Talks Through Mediators; Hurricane Polo Makes Landfall In Baja California Sur, Mexico; Funding Cuts Hit Agencies That Deal With Natural Disasters; Five Men Released On Bail Amid U.K. Air Base Investigation; Pope Leo XIV Completes Four-Day Visit To France",
    "[22] CNN International: Russian Drones Hit Kyiv Science Academy; Protesters Demand Spanish Government Limit Evictions; Children In U.S. Immigration Courts Alone As They Fight"
+  ]
+ },
+ {
+  "file": "transcripts/cnn/2026/2026-09-29__cnn-newsnight-with-abby-phillip.md",
+  "size": 48370,
+  "sections": 1,
+  "titles": [
+   "[01] Trump Rejects Regulation Of A.I. Despite Industry's Warnings; GOP Senator's Perjury Trap For Jack Smith Backfires; J.D. Vance Wants Illegals Deported To Solve Problems; Jasmine Crockett Leaves James Talarico's Endorsement"
   ]
  },
  {
@@ -89,6 +218,14 @@
   "titles": [
    "[01] CNN Headlines: Source: Trump To Meet With Top A.I. Executives Today; Lindsay Clancy Returns To Court Today; Prosecutors Reopen Investigation Into Alleged Cornell Gang Rape",
    "[02] CNN Headlines: Migrant Children Facing Immigration Court Without Lawyers; Trump To Meet With Top AI Executives Today; Princess Diana's Brother Accuses King Charles Of Being \"Elated\" After Her Death"
+  ]
+ },
+ {
+  "file": "transcripts/cnn/2026/2026-09-29__anderson-cooper-360-degrees.md",
+  "size": 45789,
+  "sections": 1,
+  "titles": [
+   "[01] GOP Senator's Perjury Trap for Jack Smith Backfires; Interview with Sen. Amy Klobuchar (D-MN); Cornell Students Speak Out as Rape Investigation Unfolds; Trump & Tech Execs Sign \"Commitment\" For \"Self- Policing\" AI; Trump Signs Executive Order Renaming AI \"Super Intelligence\"; The Georgia Shift; Trump To Campaign In Alabama, Oklahoma And Ohio; Republicans Face Headwinds In Final Month Before Midterms; Six Flags To Permanently Close X2 Coaster After CNN Investigation"
   ]
  },
  {
