@@ -1,5 +1,60 @@
 [
  {
+  "file": "transcripts/cnn/2026/2026-10-16__the-story-is-with-elex-michaelson.md",
+  "size": 82198,
+  "sections": 2,
+  "titles": [
+   "[01] 3 Children and a Teacher Killed in Oregon School Shooting; Trump to Campaign in Georgia for Mike Collins, Rick Jackson; Affordability in Focus Ahead of U.S. Midterm Elections; Starlink Service Abruptly Limited for Ukraine; Harry and Meghan Make First Joint Appearance Since U.K. Return",
+   "[02] 3 Children, 1 Teacher And Suspect Killed In Oregon Elementary School Shooting; Trump To Hold Georgia Rally For Collins Amid Midterm Push; Elon Musk Unveils First Ever Flying Car The Next-Gen Roadster; Ocasio-Cortez Set To Rally For El-Sayed In Michigan; Anti-Gang Mercenary Operation in Haiti; Evacuation Orders in Malibu Amid Fast Moving Fire. Interview with L.A. County Supervisor Lindsey Horvath; Brewers Earn World Series Berth with Sweep of Dodgers"
+  ]
+ },
+ {
+  "file": "transcripts/cnn/2026/2026-10-16__cnn-this-morning.md",
+  "size": 23367,
+  "sections": 1,
+  "titles": [
+   "[02] Oregon School Shooting Kills Four; Former NYPD Officer Jillian Snider is Interviewed about the School Shooting; Ukraine Runs out of Patriot Missiles; Protester Interrupts Maine Senate Debate"
+  ]
+ },
+ {
+  "file": "transcripts/cnn/2026/2026-10-16__cnn-newsroom.md",
+  "size": 109635,
+  "sections": 4,
+  "titles": [
+   "[19] U.S.-Ukraine Relations Derailing; Dozens Killed in a Roof Collapse at a School in Pakistan; Anti-Corruption Demonstrators Clash With Riot Police In Albania; Trump: Will Campaign For Paxton In Texas Again \"If Necessary\": Pope Leo's Post-Operation Checks Showing Good Results",
+   "[20] U.S.-Ukraine Alliance in Shambles; Houthis Attack Yemeni President Palace; Albania's Anti-Government Protests Continue; Boost of Economy in Ivory Coast; Pope Leo's Health; Haiti in Crisis",
+   "[21] CNN International: Zelenskyy In Brussels To Rally E.U. Support As Ties With U.S. Sour; Houthi Rebels Launch Deadly Attack On Yemeni Presidential Palace; Iran, Houthis try To Ramp Up Pressure On President Trump; Funerals Held For Victims Of Pakistan School Roof Collapse; Pope Leo's Post-Operation Checks Showing Good Results",
+   "[22] CNN International: Zelenskyy Looks To Boost E.U. Support As U.S. Ties Sour; CNN Speaks To Latino Voters In Virginia Ahead Of Midterm Elections; SpaceX Launches Classified Mission For U.S. Space Force; Elon Musk Unveils Flying Car At Tesla Event"
+  ]
+ },
+ {
+  "file": "transcripts/cnn/2026/2026-10-16__cnn-news-central.md",
+  "size": 66946,
+  "sections": 3,
+  "titles": [
+   "[01] Teacher Describes Horror During Shooting, Some Kids were Praying; Trump Continues Midterms Campaign Blitz With Rally in Georgia; Soon, Alex Murdaugh Due in Court for Hearing Ahead of Murder Retrial",
+   "[02] Teen Shooter Kills 3 Children, Teacher Before Bystander Shoots Him; Sen. Richard Blumenthal (D-CT) On Probe Into White House Restrictions On Starshield In Ukraine; CNN KFILE: Zacharia Shared 15 Posts Identifying Herself As \"Attorney.\" Aired 7:30-8a ET",
+   "[03] Teen Shooter Kills 3 Children, Teacher Before Bystander Shoots Him; Dem. Keisha Lance Bottoms Faces GOP's Rick Jackson in Georgia Governor Race; AI Data Centers Become Focal Point of Georgia Governor Race; Inflation Data Undercuts Trump's Economic Claims"
+  ]
+ },
+ {
+  "file": "transcripts/cnn/2026/2026-10-16__cnn-live-event-special.md",
+  "size": 38778,
+  "sections": 2,
+  "titles": [
+   "[01] CNN Headlines: 3 Children And A Teacher Killed In Oregon School Shooting; Trump's Campaign Blitz Continues Today In Georgia; Vatican: Pope Carrying Out \"Daily Activities\" And Recovering As Expected After Lung Surgery",
+   "[02] CNN Headlines: Three Children And A Teacher Killed In Oregon School Shooting; Government Records Reveal Reports Of Mechanical Failures, Faulty Restraints At Six Flags Parks; \"Skincubator\" Allows Parents To Hold Their Premature Babies"
+  ]
+ },
+ {
+  "file": "transcripts/cnn/2026/2026-10-15__what-we-know-with-max-foster.md",
+  "size": 43522,
+  "sections": 1,
+  "titles": [
+   "[01] Source: Ukraine Runs Out of Patriot Defense Missiles; Bitter Feud Between Trump And Zelenskyy Escalates; Trump Calls Off Livestream Of Fort Hood Shooter's Execution; Sources: U.S. Considers \"Mother Of All Bombs\" Against Iran; Talarico Criticizes Biden & Trump On Border Issues; Cuban Americans' Loyalty To Republicans Wavers"
+  ]
+ },
+ {
   "file": "transcripts/cnn/2026/2026-10-15__the-story-is-with-elex-michaelson.md",
   "size": 78873,
   "sections": 3,
@@ -7,6 +62,14 @@
    "[01] Did Not Air 12-1a ET",
    "[02] CNN and Jubilee Town Hall with James Talarico Analysis; Anthony Scaramucci's Advice for Katie Zacharia; Senate Hopeful James Talarico Speaks With Texas Voters; China-North Korea Bridge Opens After Yearslong Delay; Donald Trump Administration Escalates Voter Roll Fight With California",
    "[03] Trump Hits Deep Red States on Midterms Tour; Flooded Roads, Cars Submerged in Istanbul; Student Protests Grow in Albania; Pope Shares First Message After Lung Cancer Surgery; Orangutans Found in India May Be Part of Wildlife Trade; Markets Tumble After Inflations Reports; Americans Continue the Burden of Sky-High Inflation; Ukraine to Resume Strikes on Russian Refineries; New York City Moving Closer to Ban Horse-Drawn Carriages"
+  ]
+ },
+ {
+  "file": "transcripts/cnn/2026/2026-10-15__the-source-with-kaitlan-collins.md",
+  "size": 46242,
+  "sections": 1,
+  "titles": [
+   "[01] Three Children, One Teacher Killed In Oregon Elementary School Shooting; AOC Campaigns With El-Sayed In Michigan's Reliably Red Areas; Reuters: Order To Limit Starshield For Ukraine Came From Inside WH"
   ]
  },
  {
@@ -21,11 +84,28 @@
   ]
  },
  {
+  "file": "transcripts/cnn/2026/2026-10-15__the-lead-with-jake-tapper.md",
+  "size": 95129,
+  "sections": 2,
+  "titles": [
+   "[01] Rep. Robert Garcia, (D-CA), Is Interviewed About House Democrats Ask Kimberly Guilfoyle For Records Related To Alleged Pay- To-Play Scheme; School District: Active Shooter Reported At Elementary School In Bend, Oregon; Police: Multiple Victims, Suspected Shooter Is Dead",
+   "[02] Shooting Incident at Elementary School in Bend, Oregon; Four Killed in Oregon School Shooting. Source: Three Children, One Adult Killed In School Shooting, According To Preliminary Information From Law Enforcement"
+  ]
+ },
+ {
   "file": "transcripts/cnn/2026/2026-10-15__the-brief-with-jim-sciutto.md",
   "size": 41925,
   "sections": 1,
   "titles": [
    "[01] CNN International: Source: Ukraine Runs Out of Patriot Missiles; Kyiv Resident Describes Frequent Russian Attacks; Sources: U.S. Considers \"Mother of All Bombs\" Against Iran; White House Press Secretary Failed Bar Exam; Multiple People Hurt in Shooting at Oregon Elementary School; Ukraine's Access to Starlink Services Restricted; Trump Approval Rating Sinks Amid Inflation Concerns; Danger of Weight-Loss Medication in Wrong Hands"
+  ]
+ },
+ {
+  "file": "transcripts/cnn/2026/2026-10-15__quest-means-business.md",
+  "size": 44781,
+  "sections": 1,
+  "titles": [
+   "[01] French Finance Minister: Not Distracted by Election; Georgieva: Countries Must have the Courage to Reduce Debt; Global Tech Stock Selloff Deepens. That's Foreign Minister on Thailand Getting Back on Track; Thailand Aims to Spark Its Sluggish Economy; Europe's Competitive Push Stalls"
   ]
  },
  {
@@ -38,12 +118,36 @@
   ]
  },
  {
+  "file": "transcripts/cnn/2026/2026-10-15__laura-coates-live.md",
+  "size": 41786,
+  "sections": 1,
+  "titles": [
+   "[01] School Shooting in Oregon Kills Three Children and a Teacher, Two Others Critical, Shooter Also Killed; Trump Won't Be Blamed if Paxton Loses Texas Senate Race; New White House Press Secretary Denies Legal Credential Misrepresentations; Abdul El-Sayed Mum on 2028 Plans"
+  ]
+ },
+ {
+  "file": "transcripts/cnn/2026/2026-10-15__isa-soares-tonight.md",
+  "size": 45387,
+  "sections": 1,
+  "titles": [
+   "[01] Argentina's Milei Faces Protests on Day of National Strike; Maduro and Wife Plead Not Guilty to Torture Charges; Talarico Reaches Out to Republican and Independent Voters; Dozens Killed at Pakistani School. A Source Tells CNN that Kyiv has Run Out of Key Patriot Missiles; U.S. Looks into the Use of its Largest Non-Nuclear-Weapon Against Iran; Massive Student-Led and Opposition Protest for the Resignation of Albania's President Edi Rama"
+  ]
+ },
+ {
   "file": "transcripts/cnn/2026/2026-10-15__inside-politics.md",
   "size": 37947,
   "sections": 2,
   "titles": [
    "[01] Now: El-Sayed Campaigns With AOC In Red Part Of Michigan; Talarico Raised Record-Breaking $64M In 3rd Quarter; Talarico \"God Is Non-Binary\" Comment: \"I Was Being Provocative\"; Trump Brags About Cognitive Test Results While Stumping In Arizona; Joe Rogan: Trump's \"No Wars\" Promise \"Wasn't Real\"",
    "[02] Mortgage Rates At Highest Level Since November 2023; Turek And Hinson Spar Over Epstein In Dueling Iowa Senate Ads; WI Dem Shoots Clay Pigeon Labeled \"Data Centers\" In House Ad; Now: El-Sayed Campaigns With AOC In Deep-Red Part Of Michigan; Democrat Aims To Flip Deep-Red Michigan House Seat"
+  ]
+ },
+ {
+  "file": "transcripts/cnn/2026/2026-10-15__erin-burnett-outfront.md",
+  "size": 47295,
+  "sections": 1,
+  "titles": [
+   "[01] Source: 3 Children, 1 Adult Killed In Oregon Elementary School Shooting; Economic Alarm Bells; New Press Secretary"
   ]
  },
  {
@@ -65,6 +169,14 @@
   ]
  },
  {
+  "file": "transcripts/cnn/2026/2026-10-15__cnn-s-the-arena-with-kasie-hunt.md",
+  "size": 46429,
+  "sections": 1,
+  "titles": [
+   "[01] Katie Zacharia Addresses Questions On Her Legal Credentials; Midterm Anxiety Mounts For GOP As Dems Try To Expand Map; Trump Reverses Hegseth On Public Execution Of Fort Hood Shooter"
+  ]
+ },
+ {
   "file": "transcripts/cnn/2026/2026-10-15__cnn-newsroom.md",
   "size": 83190,
   "sections": 5,
@@ -74,6 +186,14 @@
    "[20] Asian Markets in the Red Amid A.I. Concerns and Inflation; Vatican Updates on Pope Leo's Condition Post-Operation",
    "[21] CNN International: Ukrainian President To Attend E.U. Summit In Brussels; Sources: U.S. May use Massive Non-Nuclear Bomb On Iran; Trump Takes Midterm Campaign Blitz To Arizona, Montana; Senate Hopeful James Talarico Speaks With Texas Voters; Immigration, Inflation Push Texas Latinos Toward Talarico",
    "[22] CNN International: Ukraine: Starlink Restriction Disrupting Military Operations; Pope Shares First Message After Lung Cancer Surgery; France's Finance Minister Speaks With CNN"
+  ]
+ },
+ {
+  "file": "transcripts/cnn/2026/2026-10-15__cnn-newsnight-with-abby-phillip.md",
+  "size": 46468,
+  "sections": 1,
+  "titles": [
+   "[01] Trump Says, Blame Rove, Cornyn if Paxton Loses Senate Race; El- Sayed Says, Need to Help Trump Voters, They're Paying $5 Gas Too; Reuters Reports, Order to Limit Tech for Ukraine Came from Inside White House. Ukraine Exhausts Patriot Missiles As Tensions Spike with Trump; Zelenskyy Admits He Feels Betrayed by Trump Amid Controversial U.S.- Russia Diesel Deal"
   ]
  },
  {
@@ -93,6 +213,14 @@
    "[01] CNN Headlines: Talarico Tackles Abortion, Faith And \"Conspiracy Theories\" At CNN Town Hall; Trump On The Trail: President Visits Montana & Arizona As Approval Hits New Low; Sources: Trump Admin. Wanted Aggressive Search Of Ilhan Omar's Home, Went Back-And-Forth With Judge; Pope Shares First Message To Catholic Faithful After Lung Cancer Diagnosis",
    "[02] CNN Headlines: Talarico Tackles Abortion, Faith And \"Conspiracy Theories\" At CNN Town Hall; Pope Leo XIV Shares First Message To Catholic Faithful After Lung Cancer Diagnosis; Confrontation Between Maryland Congressman And Student Journalist Goes Viral",
    "[03] CNN & Jubilee Town Hall with James Talarico"
+  ]
+ },
+ {
+  "file": "transcripts/cnn/2026/2026-10-15__anderson-cooper-360-degrees.md",
+  "size": 55114,
+  "sections": 1,
+  "titles": [
+   "[01] Three Children, One Adult Killed in Shooting at Oregon Elementary School; Interview with Rep. Janelle S. Bynum (D-OR); New Polling 19 Days to Midterms; White House Press Secretary Failed the Bar Exam, Still Calls Herself a Lawyer; WH Press Secretary Denies She Misrepresented Herself As A Lawyer; Officials Give Update On Oregon Elementary School Shooting"
   ]
  },
  {
