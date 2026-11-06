@@ -2,7 +2,7 @@
 
 - 数据源：cnn
 - 日期：2026-11-05
-- 抓取时间：2026-11-05T17:48:04+00:00
+- 抓取时间：2026-11-06T16:59:34+00:00
 - 官方 archive：https://transcripts.cnn.com/show/cnr/date/2026-11-05
 
 ## [19] Did Not Air 2-3a ET
