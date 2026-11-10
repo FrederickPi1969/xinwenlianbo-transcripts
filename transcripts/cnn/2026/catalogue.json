@@ -1,10 +1,77 @@
 [
  {
+  "file": "transcripts/cnn/2026/2026-11-10__the-story-is-with-elex-michaelson.md",
+  "size": 85530,
+  "sections": 2,
+  "titles": [
+   "[01] Trump Stands by Pete Hegseth No Matter What; Trump Defends Iran War After Midterm Defeat; Nvidia CEO Under Scrutiny Over Alleged Foreign Intel Plot; Senate Races in Mississippi, Alaska Remain Too Close to Call; Billionaires Tax Referendum Rejected in California; Russia's Last Independent Newspaper Closes Amid Pressure",
+   "[02] Congress Could Soon Consider Hegseth Impeachment; Trump Signals Openness To Immigration Reform With Democrats; Nvidia CEO Jensen Huang Under Scrutiny Over Alleged Chinese Espionage Links; Acton: People are Tired of Hate, Want Problem Solvers; Analysis of Ukrainian Footage of Russia's \"Double-Tap\" Strike; FAA Expands Use of A.I.-Powered Tool to Boost Efficiency; Judge Denies Clancy's Motion to Dismiss Murder Charges"
+  ]
+ },
+ {
+  "file": "transcripts/cnn/2026/2026-11-10__the-situation-room.md",
+  "size": 40128,
+  "sections": 2,
+  "titles": [
+   "[01] Hegseth Pushes Back Against GOP-Led Effort to Impeach Him; Wall Street Journal Reports, U.S. Aircraft Evacuated from Second U.K. Base Due to Iran Threat; Ohio State Suspends Fraternity After Video Shows Two Men on Fire",
+   "[02] NASA Recruiting Next Generation of Astronauts; Inflation Rising; Files on Trump Pet Projects Being Destroyed?; Interview With Rep. Pramila Jayapal (D-WA)"
+  ]
+ },
+ {
+  "file": "transcripts/cnn/2026/2026-11-10__cnn-this-morning.md",
+  "size": 51559,
+  "sections": 2,
+  "titles": [
+   "[01] Articles of Impeachment Introduced Against Hegseth; Trump Defends Deportation Policy, Rules Out Amnesty; Democrats Demand Answers on AI Chip Exports",
+   "[02] Rep. Robert Menendez (D-NJ) is Interviewed about Congress; Renewed Scrutiny over Hegseth Controversies; Leadership Fight in the House and Senate"
+  ]
+ },
+ {
+  "file": "transcripts/cnn/2026/2026-11-10__cnn-newsroom.md",
+  "size": 111696,
+  "sections": 4,
+  "titles": [
+   "[19] Congress Could Soon Consider Pete Hegseth Impeachment; Nvidia CEO Under Scrutiny Over Alleged Foreign Intel Plot; Russia's Last Independent Newspaper Closes Amid Pressure; Pope Leo Draws Massive Crowds During Argentina Visit; Pope Leo Draws Massive Crowds During Argentina Visit; Israeli Knesset to Be Sworn in, But Government Yet to Be Formed; Millions Without Access to Money After Banking Collapse in Paraguay; Russell Brand Sentenced to 10.5 Years in Prison; NASA Crew Emerges After 378 Days on Simulated Mars Mission",
+   "[20] Russia-Ukraine Talks on Ending the War Goes Underway in Dubai; NVIDIA Stocks Plunged Following CEO's Alleged Relationship with a Spy Operative",
+   "[21] CNN International: WSJ: U.S. Aircraft Evacuated From U.K. Base Due To Iran Threat; Talks Between U.S., Russia, Ukraine Underway In Abu Dhabi; Israeli Knesset To Be Sworn In, but Government Yet To Be Formed; NVIDIA CEO Under Scrutiny Over Alleged Foreign Intel Plot",
+   "[22] CNN International: Talks Between U.S. Russia And Ukraine Underway In Abu Dhabi; CNN Analyzes Ukrainian Footage Of Russian Double Tap Strike; Former President Santiago Pena Impeached And Under Investigation"
+  ]
+ },
+ {
+  "file": "transcripts/cnn/2026/2026-11-10__cnn-news-central.md",
+  "size": 115520,
+  "sections": 5,
+  "titles": [
+   "[01] Soon, Hegseth Speaks as Impeachment Vote Could Come as Soon as Today; Ohio State Suspends Fraternity After Video Shows Two Men on Fire; Trump Downplays Alleged Chinese Spy Plot Targeting NIVIDIA's CEO",
+   "[02] Soon: Hegseth Speaks As Impeachment Vote Could Come As Soon As Today; WSJ: U.S. Aircraft Evacuated From Second U.K. Base Due To Iran Threat; California Billionaire Tax Fails",
+   "[03] Defense Secretary Pete Hegseth Hold News Conference on Impeachment Threat",
+   "[05] Hegseth Pushes Back Ahead of Expected Impeachment Vote Today; Trump Praises Hegseth's New Conference; Democrat Colom Holds Narrow Lead Over GOP's Hyde-Smith in Mississippi",
+   "[06] Inflation Rose 0.4 Percent Last Month, More than Expected; NVIDIA Scandal Highlight \"Key Man Risk\" at Powerful AI Companies; Poll Predictions in House and Senate Election Results; Ohio State Suspends Fraternity After Video Shows 2 Men on Fire; New Book Encourages Women to Get Real About There Gut Health"
+  ]
+ },
+ {
+  "file": "transcripts/cnn/2026/2026-11-10__cnn-live-event-special.md",
+  "size": 41148,
+  "sections": 2,
+  "titles": [
+   "[01] CNN Headlines: Congress Could Soon Consider Hegseth Impeachment; Trump Backs Nvidia CEO As Questions Grow Over China Spy Case; Talks Between U.S., Russia & Ukraine Underway In Abu Dhabi; Senate Race In Mississippi Remains Too Close To Call",
+   "[02] CNN Headlines: Trump Downplays Alleged Spy Plot Targeting NVIDIA CEO; Ohio State Fraternity Temporarily Suspended Over Video Showing Two People On Fire; FAA Rolls Out New AI Air Traffic Control Tool Across The U.S"
+  ]
+ },
+ {
   "file": "transcripts/cnn/2026/2026-11-09__what-we-know-with-max-foster.md",
   "size": 43465,
   "sections": 1,
   "titles": [
    "[01] Republican Introduces Impeachment Articles Against Hegseth; Rubio: Hegseth Impeachment Move Is \"Unfair\"'; Nvidia Investigates Foreign Spy Claims As CEO Admits Affair; Russell Brand Sentenced To 10 Years, Six Months In Prison; Trump Admits Immigration Policy \"Might Have Been Too Tough\"; Global Leaders Meet At COP31 As World Faces Extreme Weather; Pope Leo In Argentina"
+  ]
+ },
+ {
+  "file": "transcripts/cnn/2026/2026-11-09__the-source-with-kaitlan-collins.md",
+  "size": 48598,
+  "sections": 1,
+  "titles": [
+   "[01] Trump: Will Stand By Hegseth If He's Impeached; Trump On Jump In Net Worth: \"You Should Have Had Stock\"; Trump Downplays Alleged Spy Plot Targeting Nvidia CEO Jensen Huang"
   ]
  },
  {
@@ -17,11 +84,28 @@
   ]
  },
  {
+  "file": "transcripts/cnn/2026/2026-11-09__the-lead-with-jake-tapper.md",
+  "size": 87013,
+  "sections": 2,
+  "titles": [
+   "[01] Trump Questions Midterm Results; Hegseth Faces Impeachment In The House; Nvidia's Stock Falls After Probe Into CEO's Affair With Alleged Spy; First Female Black Governor In U.S. History Speaks To CNN; Governor-elect Keisha Lance Bottoms (D-GA), Is Interviewed About Executing Her Campaign Promises; WAPO: Reckoning Pushes Out 6 Reps Accused Of Misconduct, Abuse; Election Results Reveal Scale Of Democratic Midterm Win",
+   "[02] President Trump's New Defense Of Secretary Hegseth; Tomorrow, Deadline For Mail-In Ballots And Resolving Ballot Issues; Gov.-Elect Amy Acton (D-OH) On The Lead; Speaker Johnson Says Republicans Must Get Back Up; FAA Rolls Out New A.I. Air Traffic Control Tool Across The U.S"
+  ]
+ },
+ {
   "file": "transcripts/cnn/2026/2026-11-09__the-brief-with-jim-sciutto.md",
   "size": 45022,
   "sections": 1,
   "titles": [
    "[01] CNN International: NVIDIA Launches Investigation into CEO; Hegseth Faces Impeachment Effort; Stephen Miller's First Day as White House Chief of Staff; U.N. Security Council Meets to Discuss Russia's Aggression; Israel Prepares to Swear in New Knesset; Russia's Leading Independent Newspaper Shuts Down"
+  ]
+ },
+ {
+  "file": "transcripts/cnn/2026/2026-11-09__quest-means-business.md",
+  "size": 53536,
+  "sections": 1,
+  "titles": [
+   "[01] Nvidia Announces Investigation into CEO Jensen Huang; Oil Prices Fall After Trump Signals Iran War De-Escalation; Global Climate Talks Begin with U.S. Presence; CNN Speaks With Latvian Foreign Minister; Russell Brand Sentenced To 10 Years, Six Months In Prison; Trump Speaking At The White House"
   ]
  },
  {
@@ -33,12 +117,36 @@
   ]
  },
  {
+  "file": "transcripts/cnn/2026/2026-11-09__laura-coates-live.md",
+  "size": 51354,
+  "sections": 1,
+  "titles": [
+   "[01] Hegseth To Hold Press Conference Amid Impeachment Threat; Trump Opens Door To Immigration Deal, But Insists \"No Amnesty\"; Democrats Ramp Up Investigation Plans Amid Blanche Threat; One-On-One With Congresswoman-elect JoAnna Mendoza; Vance, GOP Face New 2028 Warning Amid Blue Wave"
+  ]
+ },
+ {
+  "file": "transcripts/cnn/2026/2026-11-09__isa-soares-tonight.md",
+  "size": 46609,
+  "sections": 1,
+  "titles": [
+   "[01] Pressure Mounts On U.S. Defense Secretary Pete Hegseth As A Fellow Republican Lawmaker Threatens To Force A Vote On Impeachment; Nvidia Launches An Investigation Into Its Own CEO After He Admitted To Having An Affair With A Suspected Chinese Spy; France Accuses Iran Of Carrying Out Last Month's Massive Cyber-Attacks On French Supermarkets; Novaya Gazeta Shutting Down Amid Pressure From The Kremlin; Heavy Rain Floods Tents In Gaza; Pope Calls For \"Safeguarding Of Democracy\""
+  ]
+ },
+ {
   "file": "transcripts/cnn/2026/2026-11-09__inside-politics.md",
   "size": 42748,
   "sections": 2,
   "titles": [
    "[01] Today: Stephen Miller Takes Over As White House Chief Of Staff; Jeffries: \" Stephen Miller Has Blood On His Hands\"; Blanche: \"There Could Be\" A Crime In Democrats' Investigation Threats; Source: Van Hollen Weighs Challenging Schumer For Majority Leader; Schumer Says He's Confident He'll Be New Majority Leader; Dem Colom Holds Narrow But Growing Lead Over GOP's Hyde-Smith",
    "[02] Dem Colom Holds Narrow But Growing Lead Over GOP's Hyde-Smith; State Official: 2,800 Absentee Ballots Still Out In Tight Contest; Sanders Urges New Dem Majority To Confront Economic Inequality; Dems Begin Plotting Campaigns, Paths To Presidential Nomination; Ossoff Wins Straw Poll At Weekend Progressive Summit; Trump: Maybe I Won't Endorse Anyone In 2028 GOP Primary; Trump Suggests He'd Rather Go To Hell Than Forgive Enemies"
+  ]
+ },
+ {
+  "file": "transcripts/cnn/2026/2026-11-09__erin-burnett-outfront.md",
+  "size": 47994,
+  "sections": 1,
+  "titles": [
+   "[01] GOP Rep Files Impeachment Articles Against Hegseth, Forces Vote; Trump Accuses Dem Of \"Extortion,\" Orders DOJ To Investigate Her; Questions Grow Over What Trump Knew About CEO & Alleged Chinese Spy"
   ]
  },
  {
@@ -59,6 +167,14 @@
   ]
  },
  {
+  "file": "transcripts/cnn/2026/2026-11-09__cnn-s-the-arena-with-kasie-hunt.md",
+  "size": 56186,
+  "sections": 1,
+  "titles": [
+   "[01] GOP Rep Files Hegseth Impeachment, Vote Expected By Wednesday; Jeffries Dismisses Notion He Doesn't Have Enough Votes To Be Speaker; Democrats Prep For Investigations Into Trump In New Congress"
+  ]
+ },
+ {
   "file": "transcripts/cnn/2026/2026-11-09__cnn-newsroom.md",
   "size": 190799,
   "sections": 6,
@@ -69,6 +185,14 @@
    "[20] Legal Battles Brewing Between Democrats and Trump White House After Midterm Elections; Eisenkot Tasked with Forming Israeli Government; Nvidia Probes Foreign Intel Concerns Around CEO Jensen Huang; Russia-Ukraine War: U.S. Officials to Mediate Peace Talks; Mississippi's Uncalled Senate Race; Pole Leo Visits Argentina",
    "[21] CNN International: Trump Rallies Against Dems Threatening Congressional Probes; Netanyahu Rival, Eisenkot, Tasked With Forming Israeli Government; Reuters: Gunman Who Killed Six In Krakow Has Died In Hospital; NVIDIA probe Foreign Intel Concerns Around CEO Jensen Huang; Trump Addresses Huge Republican Midterm Losses",
    "[22] CNN International: Trump Addresses Huge Republican Midterm Losses; Israelis React To Eisenkot Being Tasked To Form New Govt.; Seven Dead, 100+ Injured After Trains Collide In Egypt"
+  ]
+ },
+ {
+  "file": "transcripts/cnn/2026/2026-11-09__cnn-newsnight-with-abby-phillip.md",
+  "size": 50270,
+  "sections": 1,
+  "titles": [
+   "[01] Fraud, UFC, Heaven And Hell, Trump's Lame Duck Era Begins; GOP Lawmaker Introduces Impeachment Effort Against Hegseth; Trump To Investigate The Investigators, Blanche Accusing Democrats For Overnight Probes"
   ]
  },
  {
@@ -92,6 +216,14 @@
   "titles": [
    "[01] CNN Headlines: Trump Admits to 60 Minutes Host That His Immigration Policy Has Been Too Tough; A Pro-Palestinian Bike Boycott Targeting Six Jewish-Owned Restaurants in Philadelphia Met with Massive Counter-protests; Suspect Arrested in Connection with the Fatal Stabbing of 28-Year-Old Jogger Katie Suarez",
    "[02] CNN Headlines: Trump Rails Against Dems Threatening Congressional Probes; Boycott Of Jewish-Owned Restaurants Draws Counterprotesters; NVIDIA CEO Admits Affair As Company Probes Ties To Alleged Foreign Spy"
+  ]
+ },
+ {
+  "file": "transcripts/cnn/2026/2026-11-09__anderson-cooper-360-degrees.md",
+  "size": 47267,
+  "sections": 1,
+  "titles": [
+   "[01] Trump Calls Midterm Blue Wave A \"Ridiculous Result, Almost Hard To Believe\"; GOP Rep. Massie Files Articles Of Impeachment Against Hegseth; Interview With Rep. Rep. Chris Deluzio (D-PA); Mississippi Senate Race Still Not Called; Dem Leading By 2,536 Votes; Trump Claims Democrats \"Stole\" Alaska Senate Election; NVIDIA CEO Admits Affairs As Company Launches Probe Into Spy Claims; China Dismisses Claims Of Spy Plot Targeting NVIDIA's CEO; Russell Brand Sentenced To 10-Plus Years In Prison For Rape, Sexual Assault"
   ]
  },
  {
