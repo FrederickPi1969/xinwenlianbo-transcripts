@@ -1,11 +1,83 @@
 [
  {
+  "file": "transcripts/cnn/2026/2026-11-13__the-story-is-with-elex-michaelson.md",
+  "size": 82716,
+  "sections": 2,
+  "titles": [
+   "[01] Jensen Huang Summoned to Testify Before Congress; Asian Markets Stable Despite Jensen Huang Departure from Nvidia; Microsoft Outlook Outage Leaves Millions Without Email; California Delegation Attends Environmental Conference, Trump Administration a No-Show",
+   "[02] A Global Microsoft 365 Outage Has Hit Thousands; Congress Summon Nvidia Ex-Boss To Testify; Trump's Envoys Head To Meet Zelenskyy After Talks With Putin; Israeli Strike On A Gaza Hospital Kills 6 People. World Leaders Speak at Cop31 Climate Conference; D.C. Gunman Killed Building Manager, Shot Four Others; Search for Survivors End in Deadly New York Building Collapse"
+  ]
+ },
+ {
+  "file": "transcripts/cnn/2026/2026-11-13__the-situation-room.md",
+  "size": 22490,
+  "sections": 1,
+  "titles": [
+   "[01] Congress Demands Ex-NVIDIA CEO Huang Testify on Spy Concerns; Wholesale Inflation Rises to Highest Level Since Nov. 2022; Microsoft Says, Emails Approaching Normal Levels After Outage"
+  ]
+ },
+ {
+  "file": "transcripts/cnn/2026/2026-11-13__cnn-this-morning.md",
+  "size": 50347,
+  "sections": 2,
+  "titles": [
+   "[01] J.D. Vance Seriously Considering Not Running in '28; Nvidia Searches for New Leader after CEO Resigns Amid Affairs",
+   "[02] Democrats Try to Get Trump to Collaborate; Congress Summons Former Nvidia CEO; Criticism of Jeffries May Affect Speakership; Trump Talks Obama Matchup"
+  ]
+ },
+ {
+  "file": "transcripts/cnn/2026/2026-11-13__cnn-newsroom.md",
+  "size": 110103,
+  "sections": 4,
+  "titles": [
+   "[19] Microsoft Faces Massive Outage; Huang Summoned to Testify; U.S. Envoys Meet with Leaders of Ukraine and Russia; Trump Says U.S. Doesn't Need a Deal with Iran; Israeli Strike on Hospital Kills Six People",
+   "[20] Outlook Still Unaccessible Worldwide, Work and School Operations Affected by the Microsoft Outage; NVIDIA CEO Steps Down after 33 Years with the Company, CFO Becomes Interim Head",
+   "[21] CNN International: Microsoft Outlook Outage Leaves Millions Without E-mail; U.S. Envoys Meet Zelenskyy After Talks With Putin; Gaza Officials: Israeli Strike On Hospital Kills Six People; Aired 4- 4:30a ET",
+   "[22] CNN International: U.S. Commerce Secretary Lutnick's Role In Nvidia Scandal; U.S. Envoys Meet Zelenskyy After Talks With Putin; Deportation Fears Deter Some Migrants From Entering U.S"
+  ]
+ },
+ {
+  "file": "transcripts/cnn/2026/2026-11-13__cnn-news-central.md",
+  "size": 71515,
+  "sections": 3,
+  "titles": [
+   "[01] GOP Demands Commerce Secretary Testify About NVIDIA Scandal; Jensen Huang Resignation Leaves Void in A.I. Industry; New York Says, Two Children Among Eight People Killed in Building Collapse",
+   "[02] Sen. Chris Van Hollen (D-MD) Challenging Sen. Chuck Schumer (D- NY) to Lead Senate Democrats; Congress Wants Huang, Lutnick to Testify Over NVIDIA Spy Concerns; Microsoft Says, Services Being Gradually Restored After Global Outage",
+   "[03] Ex-NVIDIA CEO Jensen Huang Summoned to Testify Over China Spy Concerns; GOP Demands Commerce Secretary Testify About NVIDIA Scandal; 8 Killed, 18 Injured in Brooklyn Building Collapse; Judge to Rule on Dismissing Alex Murdaugh's Murder Charges"
+  ]
+ },
+ {
+  "file": "transcripts/cnn/2026/2026-11-13__cnn-live-event-special.md",
+  "size": 38476,
+  "sections": 2,
+  "titles": [
+   "[01] CNN Headlines: Former Nvidia CEO Summoned To Testify Before Congress; Microsoft Outlook Outage Leaves Millions Without Email; Search For Survivors Ends In Deadly NYC Building Collapse",
+   "[02] CNN Headlines: D.C. Gunman Identified As Local Doctor Matt Lambert; Microsoft Outlook Outage Leaves Millions Without Email; Jensen Huang Out As Nvidia CEO After Reports Of Affairs; Ring Camera Captures Moment NYC Building Collapses, Killing 8"
+  ]
+ },
+ {
+  "file": "transcripts/cnn/2026/2026-11-12__what-we-know-with-max-foster.md",
+  "size": 44009,
+  "sections": 1,
+  "titles": [
+   "[01] Nvidia Stock Sinks, CEO Out After Affair Revelations; Eight Killed, 18 Injured In New York City Building Collapse; Police: One Dead, Four Wounded In Washington, D.C. Shooting; Trump Shifts Gears: \"We Don't Need A Deal\" On Iran; U.S. Envoys Wrap Putin Talks, Will Meet Zelenskyy In Ireland; Palestinian Officials: Israeli Strike On Hospital Kills Six"
+  ]
+ },
+ {
   "file": "transcripts/cnn/2026/2026-11-12__the-story-is-with-elex-michaelson.md",
   "size": 82789,
   "sections": 2,
   "titles": [
    "[01] Nvidia Board Discusses Future of CEO Jensen Huang; Democrat Scott Colom Wins Senate Race in Mississippi; Massive Crowd Cheers Pope Leo's Homecoming Visit to Peru; Democrat Scott Colom Wins Senate Race in Mississippi; Russian Ambassador, 66, Dies Suddenly",
    "[02] Nvidia's Board Is Weighing Jensen Huang's Future; Two Dead, At Least 17 Hurt After Building Collapses In Brooklyn; Scott Colom, A Democrat, Wins Mississippi Senate Election; Kushner And Witkoff To Meet Putin In Moscow. Nvidia Board Discusses Future of CEO Jensen Huang; Guard Reprimands Hegseth's Group at Tomb of Unknown Soldier; Kennedy Family Joins Lawsuit to Block Trump's Arch Project; Former California Governors Schwarzenegger and Davis Host Bipartisan Event for Veterans"
+  ]
+ },
+ {
+  "file": "transcripts/cnn/2026/2026-11-12__the-source-with-kaitlan-collins.md",
+  "size": 48195,
+  "sections": 1,
+  "titles": [
+   "[01] CEO Close To Trump Resigns After Affair With Alleged Spy; Van Hollen Will Challenge Schumer For Senate Majority Leader; Blanche Again Refuses To Pledge Independence From Trump"
   ]
  },
  {
@@ -19,12 +91,96 @@
   ]
  },
  {
+  "file": "transcripts/cnn/2026/2026-11-12__the-lead-with-jake-tapper.md",
+  "size": 84379,
+  "sections": 2,
+  "titles": [
+   "[01] Police: Gunman Killed Building Mgr. Amid Dispute, Shot 4 Others; Ex-Death Row Inmate Richard Glossip Pleads Guilty To Lesser Charge; Jensen Huang Out As Nvidia CEO In Wake Of Scandalous Affairs; Rep. Buddy Carter (R-GA), Is Interviewed About Despite Losses, Republicans Embrace Hard-Liners; Hegseth Awards Medal To Soldier Who Reprimanded Him",
+   "[02] Jensen Huang Out as NVIDIA CEO in Wake of Scandalous Affairs; 8 People Killed, 19 Injured in New York Building Collapse; Blagojevich Details Time in Prison, Support for Trump. Pence Suggests GOP Move Past Trump Policies To Win In 2028; Pope Draws Record Crowd In Peru"
+  ]
+ },
+ {
+  "file": "transcripts/cnn/2026/2026-11-12__the-brief-with-jim-sciutto.md",
+  "size": 44677,
+  "sections": 1,
+  "titles": [
+   "[01] CNN International: U.S. Envoys Meet with Zelenskyy After Talks with Putin; Jensen Huang Officially Out at NVIDIA; Ukrainian Defense Tech Firm UForce Raises $700M in Funding; Trump Shifts Gears: \"We Don't Need a Deal\" on Iran; U.S.-Venezuela Relations After the Midterms"
+  ]
+ },
+ {
+  "file": "transcripts/cnn/2026/2026-11-12__quest-means-business.md",
+  "size": 44050,
+  "sections": 1,
+  "titles": [
+   "[01] NVIDIA CEO Jensen Huang Resigns After Mounting Scandals; Georgieva A.I. Poses Risk of One-Legged Global Economy; U.S. Attorney General: The FBI is Looking at NVIDIA Situation. Nvidia Hunts for Next CEO with no Succession Plan in Place; Radisson CEO Explains How He Responds to a Crisis; Ring Unveils Indoor Drone and Robot"
+  ]
+ },
+ {
+  "file": "transcripts/cnn/2026/2026-11-12__one-world-with-zain-asher.md",
+  "size": 68445,
+  "sections": 2,
+  "titles": [
+   "[01] Nvidia CEO Jensen Huang Resigns, in Stunning Fall from Grace; Nvidia Stocks Fell Sharply After CEO Jensen Huang Resigned; Desperate Search for Survivors After NYC Building Collapse; Kushner, Witkoff Head to Dublin After Meeting with Putin",
+   "[02] NVIDIA Shares Drop Sharply As CEO Jensen Huang Resigns; Eight Killed, 19 Injured In NYC Building Collapse; Pope Leo Receives Hero's Welcome In Peru; Palestinian Officials: Israeli Strike On Hospital Kills Six People; Aired 12-1p ET"
+  ]
+ },
+ {
+  "file": "transcripts/cnn/2026/2026-11-12__laura-coates-live.md",
+  "size": 46950,
+  "sections": 1,
+  "titles": [
+   "[01] Trump Admin Faces Growing Scrutiny After Nvidia CEO Resigns; One-on-One with Stephen A. Smith; Van Hollen to Challenge Schumer for Senate Majority Leader; CNN Projects Democrat Will Win Alaska Governor's Race; North Carolina Now the Definition of \"Dummymandering.\" Aired 11p-12a ET"
+  ]
+ },
+ {
+  "file": "transcripts/cnn/2026/2026-11-12__isa-soares-tonight.md",
+  "size": 48640,
+  "sections": 1,
+  "titles": [
+   "[01] NVIDIA CEO Resigns Amid U.S.-China Chip War; Future of NVIDIA Without Jensen Huang; Mississippi Elects First Black Senator Since Reconstruction; Eight Killed, 18 Injured in New York City Building Collapse. NVIDIA CEO Steps Down; NVIDIA's Stock Price Plummets in a Move that Could have Consequences for Everything from the Economy to the Future of Artificial Intelligence; Trump's Envoy Steve Witkoff Says Progress was Made After Meeting with Russian Leader"
+  ]
+ },
+ {
+  "file": "transcripts/cnn/2026/2026-11-12__inside-politics.md",
+  "size": 45726,
+  "sections": 2,
+  "titles": [
+   "[01] Trump Relationship With Disgraced Nvidia CEO Under New Scrutiny; Trump: Tim Cook Should Replace Huang At Nvidia; Nvidia CEO Jensen Huang Resigns, Effective Immediately; Nvidia Scandal Threatens To Engulf Washington; NYC Building Collapse Kills At Least Eight, 18 Injured; Officials: Still Looking For Survivors In NYC Building Rubble",
+   "[02] Death Toll Rises To At Least 8 In NYC Building Collapse; White House Warns Democrats: Investigating Us Could Be A Crime; Trump Relationship With Disgraced Ex-NVIDIA CEO Under New Scrutiny; Democrats Pick Up 55th Senate Seat With Shock Mississippi Win"
+  ]
+ },
+ {
+  "file": "transcripts/cnn/2026/2026-11-12__erin-burnett-outfront.md",
+  "size": 50917,
+  "sections": 1,
+  "titles": [
+   "[01] Trump On Alleged Spy Scandal; Another Big Democratic Win; Trump Versus Obama? Aired 7-8p ET"
+  ]
+ },
+ {
+  "file": "transcripts/cnn/2026/2026-11-12__connect-the-world.md",
+  "size": 33695,
+  "sections": 2,
+  "titles": [
+   "[01] Nvidia Stocks Down Sharply after CEO Resigns; Nvidia CEO Resigns Amid Possible Spy Scandal, Affair with Company Executive; Nvidia CEO Jensen Huang Resigns; Nvidia's Huang Resigns, Colette Kress to Serve as Interim CEO; Nvidia Stock Down Sharply Following CEO's Resignation",
+   "[02] Nvidia CEO Jensen Huang Resigns"
+  ]
+ },
+ {
   "file": "transcripts/cnn/2026/2026-11-12__cnn-this-morning.md",
   "size": 49588,
   "sections": 2,
   "titles": [
    "[01] Scott Colom Wins Mississippi Senate Race, Makes History; Nvidia Board Discussing Future of CEO Jensen Huang; Guard Reprimands Hegseth's Group at Tomb of Unknown Soldier",
    "[02] Rep. Marlin Stutzman (R-IN) is Interviewed about the GOP After the Midterms; The Black Vote Surged for Democrats Candidates Nationwide; Incoming Democrat in House Warned about Backing Jeffries"
+  ]
+ },
+ {
+  "file": "transcripts/cnn/2026/2026-11-12__cnn-s-the-arena-with-kasie-hunt.md",
+  "size": 43211,
+  "sections": 1,
+  "titles": [
+   "[01] Now: Stocks Falter As Nvidia Stock Falls On CEO's Resignation; Blanche: DOJ Has Not Determined If Woman Linked To Ex-Nvidia CEO Was Spy; Dem Scott Colom Breaks GOP's Grip On Mississippi With Senate Win"
   ]
  },
  {
@@ -36,6 +192,14 @@
    "[20] NVIDIA Board Discusses Possibility of Axing CEO Jensen Huang Following a Scandal Involving Him and a Chinese Spy Operative; Protests Erupt Across Spain at a First General Strike in Nearly 15 Years",
    "[21] CNN International: Chipmaker NIVIDIA Sheds $311B Plus In Market Value This Week; Trump: New Strikes On Iran \"Highly Unlikely\" If Talks Progress; Forces From El Salvador Strike Alleged Gang Compound In Haiti; Pope Leo Gets Hero's Welcome, Calls Peru His Homeland; Millions Of People Strike Over Housing Affordability",
    "[22] CNN International: Sources: Nvidia Board Discusses Future Of CEO Jensen Huang; CNN: Democrat Scott Colum Wins Senate Race In Mississippi; CNN: Democrat Scott Colum Wins Senate Race In Mississippi"
+  ]
+ },
+ {
+  "file": "transcripts/cnn/2026/2026-11-12__cnn-newsnight-with-abby-phillip.md",
+  "size": 49296,
+  "sections": 1,
+  "titles": [
+   "[01] Trump Admin Under Scrutiny as Huang Resigns, Scandal Grows; Trump Removes Vance from Iran Talks After Blaming War. Abdul El-Sayed Mocks Trump Gold Card to push Medicare Plan; ICE Arrests and Deportations Logged Record High Despite Trump and Republicans' Reckoning at the Midterms"
   ]
  },
  {
@@ -55,6 +219,22 @@
   "titles": [
    "[01] CNN Headlines: CNN Projects Historic Win For Dem Sen.-Elect Scott Colom; At Least 2 Dead, Search Continues After NYC Building Collapse; Sources: Nvidia Board Discusses Future Of CEO Jensen Huang; Witkoff, Kushner To Meet Putin In Moscow After Trilateral Talks",
    "[02] CNN Headlines: Sources: Nvidia Board Discusses Future Of CEO Jensen Huang; CNN Projects Democrat Scott Colom Will Win Closely- Watched Mississippi Senate Race; At Least 2 Dead, Search Continues After NYC Building Collapse; Report: Treasury Secretary Moves To Military Base After Threats From Iran"
+  ]
+ },
+ {
+  "file": "transcripts/cnn/2026/2026-11-12__anderson-cooper-360-degrees.md",
+  "size": 45918,
+  "sections": 1,
+  "titles": [
+   "[01] Trump's Relationship with Ex-NVIDIA CEO Under New Scrutiny; U.S. Intel Unsure Woman Spied on NVIDIA for China; Jensen Huang Out as NVIDIA CEO After Reports of Scandalous Affairs; Dems Gather In Denver For \"What's Next\" Post-Midterm Summit; One-On-One With Sen. Bernie Sanders; Officials: 8 Killed, 18 Injured In Brooklyn Building Collapse; Arlington Sentinel Who Reprimanded Hegseth, Staff Awarded Medal; Jensen Huang Out As Nvidia CEO After Reports Of Scandalous Affairs; How Restricted Chips Get To China; Sources: U.S. Intel Unsure Woman Spied On Nvidia For China"
+  ]
+ },
+ {
+  "file": "transcripts/cnn/2026/2026-11-12__amanpour.md",
+  "size": 49122,
+  "sections": 1,
+  "titles": [
+   "[01] Interview with The Atlantic CEO Nicholas Thompson; Interview with ControlAI U.S. Executive Director Connor Leahy; Interview with Campaigner who broke Harvey Weinstein NDA Jess Phillips; Interview with \"Ten Lives\" Author Mona Chalabi"
   ]
  },
  {
